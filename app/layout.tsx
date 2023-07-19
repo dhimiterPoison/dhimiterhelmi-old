@@ -20,8 +20,8 @@ export default function RootLayout({
             <body className={inter.className}>
                 <div className='app flex h-screen  overflow-hidden'>
                     <Navbar />
-                    <div className='content w-full m-10'>
-                        <div className='rounded-lg min-h-full bg-base-200'>{children}</div>
+                    <div className='content w-full my-10 mr-10'>
+                        <div className='rounded-lg min-h-full bg-base-200 p-4'>{children}</div>
                     </div>
                 </div>
             </body>
