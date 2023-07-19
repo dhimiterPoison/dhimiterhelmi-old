@@ -11,11 +11,10 @@ const Route = ({ category, routes }: Props) => {
     const pathname = usePathname();
     return (
         <div className='route-category mb-10'>
-            <div className='route-category-title  text-accent'>{category}</div>
+            <div className='route-category-title text-accent'>{category}</div>
             <div className='route-category-routes'>
                 {routes.map((route) => {
-                    const isActive = pathname.startsWith("/"+route.path);
-                    console.log("path", route.path, isActive, pathname);
+                    const isActive = pathname.startsWith("/" + route.path);
                     return (
                         <div key={route.id} className='route-category-route'>
                             <Link

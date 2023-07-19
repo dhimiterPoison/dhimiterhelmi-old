@@ -38,7 +38,7 @@ const Navbar = () => {
                     <Route key={route.id} category={route.category} routes={route.routes} />
                 ))}
             </div>
-            <div className="contact btn btn-secondary mb-4">Get in touch</div>
+            <div className="contact btn btn-secondary mb-4 font-extrabold"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
         </div>
     )
 }
