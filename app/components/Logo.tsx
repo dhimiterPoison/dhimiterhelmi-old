@@ -1,10 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
 
 const Logo = () => {
-  return (
-    <div className='flex font-bold text-3xl justify-center py-4'><Link href="/">DhimRealm</Link></div>
-  )
-}
+    return (
+        <div className='flex flex-col'>
+            <div className='flex font-bold text-3xl justify-center pt-4 pb-2'>
+                <Link href='/'>DhimRealm</Link>
+            </div>
+            <div className='flex font-bold text-sm justify-end px-9'>
+                (Alpha)
+            </div>
+        </div>
+    );
+};
 
-export default Logo
+export default Logo;

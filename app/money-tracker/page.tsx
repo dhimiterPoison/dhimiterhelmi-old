@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const MoneyTracker = () => {
-  return (
-    <div>MoneyTracker</div>
-  )
-}
+    return (
+        <div className='flex flex-col h-full items-center justify-start '>
+            <div className='flex text-2xl font-semibold'>MoneyTracker<span className='text-accent ml-3'>- Coming soon ;)</span></div>
+            <div className='h-10'></div>
+            <div className='flex text-xl'>
+                A simple web app to track your expenses
+            </div>
+        </div>
+    );
+};
 
-export default MoneyTracker
+export default MoneyTracker;
