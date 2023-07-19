@@ -10,7 +10,7 @@ const Balonade = () => {
                     <div className='camera'></div>
                     <div className='display'>
                         <div className='artboard artboard-demo phone-1'>
-                            // image placeholder <br />
+                            image placeholder <br />
                             on hover show button to open website
                         </div>
                     </div>
