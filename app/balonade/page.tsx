@@ -10,13 +10,21 @@ const Balonade = () => {
                     <div className='camera'></div>
                     <div className='display'>
                         <div className='artboard artboard-demo phone-1'>
-                            Hi.
+                            // image placeholder <br />
+                            on hover show button to open website
                         </div>
                     </div>
                 </div>
-				{/* <div className='example'>
-					<Image src={balonadeHomeScreen} alt="Balonade WebApp Home Screenshot" width="40" height="200"/>
-				</div> */}
+                {/* <div className='example'>
+                    <Image
+                        src='/public/balonade-homescreen.PNG'
+                        alt='profile/'
+                        objectFit='cover'
+                        width={400}
+                        height={800}
+                        className='object-cover rounded-2xl'
+                    />
+                </div> */}
             </div>
             <div className='flex flex-col h-full items-center justify-around px-10 '>
                 <div className='flex text-2xl font-semibold'>
