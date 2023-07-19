@@ -4,7 +4,7 @@ const NaturesSerenade = () => {
     return (
         <div className='flex flex-col h-full items-center justify-start '>
             <div className='flex text-2xl font-semibold'>
-                Nature's Serenade
+                Nature&apos;s Serenade
                 <span className='text-accent ml-3'>- Coming soon ;)</span>
             </div>
             A creative project. <br />

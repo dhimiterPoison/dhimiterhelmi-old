@@ -15,7 +15,7 @@ const AnalogAdventures = () => {
                 The metallic sound of the shutter sends me to another universe.<br />
                 <br />
                 Wanna talk about the waiting time to see the results? <br />
-                When you finally get the scans, it's like Christmas morning.<br />
+                When you finally get the scans, it&apos;s like Christmas morning.<br />
                 <br />
                 Smile on the face and a warm feeling in the heart.<br />
                 A film starts playing in your mind<br />
