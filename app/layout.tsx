@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from './components/Navbar';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
                         <div className='flex rounded-lg min-h-full bg-base-200 p-4 justify-center items-center'>{children}</div>
                     </div>
                 </div>
+                <Analytics />
             </body>
         </html>
     );
