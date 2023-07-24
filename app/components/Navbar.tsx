@@ -31,14 +31,13 @@ const Navbar = () => {
     // const router = useRouter();
     return (
         //TODO: da bloccare sugli schermi piccoli ?
-        <div className='flex flex-col w-96 p-10'>
-            <Logo />
+        <div className='hidden sm:flex flex-col h-full w-96 px-10 py-4'>
             <div className='flex flex-col h-full justify-center'>
                 {routes.map((route) => (
                     <Route key={route.id} category={route.category} routes={route.routes} />
                 ))}
             </div>
-            <div className="contact btn btn-secondary mb-4 font-extrabold"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
+            <div className="contact btn btn-secondary font-extrabold"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
         </div>
     )
 }
