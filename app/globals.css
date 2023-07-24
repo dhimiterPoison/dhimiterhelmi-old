@@ -9,3 +9,7 @@
 .content {
     max-height: 100svh;
 }
+
+.spacer {
+    flex-grow: 1;
+}
