@@ -2,7 +2,7 @@ import React from 'react'
 
 const AnalogAdventures = () => {
   return (
-    <div className='flex flex-col h-full items-center justify-start '>
+    <div className='flex flex-col h-full items-center justify-start overflow-y-scroll'>
             <div className='flex text-2xl font-semibold'>
                 Dhim Analog Adventures
             </div>
