@@ -18,10 +18,12 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={inter.className}>
-                <div className='app flex h-screen  overflow-hidden'>
+                <div className='app flex overflow-hidden'>
                     <Navbar />
-                    <div className='content w-full my-10 mr-10 '>
-                        <div className='flex rounded-lg min-h-full bg-base-200 p-4 justify-center items-center'>{children}</div>
+                    <div className='content w-full py-10 pr-10 '>
+                        <div className='flex rounded-lg min-h-full bg-base-200 p-4 justify-center items-center'>
+                            {children}
+                        </div>
                     </div>
                 </div>
             </body>
