@@ -1,9 +1,8 @@
+'use client'
 import React from 'react'
-import Logo from './Logo'
 import Link from 'next/link';
 import Route from './Route';
-// import { useRouter } from 'next/navigation';
-
+import { useSessionStorage } from '@mantine/hooks';
 
 const routes = [
     {
@@ -27,14 +26,20 @@ const routes = [
 
 
 const Navbar = () => {
+    const [openNavigation, setOpenNavigation] = useSessionStorage({
+		key: 'open-navigation',
+		defaultValue: false,
+	});
+    
+    const closeNavigationHandler = () => {
+        setOpenNavigation(false);
+    }
 
-    // const router = useRouter();
     return (
-        //TODO: da bloccare sugli schermi piccoli ?
-        <div className='hidden sm:flex flex-col h-full w-96 px-10 py-4'>
+        <div className={`${openNavigation ? '' : 'hidden'} md:flex flex-col h-full w-96 px-10 py-4`}>
             <div className='flex flex-col h-full justify-center'>
                 {routes.map((route) => (
-                    <Route key={route.id} category={route.category} routes={route.routes} />
+                    <Route key={route.id} category={route.category} routes={route.routes} closeNavigation={closeNavigationHandler} />
                 ))}
             </div>
             <div className="contact btn btn-secondary font-extrabold"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
