@@ -27,7 +27,7 @@ export default function RootLayout({
                         <Navbar />
                     </div>
                     {/* <div className='py-10   px-3 md:pl-0 md:pr-10'> */}
-                        <div className='content w-full flex rounded-t-2xl md:rounded-lg bg-base-300 p-4 justify-center items-center my-4 md:my-10 md:mr-10'>
+                        <div className='content w-full flex rounded-t-2xl md:rounded-lg bg-base-300 p-4 justify-center my-4 md:my-10 md:mr-10'>
                             {children}
                         </div>
                     {/* </div> */}
