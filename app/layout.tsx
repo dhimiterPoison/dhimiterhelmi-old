@@ -21,12 +21,12 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={inter.className}>
-                <div className='app flex overflow-hidden flex-col sm:flex-row'>
-                    <div className='sidebar py-2 sm:py-10 flex sm:flex-col'>
+                <div className='app flex overflow-hidden flex-col md:flex-row'>
+                    <div className='sidebar py-2 md:py-10 flex flex-col'>
                         <Logo />
                         <Navbar />
                     </div>
-                    <div className='content w-full py-10 px-3 sm:pl-0 sm:pr-10'>
+                    <div className='content w-full py-10 px-3 md:pl-0 md:pr-10'>
                         <div className='flex rounded-lg min-h-full bg-base-300 p-4 justify-center items-center'>
                             {children}
                         </div>
