@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Route from './Route';
 import { useSessionStorage } from '@mantine/hooks';
 
-const routes = [
+export const routes = [
     {
         id: 1,
         category: "Web applications",
