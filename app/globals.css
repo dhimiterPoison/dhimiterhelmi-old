@@ -6,8 +6,12 @@
     min-height: 100svh;
 }
 
+.logo {
+    max-height: 10svh;
+}
+
 .content {
-    max-height: 100svh;
+    min-height: 90svh;
 }
 
 .spacer {
