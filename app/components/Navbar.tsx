@@ -36,7 +36,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className={`${openNavigation ? '' : 'hidden'} md:flex flex-col h-full w-96 px-10 py-4`}>
+        //add backdrop color to pop the menu like a modal
+        <div className={`${openNavigation ? '' : 'hidden'} md:flex flex-col h-full md:w-96 w-full px-10 py-4 bg-base-100`}>
             <div className='flex flex-col h-full justify-center'>
                 {routes.map((route) => (
                     <Route key={route.id} category={route.category} routes={route.routes} closeNavigation={closeNavigationHandler} />
