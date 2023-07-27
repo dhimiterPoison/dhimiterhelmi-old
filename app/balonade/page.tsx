@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
-// import balonadeHomeScreen from '../../public/balonade-homescreen.PNG';
+import balonadeHomeScreen from '../../public/images/balonade-homescreen.png';
 
 const Balonade = () => {
     return (
         <div className='flex'>
             <div className='flex flex-col'>
-                <div className='mockup-phone'>
+                {/* <div className='mockup-phone'>
                     <div className='camera'></div>
                     <div className='display'>
                         <div className='artboard artboard-demo phone-1'>
@@ -14,17 +14,15 @@ const Balonade = () => {
                             on hover show button to open website
                         </div>
                     </div>
-                </div>
-                {/* <div className='example'>
+                </div> */}
+                <div className='example'>
                     <Image
-                        src='/public/balonade-homescreen.PNG'
+                        src={balonadeHomeScreen}
                         alt='profile/'
                         objectFit='cover'
-                        width={400}
-                        height={800}
-                        className='object-cover rounded-2xl'
+                        className='example-balo'
                     />
-                </div> */}
+                </div>
             </div>
             <div className='flex flex-col h-full items-center justify-around px-10 '>
                 <div className='flex text-2xl font-semibold'>
