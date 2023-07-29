@@ -3,47 +3,80 @@
 @tailwind utilities;
 
 .app {
-    min-height: 100svh;
+	min-height: 100svh;
 }
 
 .logo {
-    max-height: 10svh;
+	max-height: 10svh;
 }
 
 .content {
-    min-height: 90svh;
+	min-height: 90svh;
 }
 
 .spacer {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 .carousel-slider {
-  width: min(100vw, 90%);
+	width: min(90vw, 90%);
 }
+
 
 .carousel-card {
-  aspect-ratio: 3/5;
-}
-
-.example-balo {
-  aspect-ratio: 3/5;
-  max-height: 60vw;
-  object-fit: contain;
+	aspect-ratio: 2/3;
 }
 
 .card-image {
+	mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0))
+	);
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0.01))
+	);
 }
+
+.example-balo {
+	aspect-ratio: 3/5;
+	max-height: 60vw;
+	object-fit: contain;
+}
+
+
+*::-webkit-scrollbar {
+	width: 12px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+	background: #205b32; /* color of the tracking area */
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #184426; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid #205b32; /* creates padding around scroll thumb */
+}
+
+
 // .carousel {
 //     .slick-slide {
 //       transition: all 0.3s ease;
 //     }
-  
+
 //     .slick-center {
 //       transform: scale(1.2); /* Make the center card bigger */
 //       z-index: 2; /* Bring the active card to the front */
 //     }
-  
+
 //     .slick-slide:not(.slick-center) {
 //       transform: scale(0.8); /* Make other cards smaller */
 //       z-index: 1; /* Send other cards to the back */
