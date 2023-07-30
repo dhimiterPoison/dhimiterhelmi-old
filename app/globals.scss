@@ -31,7 +31,8 @@
 .scroll-margin-left {
 	// scroll-margin-left: calc(100vw/2);
 	//scroll-margin-left: 50vw;
-	margin-left: 50vw;
+	// margin-left: 50vw;
+	margin-left: calc(50vw - ((20rem * (2/3))/2));
 }
 
 .scroll-margin-right {
