@@ -5,6 +5,7 @@ import Image from 'next/image';
 import CoffeCardImage from '../../public/images/Coffe_Card.png';
 import AnalogAdventuresImage from '../../public/images/Analog_adventures_image.png';
 import BalonadeHomescreen from '../../public/images/balonade-home.png';
+import Link from 'next/link';
 
 const settings = {
 	centerMode: true,
@@ -45,30 +46,31 @@ const cards = [
 const MyCarousel = () => {
 	const [selectedCard, setSelectedCard] = useState(1);
 	return (
-		<div className='carousel-slider flex gap-4 items-center  overflow-x-auto overscroll-none snap-proximity snap-x scroll-px-10 '>
+		<div className='carousel-slider flex gap-4 items-center  overflow-auto overscroll-none snap-proximity snap-x'>
 			{cards.map((card, index) => {
 				const active = selectedCard === card.id;
+				const hasScrollMarginLeft = index === 0;
+				const hasScrollMarginRight = index === cards.length - 1;
 				return (
 					<div
 						key={card.id}
 						className={`carousel-card relative flex flex-col flex-shrink-0 justify-self-center rounded-xl 
-							snap-always snap-center bg-base-200 shadow-xl ${active ? ' h-80   ' : ' h-60'}`}
+							snap-always snap-center bg-base-200 shadow-xl ${active ? ' h-80' : ' h-60'} 
+							${hasScrollMarginLeft ? "scroll-margin-left md:ml-0" : hasScrollMarginRight ? "scroll-margin-right md:mr-0" : ""} `}
 					>
+							<Link href={card.path} className='h-full'>
 						<div className={`flex h-full justify-center items-center ${active ? "" : ""} `}>
+							
 							<Image
 								src={card.img}
 								alt='Picture of the author'
 								className={`card-image h-full object-cover rounded-xl ${active ? "" : ""} `}
 							/>
-							<div className='card-title text-base absolute bottom-2 px-2 flex justify-center'>{card.title}</div>
-						</div>
-						{/* <div
-							className={`flex card-text pl-4 h-14 items-center ${
+							<div className={`card-title text-base absolute bottom-2 px-2 flex justify-center ${
 								active && 'text-rose-100'
-							}`}
-						>
-							<div className='card-title text-base'>{card.title}</div>
-						</div> */}
+							}`}>{card.title}</div>
+						</div>
+							</Link>
 					</div>
 				);
 			})}

@@ -19,12 +19,24 @@
 }
 
 .carousel-slider {
-	width: min(90vw, 90%);
+	width: min(100vw, 90%);
 }
 
 
 .carousel-card {
 	aspect-ratio: 2/3;
+}
+
+
+.scroll-margin-left {
+	// scroll-margin-left: calc(100vw/2);
+	//scroll-margin-left: 50vw;
+	margin-left: 50vw;
+}
+
+.scroll-margin-right {
+	//scroll-margin-right: 50vw;
+	margin-right: 50vw;
 }
 
 .card-image {
