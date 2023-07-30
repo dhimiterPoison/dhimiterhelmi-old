@@ -166,7 +166,7 @@ const MyCarousel = () => {
 					</div>
 				);
 			})}
-			<div ref={lineRef} className='vertical-line absolute top-0 bottom-0 w-1 bg-red-500'></div>
+			{/* <div ref={lineRef} className='vertical-line absolute top-0 bottom-0 w-1 bg-red-500'></div> */}
 		</div>
 	);
 };
