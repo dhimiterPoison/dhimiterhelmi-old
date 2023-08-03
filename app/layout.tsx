@@ -25,7 +25,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className={monserrat.className}>
                 <div className='app flex overflow-hidden overscroll-none flex-col justify-start md:flex-row'>
-                    <div className='navigation py-2 md:py-10 flex flex-col'>
+                    <div className='navigation py-2 md:py-10 flex flex-col max-h-screen md:sticky md:top-0 md:left-0 md:bottom-0'>
                         <Logo />
                         <Navbar />
                     </div>

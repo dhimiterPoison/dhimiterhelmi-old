@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { useDebouncedState } from '@mantine/hooks';
+import { useDebouncedState, useShallowEffect } from '@mantine/hooks';
 import { routes } from './Navbar';
 import Image from 'next/image';
 import CoffeCardImage from '../../public/images/Coffe_Card.png';
@@ -45,7 +45,7 @@ const cards = [
 ];
 
 const MyCarousel = () => {
-	const [selectedCard, setSelectedCard] = useDebouncedState(1, 200);
+	const [selectedCard, setSelectedCard] = useDebouncedState(1, 20);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const lineRef = useRef<HTMLDivElement>(null);
 
@@ -119,7 +119,7 @@ const MyCarousel = () => {
 	return (
 		<div
 			ref={containerRef}
-			className='carousel-slider flex gap-4 items-center  overflow-auto overscroll-none snap-proximity snap-x'
+			className='carousel-slider flex gap-4 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x'
 		>
 			{cards.map((card, index) => {
 				const active = selectedCard === card.id;
@@ -138,9 +138,10 @@ const MyCarousel = () => {
 									? 'scroll-margin-right md:mr-0'
 									: ''
 							} `}
+						onMouseOver={() => setSelectedCard(card.id)}
 					>
 						<Link href={card.path} className={`h-full w-full ${
-									active ? '' : ' pointer-events-none'
+									active ? '' : 'pointer-events-none md:pointer-events-auto'
 								}`}>
 							<div
 								className={`flex h-full w-full justify-center items-center ${
