@@ -65,7 +65,6 @@ const MyCarousel = () => {
 				line.style.left = `${containerCenter}px`;
 			}
 
-
 			console.log('CREATING CARD INDEXES ', container.scrollLeft);
 			// Calculate the center position of each card and its left position relative to the container center
 			const cardIndices = cards.map((_, index) => {
@@ -137,7 +136,8 @@ const MyCarousel = () => {
 									: hasScrollMarginRight
 									? 'scroll-margin-right md:mr-0'
 									: ''
-							} `}
+							} 
+							will-change-transform ease-in-out duration-200`}
 						onMouseOver={() => setSelectedCard(card.id)}
 					>
 						<Link href={card.path} className={`h-full w-full ${

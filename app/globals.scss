@@ -22,17 +22,15 @@
 	width: min(100vw, 90%);
 }
 
-
 .carousel-card {
 	aspect-ratio: 2/3;
 }
-
 
 .scroll-margin-left {
 	// scroll-margin-left: calc(100vw/2);
 	//scroll-margin-left: 50vw;
 	// margin-left: 50vw;
-	margin-left: calc(50vw - ((20rem * (2/3))/2));
+	margin-left: calc(50vw - ((20rem * (2 / 3)) / 2));
 }
 
 .scroll-margin-right {
@@ -57,12 +55,22 @@
 	);
 }
 
-.example-balo {
+.example-image-container {
+	max-height: 40vh;
+}
+.example-image {
 	aspect-ratio: 3/5;
-	max-height: 60vw;
+	height: 100%;
 	object-fit: contain;
 }
 
+@media screen and (min-width: 768px) {
+	.example-image-container {
+		max-height: 80vh;
+	}
+	.example-image {
+	}
+}
 
 *::-webkit-scrollbar {
 	width: 12px; /* width of the entire scrollbar */
@@ -78,7 +86,6 @@
 	border-radius: 20px; /* roundness of the scroll thumb */
 	border: 3px solid #205b32; /* creates padding around scroll thumb */
 }
-
 
 // .carousel {
 //     .slick-slide {
