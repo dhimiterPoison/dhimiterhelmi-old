@@ -4,7 +4,7 @@ import balonadeHomeScreen from '../../public/images/balonade-homescreen.png';
 
 const Balonade = () => {
     return (
-        <div className='flex'>
+        <div className='flex flex-col md:flex-row'>
             <div className='flex flex-col'>
                 {/* <div className='mockup-phone'>
                     <div className='camera'></div>
@@ -15,16 +15,16 @@ const Balonade = () => {
                         </div>
                     </div>
                 </div> */}
-                <div className='example'>
+                <div className='example-image-container'>
                     <Image
                         src={balonadeHomeScreen}
                         alt='profile/'
                         objectFit='cover'
-                        className='example-balo'
+                        className='example-image'
                     />
                 </div>
             </div>
-            <div className='flex flex-col h-full items-center justify-around px-10 '>
+            <div className='flex flex-col h-full items-center justify-start px-10 '>
                 <div className='flex text-2xl font-semibold'>
                     Balonade Web App
                 </div>
