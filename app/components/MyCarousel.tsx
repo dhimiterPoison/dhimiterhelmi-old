@@ -137,7 +137,7 @@ const MyCarousel = () => {
 									? 'scroll-margin-right md:mr-0'
 									: ''
 							} 
-							will-change-transform ease-in-out duration-200`}
+							ease-in-out duration-200`}
 						onMouseOver={() => setSelectedCard(card.id)}
 					>
 						<Link href={card.path} className={`h-full w-full ${

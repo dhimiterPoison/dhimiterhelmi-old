@@ -21,6 +21,7 @@
 
 .carousel-slider {
 	width: min(100vw, 90%);
+	min-height: 20rem;
 }
 
 .carousel-card {
@@ -36,7 +37,7 @@
 
 .scroll-margin-right {
 	//scroll-margin-right: 50vw;
-	margin-right: 50vw;
+	margin-right: calc(50vw - ((20rem * (2 / 3)) / 2));
 }
 
 .card-image {

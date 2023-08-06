@@ -43,7 +43,7 @@ const Navbar = () => {
                     <Route key={route.id} category={route.category} routes={route.routes} closeNavigation={closeNavigationHandler} />
                 ))}
             </div>
-            <div className="contact btn btn-secondary font-extrabold"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
+            <div className="contact btn btn-secondary font-extrabold w-full"><Link href="mailto:dhimiter.helmi@gmail.com">Get in touch</Link></div>
         </div>
     )
 }
