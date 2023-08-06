@@ -47,6 +47,7 @@ export default function RootLayout({
 						</svg>
 					</div>
 				</div>
+			    {/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
 			</body>
