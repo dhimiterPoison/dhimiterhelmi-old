@@ -2,6 +2,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import { Lora, Catamaran } from 'next/font/google';
+
+const sections = Catamaran({ subsets: ['latin'] });
 
 type Props = {
     category: string;
@@ -12,7 +15,7 @@ const Route = ({ category, routes, closeNavigation }: Props) => {
     const pathname = usePathname();
     return (
         <div className='route-category mb-10'>
-            <div className='route-category-title text-accent'>{category}</div>
+            <div className={`route-category-title text-accent  tracking-wider ${sections.className}`}>{category}</div>
             <div className='route-category-routes'>
                 {routes.map((route) => {
                     const isActive = pathname.startsWith("/" + route.path);

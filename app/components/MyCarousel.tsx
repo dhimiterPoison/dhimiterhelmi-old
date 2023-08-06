@@ -3,9 +3,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useDebouncedState, useShallowEffect } from '@mantine/hooks';
 import { routes } from './Navbar';
 import Image from 'next/image';
-import CoffeCardImage from '../../public/images/Coffe_Card.png';
-import AnalogAdventuresImage from '../../public/images/Analog_adventures_image.png';
-import BalonadeHomescreen from '../../public/images/balonade-home.png';
+import CoffeCardImage from '../../public/images/coffidelity-card.png';
+import NaturesSerenadeImage from '../../public/images/natures-serenade-card.jpg';
+import AnalogAdventuresImage from '../../public/images/analog-adventures-card.jpg';
+import MoneyTrackerCard from '../../public/images/money-tracker-card.png';
+import BalonadeHomescreen from '../../public/images/balonade-card.png';
 import Link from 'next/link';
 
 const settings = {
@@ -32,7 +34,7 @@ const cards = [
 		id: 2,
 		path: 'natures-serenade',
 		title: "Nature's Serenade",
-		img: CoffeCardImage,
+		img: NaturesSerenadeImage,
 	},
 	{ id: 3, path: 'coffee-card', title: 'Coffeedelity', img: CoffeCardImage },
 	{
@@ -41,7 +43,7 @@ const cards = [
 		title: 'Analog Adventures',
 		img: AnalogAdventuresImage,
 	},
-	{ id: 5, path: 'money-tracker', title: 'Money Tracker', img: CoffeCardImage },
+	{ id: 5, path: 'money-tracker', title: 'Money Tracker', img: MoneyTrackerCard },
 ];
 
 const MyCarousel = () => {
