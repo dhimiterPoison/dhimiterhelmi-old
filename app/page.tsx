@@ -10,8 +10,8 @@ const monserrat = Montserrat({ subsets: ['latin'] });
 export default function Home() {
 	return (
 		<main className={`flex flex-col my-4 justify-start ${monserrat.className}`}>
-			<div className='presentation flex flex-col mb-4'>
-				<div className='profile-image-container flex justify-center mb-2'>
+			<div className='presentation flex flex-col items-center justify-center md:flex-row mb-4'>
+				<div className='profile-image-container flex md:flex-col justify-center mb-2'>
 					<div className='profile-image w-20 h-20 bg-green-950 rounded-full'>
 						<Image
 							src={ProfilePicture}
@@ -20,11 +20,13 @@ export default function Home() {
 						/>
 					</div>
 				</div>
-				<div className='flex flex-row justify-center text-xl items-center font-semibold'>
-					Dhimiter Helmi
-				</div>
-				<div className='flex flex-row justify-center text-xl items-center'>
-					Front End & UX Developer
+				<div className='flex flex-col justify-center md:mx-8'>
+					<div className='flex flex-row justify-center md:justify-start text-xl items-center font-semibold'>
+						Dhimiter Helmi
+					</div>
+					<div className='flex flex-row justify-center md:justify-start text-xl items-center'>
+						Front End & UX Developer
+					</div>
 				</div>
 				<div className='contact-points flex justify-center items-center h-16 gap-4'>
 					{/* <div className='linkedin'>
