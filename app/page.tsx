@@ -1,4 +1,4 @@
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Archivo_Black, Work_Sans, Lora, Catamaran } from 'next/font/google';
 import MyCarousel from './components/MyCarousel';
 import LinkedinLogo from '../public/linkedin-svgrepo-com.svg';
 import ProfilePicture from '../public/profile-picture.jpeg';
@@ -6,13 +6,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const monserrat = Montserrat({ subsets: ['latin'] });
+const sections = Catamaran({ subsets: ['latin'] });
+// const sections = Lora({ subsets: ['latin'] });
 
 export default function Home() {
 	return (
 		<main className={`flex flex-col my-4 justify-start ${monserrat.className}`}>
 			<div className='presentation flex flex-col items-center justify-center md:flex-row mb-4'>
 				<div className='profile-image-container flex md:flex-col justify-center mb-2'>
-					<div className='profile-image w-20 h-20 bg-green-950 rounded-full'>
+					<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
 						<Image
 							src={ProfilePicture}
 							alt='profile picture'
@@ -38,7 +40,7 @@ export default function Home() {
 					</div>
 					<div className='mail'>
 					</div> */}
-					<div className='contact btn btn-secondary btn-sm font-extrabold'>
+					<div className='contact btn btn-secondary btn-sm font-extrabold  shadow-md'>
 						<Link
 							href='https://www.linkedin.com/in/dhimiter-helmi-561955200'
 							target='_blank'
@@ -51,7 +53,7 @@ export default function Home() {
 							/>
 						</Link>
 					</div>
-					<div className='contact btn btn-secondary btn-sm font-extrabold'>
+					<div className='contact btn btn-secondary btn-sm font-extrabold shadow-md'>
 						<Link href='mailto:dhimiter.helmi@gmail.com'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +106,10 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-row justify-center text-3xl font-bold h-full items-center max-w-full'>
+			<div className='flex flex-col justify-center text-3xl font-bold h-full items-center max-w-full'>
+                <div className="flex">
+                    <h1 className={`text-xl font-normal tracking-wider h-10 ${sections.className}`}>Projects</h1>
+                </div>
 				<MyCarousel />
 			</div>
 		</main>
