@@ -9,7 +9,7 @@ const Logo = () => {
             {/* comunque non è centrato, accidenti */}
             <div className='flex font-bold text-3xl pt-4 pb-1 justify-self-center'>
                 <Link href='/'>
-                    DhimRealm <sub className='text-sm'>(Alpha)</sub>
+                    DhimRealm <sub className='text-sm'>(WiP)</sub>
                 </Link>
             </div>
             <div className="spacer"></div>
