@@ -24,12 +24,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={monserrat.className}>
-				<div className='app relative flex overflow-hidden overscroll-none flex-col justify-start md:flex-row'>
-					<div className='navigation py-2 md:py-10 flex flex-col max-h-screen md:sticky md:top-0 md:left-0 md:bottom-0'>
+				<div className='app relative flex overscroll-none flex-col justify-start md:flex-row'>
+					<div className='navigation py-2 md:py-10 flex flex-col max-h-screen md:sticky md:top-0'>
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='content w-full flex rounded-t-2xl md:rounded-lg bg-base-300 p-4 md:p-10 justify-center my-4 md:my-6 md:mr-6 '>
+					<div className='content w-full flex rounded-t-2xl md:rounded-lg bg-base-300 p-4 md:pt-6 justify-center my-4 md:my-6 md:mr-6 '>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
