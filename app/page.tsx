@@ -12,7 +12,7 @@ const sections = Catamaran({ subsets: ['latin'] });
 export default function Home() {
 	return (
 		<main className={`flex flex-col my-4 justify-start ${monserrat.className}`}>
-			<div className='presentation flex flex-col items-center justify-center md:flex-row mb-4'>
+			<div className='presentation flex flex-col items-center justify-center md:flex-row mb-4 md:mb-8'>
 				<div className='profile-image-container flex md:flex-col justify-center mb-2'>
 					<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
 						<Image
@@ -108,7 +108,7 @@ export default function Home() {
 			</div>
 			<div className='flex flex-col justify-center text-3xl font-bold h-full items-center max-w-full'>
                 <div className="flex">
-                    <h1 className={`text-xl font-normal tracking-wider h-10 ${sections.className}`}>Projects</h1>
+                    <h1 className={`text-xl font-normal tracking-wider mt-4 h-10 ${sections.className}`}>Projects</h1>
                 </div>
 				<MyCarousel />
 			</div>
