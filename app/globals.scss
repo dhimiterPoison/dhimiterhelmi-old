@@ -21,7 +21,6 @@
 
 .carousel-slider {
 	width: min(100vw, 90%);
-	min-height: 20rem;
 }
 
 .carousel-card {
@@ -70,7 +69,8 @@
 	.example-image-container {
 		max-height: 80svh;
 	}
-	.example-image {
+	.carousel-slider {
+		min-height: 40rem;
 	}
 }
 

@@ -9,7 +9,9 @@ import AnalogAdventuresImage from '../../public/images/analog-adventures-card.jp
 import MoneyTrackerCard from '../../public/images/money-tracker-card.png';
 import BalonadeHomescreen from '../../public/images/balonade-card.png';
 import Link from 'next/link';
+import { Catamaran } from 'next/font/google';
 
+const sections = Catamaran({ subsets: ['latin'] });
 const settings = {
     centerMode: true,
     infinite: false,
@@ -62,7 +64,7 @@ const cards = [
 ];
 
 const MyCarousel = () => {
-    const [selectedCard, setSelectedCard] = useDebouncedState(1, 20);
+    const [selectedCard, setSelectedCard] = useDebouncedState(0, 20);
     const containerRef = useRef<HTMLDivElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
 
@@ -181,6 +183,7 @@ const MyCarousel = () => {
                             } 
 							ease-in-out duration-200`}
                         onMouseOver={() => setSelectedCard(card.id)}
+                        onMouseLeave={() => setSelectedCard(0)}
                     >
                         <Link
                             href={card.path}
