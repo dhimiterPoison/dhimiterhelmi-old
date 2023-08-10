@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
+import GithubLogo from '../../public/github.svg';
 import ProfilePicture from '../../public/profile-picture.jpeg';
 
 const ShortPresentation = () => {
@@ -25,15 +26,6 @@ const ShortPresentation = () => {
 					</div>
 				</div>
 				<div className='contact-points flex justify-center items-center h-16 gap-4'>
-					{/* <div className='linkedin'>
-						<Image
-							src={LinkedinLogo}
-							alt='linkedin logo'
-							className='w-6 h-6 stroke-white'
-						/>
-					</div>
-					<div className='mail'>
-					</div> */}
 					<div className='contact btn btn-secondary btn-sm font-extrabold  shadow-md'>
 						<Link
 							href='https://www.linkedin.com/in/dhimiter-helmi-561955200'
@@ -42,6 +34,19 @@ const ShortPresentation = () => {
 						>
 							<Image
 								src={LinkedinLogo}
+								alt='linkedin logo'
+								className='w-6 h-6 stroke-white'
+							/>
+						</Link>
+					</div>
+					<div className='contact btn btn-secondary btn-sm font-extrabold  shadow-md'>
+						<Link
+							href='https://github.com/dhimiterPoison'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<Image
+								src={GithubLogo}
 								alt='linkedin logo'
 								className='w-6 h-6 stroke-white'
 							/>

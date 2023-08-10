@@ -28,6 +28,7 @@ module.exports = {
                     'base-100': '#184426',
                     'base-200': '#205A32',
                     'base-300': '#337A54',
+                    'base-400': '#90D8A7',
                     info: '#22d3ee',
                     success: '#0e715e',
                     warning: '#f9a734',
