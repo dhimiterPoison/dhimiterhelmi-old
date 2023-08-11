@@ -3,6 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 import ReactIcon from '../../public/react.svg';
 import NextJSIcon from '../../public/nextjs.svg';
+import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
+import DanieliLogo from '../../public/career/danieli-logo.png';
+import ClavisterLogo from '../../public/career/clavister-logo.jpg';
 import Image from 'next/image';
 
 const icons = {
@@ -10,10 +13,11 @@ const icons = {
     nextjs: NextJSIcon,
 };
 
-const experiences = [
+export const experiences = [
     {
         id: 3,
         company: 'Alfa Sistemi S.p.A.',
+        logo: AlfaSistemiLogo,
         role: 'Mid FullStack Developer',
         duration: '08/2021 - Present',
         location: 'Buttrio, 🇮🇹',
@@ -24,6 +28,7 @@ const experiences = [
     {
         id: 2,
         company: 'Danieli Automation S.p.A.',
+        logo: DanieliLogo,
         role: 'FrontEnd Developer Intern',
         location: 'Buttrio, 🇮🇹',
         duration: '02/2021 - 04/2021',
@@ -34,6 +39,7 @@ const experiences = [
     {
         id: 1,
         company: 'Clavister AB',
+        logo: ClavisterLogo,
         role: 'Web Development Intern',
         location: 'Örnsköldsvik, 🇸🇪',
         duration: '05/2018 - 06/2018',
@@ -87,15 +93,15 @@ const CarrerCarousel = () => {
                                 {experience.location}
                             </div>
                         </div>
-                        <div className='flex h-12 items-center gap-4'>
-                                {experience.tech.map((technology, index) => (
-                                    <Image
-                                        key={index}
-                                        src={technology}
-                                        alt='React'
-                                        className='w-8 h-8 rounded-md'
-                                    />
-                                ))}
+                        <div className='flex h-12 items-center justify-center gap-4'>
+                            {experience.tech.map((technology, index) => (
+                                <Image
+                                    key={index}
+                                    src={technology}
+                                    alt='React'
+                                    className='w-8 h-8 rounded-md'
+                                />
+                            ))}
                         </div>
                         <div className='flex'>
                             <ul>
@@ -122,20 +128,23 @@ const CarrerCarousel = () => {
                             </ul>
                         </div>
                         <div className='absolute bottom-2 text-sm self-end'>
-                            <Link href={`/career/${experience.id}`} className='flex '>
-                                <span className='mr-2 cursor-pointer underline'>Read more</span>
+                            <Link
+                                href={`/career/${experience.id}`}
+                                className='flex '
+                            >
+                                <span className='mr-2 cursor-pointer underline'>
+                                    Read more
+                                </span>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
-                                    fill='none'
                                     viewBox='0 0 24 24'
-                                    strokeWidth={1.5}
-                                    stroke='currentColor'
+                                    fill='currentColor'
                                     className='w-6 h-6'
                                 >
                                     <path
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                                        fillRule='evenodd'
+                                        d='M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z'
+                                        clipRule='evenodd'
                                     />
                                 </svg>
                             </Link>
