@@ -3,6 +3,20 @@ import Link from 'next/link';
 import React from 'react';
 import ReactIcon from '../../public/react.svg';
 import NextJSIcon from '../../public/nextjs.svg';
+import GithubIcon from '../../public/github.svg';
+import VercelIcon from '../../public/vercel.svg';
+import TailwindIcon from '../../public/tailwind.webp';
+import AngularIcon from '../../public/angular.svg';
+import AspNet from '../../public/asp-net.png';
+import BootstrapIcon from '../../public/bootstrap.svg';
+import GitIcon from '../../public/git.svg';
+import GitlabIcon from '../../public/gitlab.svg';
+import AzureDevops from '../../public/azure-devops.svg';
+import JavascriptIcon from '../../public/javascript.svg';
+import TypescriptIcon from '../../public/typescript.svg';
+import SpringIcon from '../../public/spring.svg';
+import AdobeXD from '../../public/adobe-xd.svg';
+
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
 import ClavisterLogo from '../../public/career/clavister-logo.jpg';
@@ -11,6 +25,19 @@ import Image from 'next/image';
 const icons = {
     react: ReactIcon,
     nextjs: NextJSIcon,
+    spring: SpringIcon,
+    angular: AngularIcon,
+    aspnet: AspNet,
+    git: GitIcon,
+    github: GithubIcon,
+    gitlab: GitlabIcon,
+    azuredevops: AzureDevops,
+    tailwind: TailwindIcon,
+    bootstrap: BootstrapIcon,
+    javascript: JavascriptIcon,
+    typescript: TypescriptIcon,
+    vercel: VercelIcon,
+    adobeXD: AdobeXD,
 };
 
 export const experiences = [
@@ -22,7 +49,13 @@ export const experiences = [
         duration: '08/2021 - Present',
         location: 'Buttrio, 🇮🇹',
         description: '',
-        tech: [icons.react, icons.nextjs],
+        tech: [
+            icons.javascript,
+            icons.react,
+            icons.spring,
+            icons.git,
+            icons.gitlab
+        ],
         skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
     {
@@ -33,7 +66,13 @@ export const experiences = [
         location: 'Buttrio, 🇮🇹',
         duration: '02/2021 - 04/2021',
         description: '',
-        tech: [],
+        tech: [
+            icons.angular,
+            icons.typescript,
+            icons.adobeXD,
+            icons.git,
+            icons.azuredevops,
+        ],
         skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
     {
@@ -44,7 +83,7 @@ export const experiences = [
         location: 'Örnsköldsvik, 🇸🇪',
         duration: '05/2018 - 06/2018',
         description: '',
-        tech: [],
+        tech: [AspNet, GitIcon],
         skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
 ];
@@ -72,13 +111,8 @@ const CarrerCarousel = () => {
                             ) : null}
                         </div>
                         <span className='text-xl'>{experience.company}</span>
-                        <span className='text-lg'>{experience.role}</span>
+                        <span className={`text-lg ${sections.className}`}>{experience.role}</span>
                         <div className='flex justify-between h-12 items-center'>
-                            <div className='flex flex-col'>
-                                <span className='text-sm font-normal'>
-                                    {experience.duration}
-                                </span>
-                            </div>
                             <div className='flex text-sm gap-1 items-center'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
@@ -99,10 +133,15 @@ const CarrerCarousel = () => {
                                         d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z'
                                     />
                                 </svg>
-                                {experience.location}
+                                <span className={`${sections.className}`}>{experience.location}</span>
+                            </div>
+                            <div className='flex flex-col'>
+                                <span className='text-sm font-normal'>
+                                    {experience.duration}
+                                </span>
                             </div>
                         </div>
-                        <div className='flex h-12 items-center justify-center gap-4 text-xs'>
+                        <div className='flex h-12 items-center justify-center gap-4 mb-2 text-xs'>
                             {experience.tech.map((technology, index) => (
                                 <Image
                                     key={index}
@@ -111,7 +150,6 @@ const CarrerCarousel = () => {
                                     className='w-8 h-8 rounded-md'
                                 />
                             ))}
-                            ..in progress
                         </div>
                         <div className='flex'>
                             <ul>
