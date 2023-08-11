@@ -34,7 +34,7 @@ export default function Home() {
                 <CarrerCarousel />
                 <div className='flex'>
                     <h1
-                        className={`text-xl font-normal tracking-wider mt-4 h-10 ${sections.className}`}
+                        className={`text-xl font-normal tracking-wider mt-8 md:mt-12 h-10 ${sections.className}`}
                     >
                         Personal Projects
                     </h1>

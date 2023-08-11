@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useDebouncedState, useShallowEffect } from '@mantine/hooks';
 import { routes } from './Navbar';
 import Image from 'next/image';
@@ -10,19 +10,10 @@ import MoneyTrackerCard from '../../public/images/money-tracker-card.png';
 import BalonadeHomescreen from '../../public/images/balonade-card.png';
 import Link from 'next/link';
 import { Catamaran } from 'next/font/google';
+import { useIntersection } from '@mantine/hooks';
+import MyCarouselCard from './MyCarouselCard';
 
 const sections = Catamaran({ subsets: ['latin'] });
-const settings = {
-    centerMode: true,
-    infinite: false,
-    centerPadding: '0',
-    slidesToShow: 3,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 400,
-    focusOnSelect: true,
-    className: 'carousel',
-};
 
 //array made from routes
 const cards = [
@@ -68,160 +59,28 @@ const MyCarousel = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            console.log('scrolling');
-            const container = containerRef.current;
-            if (!container) {
-                console.log('container not found');
-                return;
-            }
-            console.log('container found');
-
-            // Calculate the center of the container
-            // const containerCenter = container.scrollLeft + container.offsetWidth / 2;
-            const containerCenter = container.offsetWidth / 2;
-            console.log('Container center:', {
-                containerCenter,
-                containerData: container,
-                scrollLeft: container.scrollLeft,
-                offsetWidth: container.offsetWidth,
-            });
-            const line = lineRef.current;
-            if (line) {
-                line.style.left = `${containerCenter}px`;
-            }
-
-            console.log('CREATING CARD INDEXES ', container.scrollLeft);
-            // Calculate the center position of each card and its left position relative to the container center
-            const cardIndices = cards.map((_, index) => {
-                console.log('Index:', index);
-                const card = container.children[index];
-                console.log('Card:', card);
-
-                if (!card) {
-                    console.log('card not found');
-                    return;
-                }
-                const cardWidth =
-                    (20 *
-                        parseFloat(
-                            getComputedStyle(document.documentElement).fontSize
-                        )) /
-                    (3 / 2); // Calculate the width based on the aspect ratio (height / 0.8 for 80rem height)
-                const rect = card.getBoundingClientRect();
-                const cardCenter = rect.left + cardWidth / 2;
-                const distanceToCenter = Math.abs(containerCenter - cardCenter);
-                console.log('Card center:', cardCenter);
-                console.log('Distance to center:', distanceToCenter);
-                return { index, distanceToCenter };
-            });
-
-            console.log('Card indices:', cardIndices);
-            // Find the index of the centered card with the smallest distance to the container center
-            const centeredCardIndex = cardIndices.reduce(
-                (minIndex, card, currentIndex) => {
-                    console.log(
-                        'Min index:',
-                        minIndex,
-                        'Card:',
-                        card,
-                        'Current index:',
-                        currentIndex
-                    );
-                    if (
-                        card &&
-                        card.distanceToCenter <
-                            (cardIndices[minIndex]?.distanceToCenter || 0)
-                    ) {
-                        console.log('Card is smaller');
-                        return currentIndex;
-                    }
-                    console.log('Card is bigger');
-                    return minIndex;
-                },
-                0
-            );
-
-            console.log('Centered card index:', centeredCardIndex);
-
-            // Update the state with the index of the centered card
-            setSelectedCard(centeredCardIndex + 1);
-        };
-
-        const container = containerRef.current;
-        if (!container) return;
-        container.addEventListener('scroll', handleScroll);
-        handleScroll(); // Check the initial state
-
-        return () => {
-            container.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const selectCardHandler = (id: number) => {
+        setSelectedCard(id);
+    };
 
     return (
         <div
             ref={containerRef}
-            className='carousel-slider flex gap-4 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x'
+            className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10'
         >
             {cards.map((card, index) => {
                 const active = selectedCard === card.id;
                 const hasScrollMarginLeft = index === 0;
                 const hasScrollMarginRight = index === cards.length - 1;
                 return (
-                    <div
+                    <MyCarouselCard
                         key={card.id}
-                        id={`card-${index}`}
-                        className={`carousel-card relative flex flex-col flex-shrink-0 justify-self-center rounded-xl 
-							snap-always snap-center bg-base-200 shadow-xl ${active ? ' h-80' : ' h-60'} 
-							${
-                                hasScrollMarginLeft
-                                    ? 'scroll-margin-left md:ml-0'
-                                    : hasScrollMarginRight
-                                    ? 'scroll-margin-right md:mr-0'
-                                    : ''
-                            } 
-							ease-in-out duration-200`}
-                        onMouseOver={() => setSelectedCard(card.id)}
-                        onMouseLeave={() => setSelectedCard(0)}
-                    >
-                        <Link
-                            href={card.path}
-                            className={`h-full w-full ${
-                                active
-                                    ? ''
-                                    : 'pointer-events-none md:pointer-events-auto'
-                            }`}
-                        >
-                            <div
-                                className={`flex h-full w-full justify-center items-center ${
-                                    active ? '' : ''
-                                } `}
-                            >
-                                <Image
-                                    src={card.img}
-                                    alt='Picture of the author'
-                                    className={`card-image h-full w-full object-cover rounded-xl ${
-                                        active ? '' : ''
-                                    } `}
-                                />
-                                <div className='flex flex-col absolute bottom-2 px-2'>
-                                    <div
-                                        className={`card-extra flex w-fit  px-1 rounded font-normal bg-primary text-xs text-black`}
-                                    >
-                                        {card.category}
-                                    </div>
-                                    <div
-                                        className={`card-title text-base flex justify-center ${
-                                            active && 'text-rose-100'
-                                        }`}
-                                    >
-                                        {card.title}
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                        card={card}
+                        active={active}
+                        hasScrollMarginLeft={hasScrollMarginLeft}
+                        hasScrollMarginRight={hasScrollMarginRight}
+                        selectCard={selectCardHandler}
+                    />
                 );
             })}
             {/* <div ref={lineRef} className='vertical-line absolute top-0 bottom-0 w-1 bg-red-500'></div> */}
