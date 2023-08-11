@@ -12,6 +12,8 @@ const CareerDetail = ({ params }: { params: { id: number } }) => {
         (experience) => experience.id == params?.id
     );
 
+    if(!experience) return (<div className='flex h-full text-3xl items-center'>Not found</div>);
+
     console.log('experience', experience, experiences);
     return (
         <div className='flex flex-col w-full px-8'>

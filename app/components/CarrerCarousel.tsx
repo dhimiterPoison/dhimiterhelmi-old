@@ -52,7 +52,7 @@ export const experiences = [
 const sections = Catamaran({ subsets: ['latin'] });
 const CarrerCarousel = () => {
     return (
-        <div className='carousel-slider flex gap-4 items-center justify-start px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
+        <div className='carousel-slider career flex gap-4 items-center justify-start px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10 '>
             {experiences.map((experience, index) => {
                 return (
                     <div
@@ -62,6 +62,15 @@ const CarrerCarousel = () => {
                             snap-always snap-start shadow-xl p-4
                             `}
                     >
+                        <div className='flex justify-center -mt-10 mb-4'>
+                            {experience?.logo ? (
+                                <Image
+                                    src={experience?.logo}
+                                    alt='profile picture'
+                                    className='h-12 object-contain z-20'
+                                />
+                            ) : null}
+                        </div>
                         <span className='text-xl'>{experience.company}</span>
                         <span className='text-lg'>{experience.role}</span>
                         <div className='flex justify-between h-12 items-center'>
@@ -93,7 +102,7 @@ const CarrerCarousel = () => {
                                 {experience.location}
                             </div>
                         </div>
-                        <div className='flex h-12 items-center justify-center gap-4'>
+                        <div className='flex h-12 items-center justify-center gap-4 text-xs'>
                             {experience.tech.map((technology, index) => (
                                 <Image
                                     key={index}
@@ -102,6 +111,7 @@ const CarrerCarousel = () => {
                                     className='w-8 h-8 rounded-md'
                                 />
                             ))}
+                            ..in progress
                         </div>
                         <div className='flex'>
                             <ul>
