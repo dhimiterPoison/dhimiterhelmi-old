@@ -16,6 +16,7 @@ import JavascriptIcon from '../../public/javascript.svg';
 import TypescriptIcon from '../../public/typescript.svg';
 import SpringIcon from '../../public/spring.svg';
 import AdobeXD from '../../public/adobe-xd.svg';
+import GeneralDb from '../../public/general-db.svg';
 
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
@@ -38,12 +39,14 @@ const icons = {
     typescript: TypescriptIcon,
     vercel: VercelIcon,
     adobeXD: AdobeXD,
+    generalDb: GeneralDb
+  
 };
 
 export const experiences = [
     {
         id: 3,
-        company: 'Alfa Sistemi S.p.A.',
+        company: 'Alfa Sistemi',
         logo: AlfaSistemiLogo,
         role: 'Mid FullStack Developer',
         duration: '08/2021 - Present',
@@ -60,7 +63,7 @@ export const experiences = [
     },
     {
         id: 2,
-        company: 'Danieli Automation S.p.A.',
+        company: 'Danieli Automation',
         logo: DanieliLogo,
         role: 'FrontEnd Developer Intern',
         location: 'Buttrio, 🇮🇹',
@@ -83,7 +86,7 @@ export const experiences = [
         location: 'Örnsköldsvik, 🇸🇪',
         duration: '05/2018 - 06/2018',
         description: '',
-        tech: [AspNet, GitIcon],
+        tech: [icons.generalDb, icons.adobeXD, icons.aspnet, icons.git, icons.gitlab],
         skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
     },
 ];
@@ -91,7 +94,7 @@ export const experiences = [
 const sections = Catamaran({ subsets: ['latin'] });
 const CarrerCarousel = () => {
     return (
-        <div className='carousel-slider career flex gap-4 items-center justify-start px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10 '>
+        <div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
             {experiences.map((experience, index) => {
                 return (
                     <div

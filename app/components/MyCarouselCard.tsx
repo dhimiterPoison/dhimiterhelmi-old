@@ -33,7 +33,7 @@ const MyCarouselCard = ({card, active, hasScrollMarginLeft, hasScrollMarginRight
         <div
             key={card.id}
             id={`card-${card.id}`}
-            className={`carousel-card relative flex flex-col flex-shrink-0 justify-self-center rounded-xl 
+            className={`carousel-card relative flex flex-col flex-shrink-0 justify-self-center rounded-xl
 							snap-always snap-center bg-base-200 shadow-xl h-80 md:hover:scale-125 hover:z-10  ${
                                 active ? 'scale-125 md:scale-100' : ' '
                             } 

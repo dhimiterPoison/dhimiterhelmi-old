@@ -66,7 +66,7 @@ const MyCarousel = () => {
     return (
         <div
             ref={containerRef}
-            className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10'
+            className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10 md:px-4'
         >
             {cards.map((card, index) => {
                 const active = selectedCard === card.id;
