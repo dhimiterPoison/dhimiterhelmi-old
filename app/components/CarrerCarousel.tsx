@@ -77,7 +77,7 @@ export const experiences = [
     },
     {
         id: 1,
-        company: 'Clavister AB',
+        company: 'Clavister',
         logo: ClavisterLogo,
         role: 'Web Development Intern',
         location: 'Örnsköldsvik, 🇸🇪',

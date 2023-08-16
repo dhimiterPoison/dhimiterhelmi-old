@@ -7,7 +7,7 @@ import ProfilePicture from '../../public/profile-picture.jpeg';
 
 const ShortPresentation = () => {
   return (
-	<div className='presentation flex flex-col items-center justify-center md:flex-row mb-4 md:mb-8'>
+	<div className='presentation flex flex-col items-center justify-center md:flex-row mb-8'>
 				<div className='profile-image-container flex md:flex-col justify-center mb-2'>
 					<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
 						<Image
