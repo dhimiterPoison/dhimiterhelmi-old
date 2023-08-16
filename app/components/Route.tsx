@@ -2,9 +2,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { Lora, Catamaran } from 'next/font/google';
+import { Lora, Catamaran, Inter } from 'next/font/google';
 
-const sections = Catamaran({ subsets: ['latin'] });
+const sections = Inter({ subsets: ['latin'] });
 
 type Props = {
     category: string;

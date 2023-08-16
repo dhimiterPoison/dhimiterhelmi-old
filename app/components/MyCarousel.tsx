@@ -9,11 +9,11 @@ import AnalogAdventuresImage from '../../public/images/analog-adventures-card.jp
 import MoneyTrackerCard from '../../public/images/money-tracker-card.png';
 import BalonadeHomescreen from '../../public/images/balonade-card.png';
 import Link from 'next/link';
-import { Catamaran } from 'next/font/google';
+import { Catamaran, Inter } from 'next/font/google';
 import { useIntersection } from '@mantine/hooks';
 import MyCarouselCard from './MyCarouselCard';
 
-const sections = Catamaran({ subsets: ['latin'] });
+const sections = Inter({ subsets: ['latin'] });
 
 //array made from routes
 const cards = [

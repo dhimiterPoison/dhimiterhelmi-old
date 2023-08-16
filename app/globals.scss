@@ -23,7 +23,7 @@
 	width: min(100vw, 90%);
 }
 
-.carousel-slider.career{
+.carousel-slider.career {
 	min-height: 28rem;
 }
 
@@ -76,6 +76,25 @@
 	// .carousel-slider {
 	// 	min-height: 40rem;
 	// }
+	.tv-animation {
+		position: relative;
+	
+		.upper,
+		.lower {
+			left: 24rem;
+		}
+
+		.left-side{
+			width: 24rem;
+			height: 100svh;
+			
+			&.slide-exit {
+				animation-name: slideOutLeft;
+			}
+		}
+
+	}
+
 }
 
 *::-webkit-scrollbar {
@@ -93,13 +112,63 @@
 	border: 3px solid #205b32; /* creates padding around scroll thumb */
 }
 
-
 .horizontal-line {
 	position: absolute;
 	top: 100svh;
 	left: 0;
 	width: 100vw;
 	height: 1px;
+}
+
+.tv-animation {
+	position: relative;
+
+	.upper,
+	.lower {
+		height: 50svh;
+	}
+
+	.upper,
+	.lower,
+	.left-side {
+		animation-duration: 700ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	.upper.slide-exit {
+		animation-name: slideOutUp;
+	}
+	
+	.lower.slide-exit {
+		animation-name: slideOutDown;
+	}
+}
+
+@keyframes slideOutUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100svh);
+    }
+}
+@keyframes slideOutDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100svh);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
 }
 
 // .carousel {
