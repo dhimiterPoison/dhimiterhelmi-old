@@ -1,4 +1,4 @@
-import { Catamaran } from 'next/font/google';
+import { Catamaran, Inter } from 'next/font/google';
 import Link from 'next/link';
 import React from 'react';
 import ReactIcon from '../../public/react.svg';
@@ -91,10 +91,10 @@ export const experiences = [
     },
 ];
 
-const sections = Catamaran({ subsets: ['latin'] });
+const sections = Inter({ subsets: ['latin'] });
 const CarrerCarousel = () => {
     return (
-        <div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
+        <div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start 2xl:justify-center px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
             {experiences.map((experience, index) => {
                 return (
                     <div
@@ -113,7 +113,7 @@ const CarrerCarousel = () => {
                                 />
                             ) : null}
                         </div>
-                        <span className='text-xl'>{experience.company}</span>
+                        <div className='text-xl flex mb-2 text-white'>{experience.company}</div>
                         <span className={`text-lg ${sections.className}`}>{experience.role}</span>
                         <div className='flex justify-between h-12 items-center'>
                             <div className='flex text-sm gap-1 items-center'>
@@ -150,7 +150,7 @@ const CarrerCarousel = () => {
                                     key={index}
                                     src={technology}
                                     alt='React'
-                                    className='w-8 h-8 rounded-md'
+                                    className='w-7 h-full object-contain rounded-md'
                                 />
                             ))}
                         </div>

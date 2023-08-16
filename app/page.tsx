@@ -4,6 +4,7 @@ import {
     Work_Sans,
     Lora,
     Catamaran,
+    Inter
 } from 'next/font/google';
 import MyCarousel from './components/MyCarousel';
 import Image from 'next/image';
@@ -11,15 +12,18 @@ import Link from 'next/link';
 import MainHero from './components/MainHero';
 import ShortPresentation from './components/ShortPresentation';
 import CarrerCarousel from './components/CarrerCarousel';
+import TvAnimation from './components/TvAnimation';
 
 const monserrat = Montserrat({ subsets: ['latin'] });
-const sections = Catamaran({ subsets: ['latin'] });
+const sections = Inter({ subsets: ['latin'] });
 // const sections = Lora({ subsets: ['latin'] });
 
 export default function Home() {
     return (
         <main
-            className={`flex flex-col my-4 justify-start ${monserrat.className}`}
+            //adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
+            //be restricted by the padding, id like it to continue to the end of the screen
+            className={`flex flex-col my-4 justify-start ${monserrat.className} scroll-smooth`}
         >
             <ShortPresentation />
             <MainHero />
@@ -41,6 +45,7 @@ export default function Home() {
                 </div>
                 <MyCarousel />
             </div>
+            <TvAnimation />
         </main>
     );
 }
