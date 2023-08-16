@@ -11,7 +11,7 @@ const MainHero = () => {
 				<span className='text-primary'>U</span>ser e
 				<span className='text-secondary'>X</span>perience
 			</div>
-			<div className='flex flex-row justify-center text-xl h-20 items-center'>
+			<div className='flex flex-row justify-center text-xl h-12 pt-2 md:h-16 md:items-center md:pt-0 md:pb-4'>
 				digital & analog
 			</div>
 			<div className='flex flex-row justify-center text-xl h-12 items-center'>
