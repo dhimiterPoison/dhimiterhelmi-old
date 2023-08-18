@@ -6,17 +6,21 @@ const TvAnimation = () => {
 		const upperDiv = document.querySelector('.upper');
 		const lowerDiv = document.querySelector('.lower');
 		const sideDiv = document.querySelector('.left-side');
-		
+
 		if (!upperDiv || !lowerDiv) {
 			console.log('No divs found');
 			return;
 		} else {
 			console.log('divs found');
 		}
-
-		upperDiv.classList.add('slide-exit');
-		lowerDiv.classList.add('slide-exit');
-		if(sideDiv) sideDiv.classList.add('slide-exit');
+		if (!upperDiv.classList.contains('slide-exit'))
+			upperDiv.classList.add('slide-exit');
+		if (!lowerDiv.classList.contains('slide-exit'))
+			lowerDiv.classList.add('slide-exit');
+		if (sideDiv) {
+			if (!sideDiv.classList.contains('slide-exit'))
+				sideDiv.classList.add('slide-exit');
+		}
 	}, []);
 
 	return (
