@@ -34,8 +34,8 @@ const MyCarouselCard = ({card, active, hasScrollMarginLeft, hasScrollMarginRight
             key={card.id}
             id={`card-${card.id}`}
             className={`carousel-card relative flex flex-col flex-shrink-0 justify-self-center rounded-xl 
-							snap-always snap-center bg-base-200 shadow-xl h-80 md:hover:scale-125 hover:z-10  ${
-                                active ? 'scale-125 md:scale-100' : ' '
+							snap-always snap-center bg-base-200 shadow-xl h-80 md:hover:scale-110 hover:z-10  ${
+                                active ? 'active scale-125 md:scale-100' : ' '
                             } 
 							${
                                 hasScrollMarginLeft
@@ -64,7 +64,7 @@ const MyCarouselCard = ({card, active, hasScrollMarginLeft, hasScrollMarginRight
                         src={card.img}
                         alt='Picture of the author'
                         className={`card-image h-full w-full object-cover rounded-xl ${
-                            active ? '' : ''
+                            active ? 'active' : ''
                         } `}
                     />
                     <div className='flex flex-col absolute bottom-2 px-2'>
