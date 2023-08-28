@@ -9,11 +9,11 @@ import AnalogAdventuresImage from '../../public/images/analog-adventures-card.jp
 import MoneyTrackerCard from '../../public/images/money-tracker-card.png';
 import BalonadeHomescreen from '../../public/images/balonade-card.png';
 import Link from 'next/link';
-import { Catamaran } from 'next/font/google';
+import { Catamaran, Inter } from 'next/font/google';
 import { useIntersection } from '@mantine/hooks';
 import MyCarouselCard from './MyCarouselCard';
 
-const sections = Catamaran({ subsets: ['latin'] });
+const sections = Inter({ subsets: ['latin'] });
 
 //array made from routes
 const cards = [
@@ -66,7 +66,7 @@ const MyCarousel = () => {
     return (
         <div
             ref={containerRef}
-            className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10'
+            className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10 md:px-4'
         >
             {cards.map((card, index) => {
                 const active = selectedCard === card.id;
