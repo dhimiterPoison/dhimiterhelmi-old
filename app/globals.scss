@@ -3,50 +3,49 @@
 @tailwind utilities;
 
 .app {
-    min-height: 100svh;
-    // max-height: 100svh;
+	min-height: 100svh;
+	// max-height: 100svh;
 }
 
 .logo {
-    max-height: 10svh;
+	max-height: 10svh;
 }
 
 .content {
-    min-height: 90svh;
+	min-height: 90svh;
 }
 
 .spacer {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 .carousel-slider {
-    width: min(100vw, 90%);
+	width: min(100vw, 90%);
 }
 
 .carousel-slider.career {
-    min-height: 30rem;
+	min-height: 30rem;
 }
 
 .carousel-card {
-    aspect-ratio: 2/3;
+	aspect-ratio: 2/3;
 }
 
 .scroll-margin-left {
-    // scroll-margin-left: calc(100vw/2);
-    //scroll-margin-left: 50vw;
-    // margin-left: 50vw;
-    margin-left: calc(50vw - ((20rem * (2 / 3)) / 2));
+	// scroll-margin-left: calc(100vw/2);
+	//scroll-margin-left: 50vw;
+	// margin-left: 50vw;
+	margin-left: calc(50vw - ((20rem * (2 / 3)) / 2));
 }
 
 .scroll-margin-right {
-    //scroll-margin-right: 50vw;
-    margin-right: calc(50vw - ((20rem * (2 / 3)) / 2));
+	//scroll-margin-right: 50vw;
+	margin-right: calc(50vw - ((20rem * (2 / 3)) / 2));
 }
-
 
 .card-image {
 	mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    mask-mode: alpha;
+	mask-mode: alpha;
 
 	&.active {
 		mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
@@ -55,45 +54,50 @@
 }
 
 .example-image-container {
-    max-height: 40svh;
+	max-height: 40svh;
 }
 .example-image {
-    aspect-ratio: 3/5;
-    height: 100%;
-    object-fit: contain;
+	aspect-ratio: 3/5;
+	height: 100%;
+	object-fit: contain;
 }
 
 @media screen and (min-width: 768px) {
-    .example-image-container {
-        max-height: 80svh;
-    }
-    .card-image {
-        &:hover {
-            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-            mask-mode: alpha;
-        }
-    }
+	.example-image-container {
+		max-height: 80svh;
+	}
+	.card-image {
+		&:hover {
+			mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+			mask-mode: alpha;
+		}
+	}
+}
+
+.image-opacity-gradient-bottom {
+	mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+	mask-mode: alpha;
 }
 
 *::-webkit-scrollbar {
-    width: 12px; /* width of the entire scrollbar */
+	width: 12px; /* width of the entire scrollbar */
 }
 
 *::-webkit-scrollbar-track {
-    background: #205b32; /* color of the tracking area */
-    border-radius: 20px;
+	background: #205b32; /* color of the tracking area */
+	border-radius: 20px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #184426; /* color of the scroll thumb */
-    border-radius: 20px; /* roundness of the scroll thumb */
-    border: 3px solid #205b32; /* creates padding around scroll thumb */
+	background-color: #184426; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid #205b32; /* creates padding around scroll thumb */
 }
 
 .horizontal-line {
-    position: absolute;
-    top: 100svh;
-    left: 0;
-    width: 100vw;
-    height: 1px;
+	position: absolute;
+	top: 100svh;
+	left: 0;
+	width: 100vw;
+	height: 1px;
 }
