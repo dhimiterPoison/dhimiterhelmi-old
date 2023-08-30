@@ -3,40 +3,22 @@ import React from 'react';
 import balonadeHomeScreen from '../../public/images/balonade-homescreen.png';
 
 const Balonade = () => {
-    return (
-        <div className='flex flex-col md:flex-row'>
-            <div className='flex flex-col'>
-                {/* <div className='mockup-phone'>
-                    <div className='camera'></div>
-                    <div className='display'>
-                        <div className='artboard artboard-demo phone-1'>
-                            image placeholder <br />
-                            on hover show button to open website
-                        </div>
-                    </div>
-                </div> */}
-                <div className='example-image-container'>
-                    <Image
-                        src={balonadeHomeScreen}
-                        alt='profile/'
-                        objectFit='cover'
-                        className='example-image'
-                    />
-                </div>
+	return (
+		<div className='flex flex-col w-full'>
+			<div className='relative flex flex-col h-52 xl:h-64 w-full'>
+				<Image
+					src={balonadeHomeScreen}
+					alt='cover image for balonade project'
+					className='h-full w-full object-cover image-opacity-gradient-bottom'
+				/>
+				<div className='absolute bottom-0 flex w-full justify-center font-semibold text-xl'>Balonade Web App</div>
+			</div>
+            <div className="prose md:prose-md lg:prose-lg py-4">
+                {/* <h3>Balonade Web App</h3> */}
+                <p>Test</p>
             </div>
-            <div className='flex flex-col h-full items-center justify-start px-10 '>
-                <div className='flex text-2xl font-semibold'>
-                    Balonade Web App
-                </div>
-                <div className='h-10'></div>
-                <div className='flex justify-center text-xl'>
-                    Made for the Buttrio summer sport tournament. <br />
-                    Allows you to enroll your team and see the tournament
-                    schedule.
-                </div>
-            </div>
-        </div>
-    );
+		</div>
+	);
 };
 
 export default Balonade;
