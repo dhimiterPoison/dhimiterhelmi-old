@@ -67,7 +67,7 @@ export const experiences = [
         ],
         skills: [
             'Working with important clients',
-            'Creating and mantaining responsive SPAs', 
+            'Creating and mantaining responsive React SPAs', 
             'Project scope definition, costs estimation, and constant contact with customers', 
         ],
     },
@@ -143,6 +143,7 @@ const CarrerCarousel = () => {
                                 <Image
                                     src={experience.flag}
                                     alt={`${experience.shortLocation} flag`}
+                                    title={`${experience.shortLocation} flag`}
                                     className='w-4 h-4'
                                 />
                                 <span className={`font-normal ${sections.className}`}>{experience.shortLocation}</span>

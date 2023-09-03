@@ -8,24 +8,26 @@ import ProfilePicture from '../../public/profile-picture.jpeg';
 const ShortPresentation = () => {
 	return (
 		<div className='presentation flex flex-col items-center justify-center md:flex-row mb-8 md:mb-12'>
-			<div className='profile-image-container flex md:flex-col justify-center mb-2'>
-				<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
-					<Image
-						src={ProfilePicture}
-						alt='profile picture'
-						className='w-full rounded-full'
-					/>
+			<div className='flex flex-col sm:flex-row'>
+				<div className='profile-image-container flex md:flex-col justify-center mb-2 shrink-0'>
+					<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
+						<Image
+							src={ProfilePicture}
+							alt='profile picture'
+							className='w-full rounded-full'
+						/>
+					</div>
 				</div>
-			</div>
-			<div className='flex flex-col justify-center md:mx-8'>
-				<div className='flex flex-row justify-center md:justify-start text-xl items-center font-semibold'>
-					Dhimiter Helmi
-				</div>
-				<div className='flex flex-row justify-center md:justify-start text-xl items-center'>
-					Front End & UX Developer
-				</div>
-				<div className='flex flex-row justify-center md:justify-start text-lg items-center'>
-					with passion for <i className='mx-2'>analog </i> activities
+				<div className='flex flex-col justify-center pl-4 md:mx-8 md:pl-0'>
+					<div className='flex flex-row justify-center sm:justify-start text-xl items-center font-semibold'>
+						Dhimiter Helmi
+					</div>
+					<div className='flex flex-row justify-center sm:justify-start text-xl items-center'>
+						Front End & UX Developer
+					</div>
+					<div className='flex flex-row justify-center sm:justify-start text-lg items-center'>
+						with passion for <i className='mx-2'>analog </i> activities
+					</div>
 				</div>
 			</div>
 			<div className='contact-points flex justify-center items-center h-16 gap-4'>
