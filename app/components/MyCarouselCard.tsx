@@ -2,6 +2,7 @@ import { useIntersection } from '@mantine/hooks';
 import Link from 'next/link';
 import React, {useEffect} from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { useMediaQuery } from '@mantine/hooks';
 
 type Props = {
     card: {
@@ -19,12 +20,15 @@ type Props = {
 
 const MyCarouselCard = ({card, active, hasScrollMarginLeft, hasScrollMarginRight, selectCard} : Props) => {
 
+    const desktop = useMediaQuery('(min-width: 768px)');
+
     const { ref, entry } = useIntersection({
         threshold: 1,
     });
 
 
     useEffect(() => {
+        if(desktop) return;
         selectCard(card.id);
     }, [entry?.isIntersecting])
     
@@ -69,7 +73,7 @@ const MyCarouselCard = ({card, active, hasScrollMarginLeft, hasScrollMarginRight
                     />
                     <div className='flex flex-col absolute bottom-2 px-2'>
                         <div
-                            className={`card-extra flex w-fit  px-1 rounded font-normal bg-primary text-xs text-black`}
+                            className={`card-extra flex w-fit  px-1 rounded font-normal bg-primary text-xs text-black mb-1`}
                         >
                             {card.category}
                         </div>
