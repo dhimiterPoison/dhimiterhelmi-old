@@ -18,10 +18,14 @@ import SpringIcon from '../../public/spring.svg';
 import AdobeXD from '../../public/adobe-xd.svg';
 import GeneralDb from '../../public/general-db.svg';
 
+import SwedenFlag from '../../public/flag-sweden.svg';
+import ItalyFlag from '../../public/flag-italy.svg';
+
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
 import ClavisterLogo from '../../public/career/clavister-logo.jpg';
 import Image from 'next/image';
+
 
 const icons = {
     react: ReactIcon,
@@ -50,7 +54,9 @@ export const experiences = [
         logo: AlfaSistemiLogo,
         role: 'Mid FullStack Developer',
         duration: '08/2021 - Present',
-        location: 'Buttrio, 🇮🇹',
+        location: 'Buttrio, Italy',
+        shortLocation: 'Italy',
+        flag: ItalyFlag,
         description: '',
         tech: [
             icons.javascript,
@@ -59,14 +65,20 @@ export const experiences = [
             icons.git,
             icons.gitlab
         ],
-        skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+        skills: [
+            'Working with important clients',
+            'Creating and mantaining responsive SPAs', 
+            'Project scope definition, costs estimation, and constant contact with customers', 
+        ],
     },
     {
         id: 2,
         company: 'Danieli Automation',
         logo: DanieliLogo,
         role: 'FrontEnd Developer Intern',
-        location: 'Buttrio, 🇮🇹',
+        location: 'Buttrio, Italy',
+        shortLocation: 'Italy',
+        flag: ItalyFlag,
         duration: '02/2021 - 04/2021',
         description: '',
         tech: [
@@ -76,23 +88,34 @@ export const experiences = [
             icons.git,
             icons.azuredevops,
         ],
-        skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+        skills: [
+            'Studied and designed UI/UX',
+            'Used Angular and Typescript to integrate new features', 
+            'Azure DevOps for CI/CD', 
+        ],
     },
     {
         id: 1,
         company: 'Clavister',
         logo: ClavisterLogo,
         role: 'Web Development Intern',
-        location: 'Örnsköldsvik, 🇸🇪',
+        location: 'Örnsköldsvik, Sweden',
+        shortLocation: 'Sweden',
+        flag: SwedenFlag,
         duration: '05/2018 - 06/2018',
         description: '',
         tech: [icons.generalDb, icons.adobeXD, icons.aspnet, icons.git, icons.gitlab],
-        skills: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
+        skills: [
+            'International work experience',
+            'Learned how to work and comunicate in a team', 
+            'Eye-opening experience about the world of work', 
+        ],
     },
 ];
 
 const sections = Inter({ subsets: ['latin'] });
 const CarrerCarousel = () => {
+
     return (
         <div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start 2xl:justify-center px-4 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
             {experiences.map((experience, index) => {
@@ -114,29 +137,15 @@ const CarrerCarousel = () => {
                             ) : null}
                         </div>
                         <div className='text-xl flex mb-2 text-white'>{experience.company}</div>
-                        <span className={`text-lg ${sections.className}`}>{experience.role}</span>
+                        <span className={`text-base ${sections.className} font-normal`}>{experience.role}</span>
                         <div className='flex justify-between h-12 items-center'>
-                            <div className='flex text-sm gap-1 items-center'>
-                                <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    fill='none'
-                                    viewBox='0 0 24 24'
-                                    strokeWidth={1.5}
-                                    stroke='currentColor'
+                            <div className='flex text-sm gap-2 items-center'>
+                                <Image
+                                    src={experience.flag}
+                                    alt={`${experience.shortLocation} flag`}
                                     className='w-4 h-4'
-                                >
-                                    <path
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        d='M15 10.5a3 3 0 11-6 0 3 3 0 016 0z'
-                                    />
-                                    <path
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z'
-                                    />
-                                </svg>
-                                <span className={`${sections.className}`}>{experience.location}</span>
+                                />
+                                <span className={`font-normal ${sections.className}`}>{experience.shortLocation}</span>
                             </div>
                             <div className='flex flex-col'>
                                 <span className='text-sm font-normal'>
@@ -159,13 +168,13 @@ const CarrerCarousel = () => {
                                 {experience.skills.map((skill, index) => (
                                     <li
                                         key={index}
-                                        className='text-sm text-white px-2 py-1 flex'
+                                        className='text-sm text-white  py-1 flex'
                                     >
                                         <svg
                                             xmlns='http://www.w3.org/2000/svg'
                                             viewBox='0 0 20 20'
                                             fill='currentColor'
-                                            className='w-4 h-4'
+                                            className='w-4 h-4 shrink-0'
                                         >
                                             <path
                                                 fillRule='evenodd'
@@ -173,12 +182,12 @@ const CarrerCarousel = () => {
                                                 clipRule='evenodd'
                                             />
                                         </svg>
-                                        <span className='ml-2'>{skill}</span>
+                                        <span className='ml-2 font-normal'>{skill}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className='absolute bottom-2 text-sm self-end'>
+                        <div className='absolute bottom-2 text-sm self-end text-white'>
                             <Link
                                 href={`/career/${experience.id}`}
                                 className='flex '
