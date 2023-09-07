@@ -10,7 +10,7 @@ const Menu = () => {
 
 	return (
 		<div
-			className='md:hidden flex justify-self-end w-8 justify-start items-center m-2'
+			className='lg:hidden flex justify-self-end w-8 justify-start items-center m-2'
 			onClick={() => setOpenNavigation((prevVal) => !prevVal)}
 		>
 			{openNavigation ? (

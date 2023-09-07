@@ -12,10 +12,10 @@ const Logo = () => {
 	});
 
     return (
-        <div className='logo flex w-full justify-center items-center bg-base-100'>
-            <div className="spacer ml-8 md:ml-0"></div>
+        <div className='logo flex justify-center lg:justify-start items-center bg-base-100 w-auto'>
+            <div className="spacer ml-8 lg:ml-12"></div>
             {/* comunque non è centrato, accidenti */}
-            <div className='flex font-bold text-3xl pt-4 pb-1 justify-self-center'>
+            <div className='flex font-bold text-3xl pt-4 pb-1 lg:py-0 justify-self-center'>
                 <Link href='/' onClick={() => setOpenNavigation(false)}>
                     DhimRealm <sub className='text-sm'>(WiP)</sub>
                 </Link>

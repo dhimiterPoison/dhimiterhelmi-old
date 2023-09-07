@@ -24,12 +24,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={monserrat.className}>
-				<div className='app relative flex overscroll-none flex-col justify-start md:flex-row'>
-					<div className='navigation py-2 md:py-10 flex flex-col max-h-screen md:sticky md:top-0'>
+				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
+					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between'>
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='content w-full flex rounded-t-2xl md:rounded-lg bg-base-300 p-4 md:pt-6 justify-center my-4 md:my-6 md:mr-6 '>
+					<div className='content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center'>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -37,7 +37,7 @@ export default function RootLayout({
 							viewBox='0 0 24 24'
 							strokeWidth={1.5}
 							stroke='currentColor'
-							className='w-6 h-6 stroke-white absolute bottom-8 md:bottom-8 animate-bounce'
+							className='w-6 h-6 stroke-white absolute bottom-8 lg:bottom-8 animate-bounce'
 						>
 							<path
 								strokeLinecap='round'
