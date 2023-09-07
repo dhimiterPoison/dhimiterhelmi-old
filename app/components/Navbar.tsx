@@ -5,9 +5,9 @@ import Route from './Route';
 import { useSessionStorage } from '@mantine/hooks';
 
 export const routes = [
-	{ id: 1, path: 'projects', title: 'Projects' },
-	{ id: 1, path: 'career', title: 'Career' },
-	{ id: 1, path: 'blog', title: 'Blog' },
+	{ id: 1, path: '/#personal-projects', title: 'Projects' },
+	{ id: 1, path: '/#career', title: 'Career' },
+	{ id: 1, path: '/blog', title: 'Blog' },
 	
 	// {
 	//     id: 1,
@@ -43,9 +43,9 @@ const Navbar = () => {
 		<div
 			className={`${
 				openNavigation ? '' : 'hidden lg:flex'
-			} flex flex-col lg:flex-row w-full lg:w-auto px-10 py-4 bg-base-100`}
+			} flex flex-col lg:flex-row w-full lg:w-auto px-10 py-2 bg-base-100`}
 		>
-			<div className='flex flex-col lg:flex-row justify-center lg:grow lg:gap-12 lg:justify-end mx-12'>
+			<div className='flex flex-col lg:flex-row justify-center lg:grow lg:gap-12 lg:justify-end mx-12 mb-8 lg:mb-0'>
 				{routes.map((route) => (
 					<Route
 						key={route.id}

@@ -28,7 +28,7 @@ export default function Home() {
             <ShortPresentation />
             <MainHero />
             <div className='flex flex-col justify-center text-3xl font-bold h-full items-center w-full'>
-                <div className='flex'>
+                <div id='career' className='flex'>
                     <h1
                         className={`text-xl font-normal tracking-wider mt-4 h-10 ${sections.className}`}
                     >
@@ -36,7 +36,7 @@ export default function Home() {
                     </h1>
                 </div>
                 <CarrerCarousel />
-                <div className='flex'>
+                <div id='personal-projects' className='flex'>
                     <h1
                         className={`text-xl font-normal tracking-wider mt-8 h-10 ${sections.className}`}
                     >

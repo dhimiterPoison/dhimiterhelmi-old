@@ -25,11 +25,11 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={monserrat.className}>
 				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
-					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between'>
+					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between bg-base-100'>
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center'>
+					<div className='content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center scroll-smooth'>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'

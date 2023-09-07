@@ -4,7 +4,7 @@ import balonadeHomeScreen from '../../public/images/balonade-homescreen.png';
 
 const Balonade = () => {
 	return (
-		<div className='flex flex-col w-full'>
+		<div className='flex flex-col w-full px-8'>
 			<div className='relative flex flex-col h-52 xl:h-64 w-full'>
 				<Image
 					src={balonadeHomeScreen}
