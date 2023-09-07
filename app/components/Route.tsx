@@ -30,7 +30,7 @@ const Route = ({ route, closeNavigation }: Props) => {
 								className={`flex text-xl py-2 items-center ${
 									isActive && 'text-primary font-semibold'
 								}`}
-								href={`/${route.path}`}
+								href={`${route.path}`}
 								onClick={closeNavigation}
 							>
 								{route.title}
