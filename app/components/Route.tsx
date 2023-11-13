@@ -29,7 +29,8 @@ const Route = ({ route, closeNavigation }: Props) => {
 							<Link
 								className={`flex text-xl py-2 items-center ${
 									isActive && 'text-primary font-semibold'
-								}`}
+								} hover:underline  hover:scale-110`}
+
 								href={`${route.path}`}
 								onClick={closeNavigation}
 							>

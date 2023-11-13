@@ -6,8 +6,8 @@ import { useSessionStorage } from '@mantine/hooks';
 
 export const routes = [
 	{ id: 1, path: '/#personal-projects', title: 'Projects' },
-	{ id: 1, path: '/#career', title: 'Career' },
-	{ id: 1, path: '/blog', title: 'Blog' },
+	{ id: 2, path: '/#career', title: 'Career' },
+	{ id: 3, path: '/blog', title: 'Blog' },
 	
 	// {
 	//     id: 1,
@@ -49,14 +49,12 @@ const Navbar = () => {
 				{routes.map((route) => (
 					<Route
 						key={route.id}
-						// category={route.category}
-						// routes={route.routes}
                         route={route}
 						closeNavigation={closeNavigationHandler}
 					/>
 				))}
 			</div>
-			<div className='contact btn btn-secondary font-extrabold w-full lg:w-auto shadow-md'>
+			<div className='contact btn btn-secondary font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
 				<Link href='mailto:dhimiter.helmi@gmail.com'>Get in touch</Link>
 			</div>
 		</div>
