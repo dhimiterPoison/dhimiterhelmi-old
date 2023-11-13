@@ -41,7 +41,7 @@ const MainHero = () => {
 				</div>
 				<div className='flex justify-center items-center m-1 font-medium py-1 px-2 rounded-full text-gray-700 bg-lime-200 '>
 					<div className='font-normal leading-none max-w-full flex-initial'>
-						Feel
+						Create
 					</div>
 				</div>
 			</div>
