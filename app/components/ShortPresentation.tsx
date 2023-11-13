@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
 import GithubLogo from '../../public/github.svg';
-import ProfilePicture from '../../public/profile-picture.jpeg';
+import ProfilePicture from '../../public/profile-picture-test.jpg';
 
 const ShortPresentation = () => {
 	return (

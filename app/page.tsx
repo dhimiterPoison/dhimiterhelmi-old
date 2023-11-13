@@ -23,7 +23,7 @@ export default function Home() {
         <main
             //adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
             //be restricted by the padding, id like it to continue to the end of the screen
-            className={`flex flex-col w-full my-4 justify-start ${monserrat.className} scroll-smooth`}
+            className={`flex flex-col w-full my-4 justify-start ${monserrat.className} scroll-smooth transition ease-linear`}
         >
             <ShortPresentation />
             <MainHero />
