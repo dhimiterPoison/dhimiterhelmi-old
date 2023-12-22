@@ -1,11 +1,11 @@
 import './globals.scss';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Montserrat } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import Logo from './components/Logo';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: {
+}: Readonly<{
 	children: React.ReactNode;
-}) {
+}>) {
 	return (
 		<html lang='en'>
 			<body className={monserrat.className}>
@@ -50,6 +50,7 @@ export default function RootLayout({
 			    {/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
