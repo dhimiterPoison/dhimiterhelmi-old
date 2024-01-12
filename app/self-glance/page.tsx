@@ -1,7 +1,13 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react';
 
+type Props = {
+	params: { slug: string };
+	searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export async function generateMetadata(
+	{ params, searchParams }: Props,
 	parent: ResolvingMetadata
 ): Promise<Metadata> {
 	// read route params
