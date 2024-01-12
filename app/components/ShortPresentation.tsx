@@ -36,6 +36,7 @@ const ShortPresentation = () => {
 						href='https://www.linkedin.com/in/dhimiter-helmi-561955200'
 						target='_blank'
 						rel='noopener noreferrer'
+						aria-label='Linkedin profile'
 					>
 						<Image
 							src={LinkedinLogo}
@@ -49,6 +50,7 @@ const ShortPresentation = () => {
 						href='https://github.com/dhimiterPoison'
 						target='_blank'
 						rel='noopener noreferrer'
+						aria-label='Github profile'
 					>
 						<Image
 							src={GithubLogo}
@@ -58,7 +60,7 @@ const ShortPresentation = () => {
 					</Link>
 				</div>
 				<div className='contact btn btn-secondary btn-sm font-extrabold shadow-md'>
-					<Link href='mailto:dhimiter.helmi@gmail.com'>
+					<Link href='mailto:dhimiter.helmi@gmail.com' aria-label='Email'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'

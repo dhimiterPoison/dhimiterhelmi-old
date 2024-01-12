@@ -14,7 +14,7 @@ type Props = {
 };
 const Route = ({ route, closeNavigation }: Props) => {
 	const pathname = usePathname();
-    const isActive = pathname.startsWith('/' + route.path);
+    const isActive = pathname?.startsWith('/' + route.path + '/');
 	return (
 		// <div className='route-category mb-10'>
 		// 	<div

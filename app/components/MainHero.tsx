@@ -3,13 +3,13 @@ import React from 'react';
 const MainHero = () => {
 	return (
 		<div className='flex flex-col mb-8'>
-			<div className='flex flex-row justify-center text-3xl md:text-5xl font-bold'>
+			<h1 className='flex flex-row justify-center text-3xl md:text-5xl font-bold'>
 				unleash Powerful
-			</div>
+			</h1>
 			<div className='flex flex-row justify-center text-3xl md:text-5xl font-bold'>
 				{/* //set fist letter to secondary color */}
-				<span className='text-primary'>U</span>ser e
-				<span className='text-secondary'>X</span>perience
+				<h1 className='text-primary'>U</h1>ser e
+				<h1 className='text-secondary'>X</h1>perience
 			</div>
 			<div className='flex flex-col my-4 justify-center text-xl items-center'>
 				<p>Whatever you do,</p>

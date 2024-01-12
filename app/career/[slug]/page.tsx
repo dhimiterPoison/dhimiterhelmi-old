@@ -2,23 +2,50 @@ import React from 'react';
 import { experiences } from '@/app/components/CarrerCarousel';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
-	title: string;
-	description: string;
+	params: { slug: string };
+	searchParams: { [key: string]: string | string[] | undefined };
 };
 
 const inter = Inter({ subsets: ['latin'] });
 
-const CareerDetail = ({ params }: { params: { id: number } }) => {
+export async function generateMetadata(
+	{ params, searchParams }: Props,
+	parent: ResolvingMetadata
+): Promise<Metadata> {
+	// read route params
+	const slug = params.slug;
 	const experience = experiences.find(
-		(experience) => experience.id == params?.id
+		(experience) => experience.slug == params?.slug
+	);
+
+	// optionally access and extend (rather than replace) parent metadata
+	// const previousImages = (await parent).openGraph?.images || [];
+	const previousDescription = (await parent).description || '';
+
+	return {
+		title: `Dhimiter Helmi - ${experience?.company} - ${experience?.role}`,
+		description: `Key points of my experience in ${experience?.company}. ${previousDescription} `, //experience?.shortDescription,
+		// openGraph: {
+			// images: ['/some-specific-page-image.jpg', ...previousImages],
+			// description: `${previousDescription} Key points of my experience in ${experience?.company}`, //experience?.shortDescription,
+		// },
+	};
+}
+
+const CareerDetail = ({ params }: { params: { slug: string } }) => {
+	console.log('params', params);
+	const experience = experiences.find(
+		(experience) => experience.slug == params?.slug
 	);
 
 	if (!experience)
-		return <div className='flex h-full text-3xl items-center'>Not found</div>;
+		//TODO: not working as expected
+		return notFound();
 
-	console.log('experience', experience, experiences);
 	return (
 		<div className='flex flex-col w-full px-8'>
 			<div className='flex justify-center font-bold h-16 mb-8 items-center'>

@@ -55,7 +55,7 @@ const Navbar = () => {
 				))}
 			</div>
 			<div className='contact btn btn-secondary font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
-				<Link href='mailto:dhimiter.helmi@gmail.com'>Get in touch</Link>
+				<Link href='mailto:dhimiter.helmi@gmail.com' className={``}>Get in touch</Link>
 			</div>
 		</div>
 	);
