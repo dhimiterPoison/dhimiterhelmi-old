@@ -9,7 +9,7 @@ type Props = {
 		id: number;
 		path: string;
 		title: string;
-        description: string;
+		description: string;
 		category: string;
 		img: StaticImageData;
 	};
@@ -66,11 +66,11 @@ const MyCarouselCard = ({
 				<Image
 					src={card.img}
 					alt='Picture of the author'
-					className={`card-image h-full w-full md:w-1/3 object-cover rounded-xl ${
+					className={`card-image h-full w-full md:w-1/3 object-cover rounded-l-xl ${
 						active ? 'active' : ''
 					} `}
 				/>
-				<div className='flex flex-col absolute bottom-2 px-2 md:relative md:bottom-0 md:h-full md:w-2/3 md:justify-center md:items-center'>
+				<div className='flex flex-col absolute bottom-2 px-8 md:relative md:bottom-0 md:h-full md:w-2/3 md:justify-center md:items-start'>
 					<div
 						className={`card-extra flex w-fit px-1 rounded font-normal bg-primary text-xs text-black mb-1 md:text-sm`}
 					>
@@ -83,9 +83,9 @@ const MyCarouselCard = ({
 					>
 						{card.title}
 					</div>
-                    <div className="card-description hidden md:flex text-lg font-normal">
-aaaaaaaaaaaaa           {card.description}
-                    </div>
+					<div className='card-description hidden md:flex text-lg font-normal'>
+						{card.description}
+					</div>
 				</div>
 			</Link>
 		</div>

@@ -85,12 +85,13 @@ body {
 
 	.carousel-card.projects {
 		aspect-ratio: unset;
+		background: #337a54;
 
-		background: linear-gradient(145deg, #2e6e4c, #37835a);
-box-shadow:  20px 20px 60px #2b6847,
-             -20px -20px 60px #3b8c61;
+		// background: linear-gradient(145deg, #2e6e4c, #37835a);
+		// box-shadow: 20px 20px 60px #2b6847, -20px -20px 60px #3b8c61;
+		box-shadow:  -10px 10px 19px #2a6445,
+             10px -10px 19px #3c9063;
 	}
-	
 }
 
 .image-opacity-gradient-bottom {
