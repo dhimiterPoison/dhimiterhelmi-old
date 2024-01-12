@@ -5,15 +5,17 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import Logo from './components/Logo';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'Dhimiter Helmi Portfolio',
-	description: 'Frontend & UX Developer',
+	title: 'Dhimiter Helmi Portfolio - FrontEnd & UX developer',
+	description: `I help you by providing products or SaaS tailored to your needs.
+	Win win, I create and have fun, 
+	you save time and get a smile.`,
 };
 
 export default function RootLayout({
@@ -47,7 +49,7 @@ export default function RootLayout({
 						</svg>
 					</div>
 				</div>
-			    {/* <div className='horizontal-line bg-red-500'></div> */}
+				{/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
 				<SpeedInsights />

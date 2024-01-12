@@ -48,6 +48,7 @@ const icons = {
 export const experiences = [
 	{
 		id: 3,
+		slug: 'alfa-sistemi',
 		company: 'Alfa Sistemi',
 		logo: AlfaSistemiLogo,
 		role: 'Mid FullStack Developer',
@@ -71,6 +72,7 @@ export const experiences = [
 	},
 	{
 		id: 2,
+		slug: 'danieli-automation',
 		company: 'Danieli Automation',
 		logo: DanieliLogo,
 		role: 'FrontEnd Developer Intern',
@@ -87,13 +89,15 @@ export const experiences = [
 			icons.azuredevops,
 		],
 		skills: [
-			'Studied and designed UI/UX',
-			'Used Angular and Typescript to integrate new features',
-			'Azure DevOps for CI/CD',
+			'Scrum methodology, weekly sprints',
+			'UI/UX design with Adobe Xd',
+			'Developed new features with Angular and Typescript',
+			'CI/CD with Azure DevOps',
 		],
 	},
 	{
 		id: 1,
+		slug: 'clavister',
 		company: 'Clavister',
 		logo: ClavisterLogo,
 		role: 'Web Development Intern',
@@ -126,7 +130,7 @@ const CarrerCarousel = () => {
 					<div
 						key={experience.id}
 						id={`experience-${index}`}
-						className={`relative flex h-96 w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
+						className={`carousel-card relative flex w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
                             snap-always snap-start shadow-xl p-4
                             `}
 					>
@@ -145,7 +149,7 @@ const CarrerCarousel = () => {
 						<span className={`text-base ${sections.className} font-normal`}>
 							{experience.role}
 						</span>
-						<div className='flex justify-between h-12 items-center'>
+						<div className='flex justify-between h-16 items-center'>
 							<div className='flex text-sm gap-2 items-center'>
 								<Image
 									src={experience.flag}
@@ -174,10 +178,10 @@ const CarrerCarousel = () => {
 								/>
 							))}
 						</div>
-						<div className='flex'>
+						<div className=''>
 							<ul>
 								{experience.skills.map((skill, index) => (
-									<li key={index} className='text-sm text-white  py-1 flex'>
+									<li key={index} className='text-sm text-white py-1 flex'>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
 											viewBox='0 0 20 20'
@@ -196,8 +200,7 @@ const CarrerCarousel = () => {
 							</ul>
 						</div>
 						<div className='absolute bottom-2 text-sm self-end text-white'>
-							<Link href={`/career/${experience.id}`} className='flex '>
-								<span className='mr-2 cursor-pointer underline'>Read more</span>
+							<Link href={`/career/${experience.slug}`} className='flex items-center'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 24 24'
@@ -210,6 +213,7 @@ const CarrerCarousel = () => {
 										clipRule='evenodd'
 									/>
 								</svg>
+								<span className='mr-2 cursor-pointer underline'>Read more</span>
 							</Link>
 						</div>
 					</div>

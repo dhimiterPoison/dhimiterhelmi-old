@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /r/
+
+Sitemap: https://dhimiterhelmi.it/sitemap.xml

@@ -13,6 +13,7 @@ import MainHero from './components/MainHero';
 import ShortPresentation from './components/ShortPresentation';
 import CarrerCarousel from './components/CarrerCarousel';
 import TvAnimation from './components/TvAnimation';
+import { sectionTitleClassname } from './helper/typography';
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 const sections = Inter({ subsets: ['latin'] });
@@ -30,7 +31,7 @@ export default function Home() {
             <div className='flex flex-col justify-center text-3xl font-bold h-full items-center w-full'>
                 <div id='career' className='flex'>
                     <h1
-                        className={`text-xl font-normal tracking-wider mt-4 h-10 ${sections.className}`}
+                        className={`mt-4 h-10 ${sectionTitleClassname}`}
                     >
                         Career
                     </h1>
@@ -38,7 +39,7 @@ export default function Home() {
                 <CarrerCarousel />
                 <div id='personal-projects' className='flex'>
                     <h1
-                        className={`text-xl font-normal tracking-wider mt-8 h-10 ${sections.className}`}
+                        className={`mt-8 h-10 ${sectionTitleClassname}`}
                     >
                         Personal Projects
                     </h1>
