@@ -34,6 +34,7 @@ const MyCarouselCard = ({
 
 	useEffect(() => {
 		if (desktop) return;
+		if (entry?.isIntersecting)
 		selectCard(card.id);
 	}, [entry?.isIntersecting]);
 
@@ -45,13 +46,7 @@ const MyCarouselCard = ({
 							snap-always snap-center bg-base-200 md:bg-transparent h-80 md:w-3/4 md:hover:scale-110 hover:z-10  ${
 								active ? 'active scale-125 md:scale-100 ' : ' '
 							}
-							${
-								hasScrollMarginLeft
-									? 'scroll-margin-left md:ml-0'
-									: hasScrollMarginRight
-									? 'scroll-margin-right md:mr-0'
-									: ''
-							} 
+							
 							ease-in-out duration-200`}
 			// onMouseOver={() => setSelectedCard(card.id)}
 			// onMouseLeave={() => setSelectedCard(0)}
@@ -66,7 +61,7 @@ const MyCarouselCard = ({
 				<Image
 					src={card.img}
 					alt='Picture of the author'
-					className={`card-image h-full w-full md:w-1/3 object-cover rounded-l-xl ${
+					className={`card-image h-full w-full md:w-1/3 object-cover rounded-xl md:rounded-l-xl ${
 						active ? 'active' : ''
 					} `}
 				/>
