@@ -85,29 +85,9 @@ const MyCarousel = () => {
 
 	return (
 		<div>
-			{/* <div
-				ref={containerRef}
-				className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10 md:px-4'
-			>
-				{cards.map((card, index) => {
-					const active = selectedCard === card.id;
-					const hasScrollMarginLeft = index === 0;
-					const hasScrollMarginRight = index === cards.length - 1;
-					return (
-						<MyCarouselCard
-							key={card.id}
-							card={card}
-							active={active}
-							hasScrollMarginLeft={hasScrollMarginLeft}
-							hasScrollMarginRight={hasScrollMarginRight}
-							selectCard={selectCardHandler}
-						/>
-					);
-				})}
-			</div> */}
 			<div
 				ref={containerRef}
-				className='carousel-slider flex gap-10 items-center md:justify-center overflow-auto md:overflow-hidden md:max-w-full md:flex-wrap overscroll-none snap-proximity snap-x py-10 md:px-4'
+				className='carousel-slider flex flex-col gap-14 items-center justify-center overflow-hidden md:max-w-full flex-wrap overscroll-none py-10 md:px-4'
 			>
 				{cards.map((card, index) => {
 					const active = selectedCard === card.id;
