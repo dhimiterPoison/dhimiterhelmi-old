@@ -1,15 +1,20 @@
 import './globals.scss';
 import type { Metadata } from 'next';
-import { Inter, Montserrat } from 'next/font/google';
+import { Inter, Montserrat, Space_Grotesk } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import Logo from './components/Logo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistSans } from 'geist/font/sans';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
 const monserrat = Montserrat({ subsets: ['latin'] });
+
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
+
 
 export const metadata: Metadata = {
 	title: 'Dhimiter Helmi Portfolio - FrontEnd & UX developer',
@@ -25,13 +30,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={monserrat.className}>
+			<body className={GeistSans.className}>
 				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
 					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between bg-base-100'>
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center scroll-smooth'>
+					<div className='router-content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center scroll-smooth  text-slate-50'>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'

@@ -14,6 +14,7 @@ import ShortPresentation from './components/ShortPresentation';
 import CarrerCarousel from './components/CarrerCarousel';
 import TvAnimation from './components/TvAnimation';
 import { sectionTitleClassname } from './helper/typography';
+import { GeistSans } from 'geist/font/sans';
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 const sections = Inter({ subsets: ['latin'] });
@@ -24,7 +25,7 @@ export default function Home() {
         <main
             //adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
             //be restricted by the padding, id like it to continue to the end of the screen
-            className={`flex flex-col w-full my-4 justify-start ${monserrat.className} scroll-smooth transition ease-linear`}
+            className={`flex flex-col w-full my-4 justify-start ${GeistSans.className} scroll-smooth transition ease-linear`}
         >
             <ShortPresentation />
             <MainHero />

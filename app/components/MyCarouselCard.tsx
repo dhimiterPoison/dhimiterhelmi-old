@@ -1,8 +1,6 @@
-import { useIntersection } from '@mantine/hooks';
-import Link from 'next/link';
-import React, { useEffect } from 'react';
+import { GeistSans } from 'geist/font/sans';
 import Image, { StaticImageData } from 'next/image';
-import { useMediaQuery } from '@mantine/hooks';
+import Link from 'next/link';
 
 type Props = {
 	card: {
@@ -13,10 +11,10 @@ type Props = {
 		category: string;
 		img: StaticImageData;
 	};
-	active: boolean;
-	hasScrollMarginLeft: boolean;
-	hasScrollMarginRight: boolean;
-	selectCard: (id: number) => void;
+	active?: boolean;
+	hasScrollMarginLeft?: boolean;
+	hasScrollMarginRight?: boolean;
+	selectCard?: (id: number) => void;
 };
 
 const MyCarouselCard = ({
@@ -26,63 +24,51 @@ const MyCarouselCard = ({
 	hasScrollMarginRight,
 	selectCard,
 }: Props) => {
-	const desktop = useMediaQuery('(min-width: 768px)');
+	// const desktop = useMediaQuery('(min-width: 768px)');
 
-	const { ref, entry } = useIntersection({
-		threshold: 1,
-	});
+	// const { ref, entry } = useIntersection({
+	// 	threshold: 1,
+	// });
 
-	useEffect(() => {
-		if (desktop) return;
-		if (entry?.isIntersecting)
-		selectCard(card.id);
-	}, [entry?.isIntersecting]);
+	// useEffect(() => {
+	// 	if (desktop) return;
+	// 	if (entry?.isIntersecting) selectCard(card.id);
+	// }, [entry?.isIntersecting]);
 
 	return (
 		<div
-			key={card.id}
-			id={`card-${card.id}`}
-			className={`carousel-card projects relative flex flex-col flex-shrink-0 justify-self-center rounded-xl 
-							snap-always snap-center bg-base-200 md:bg-transparent h-80 md:w-3/4 md:hover:scale-110 hover:z-10  ${
-								active ? 'active scale-125 md:scale-100 ' : ' '
-							}
-							
-							ease-in-out duration-200`}
-			// onMouseOver={() => setSelectedCard(card.id)}
-			// onMouseLeave={() => setSelectedCard(0)}
-			ref={ref}
+			className={`project-card flex flex-col p-2 gap-2 bg-green-800 rounded-xl ${GeistSans.className}`}
 		>
-			<Link
-				href={card.path}
-				className={`flex h-full w-full justify-center md:justify-start items-center ${
-					active ? '' : 'pointer-events-none md:pointer-events-auto'
-				}`}
-			>
-				<Image
-					src={card.img}
-					alt='Picture of the author'
-					className={`card-image h-full w-full md:w-1/3 object-cover rounded-xl md:rounded-l-xl ${
-						active ? 'active' : ''
-					} `}
-				/>
-				<div className='flex flex-col absolute bottom-2 px-8 md:relative md:bottom-0 md:h-full md:w-2/3 md:justify-center md:items-start'>
-					<div
-						className={`card-extra flex w-fit px-1 rounded font-normal bg-primary text-xs text-black mb-1 md:text-sm`}
+			<Image
+				src={card.img}
+				aria-label='{`Image cover for ${card.title}'
+				alt={`Image cover for ${card.title} project`}
+				className='image h-2/3 object-cover rounded-md'
+			></Image>
+			<div className='content flex flex-col h-1/3 '>
+				<h2 className='title text-xl font-bold'>{card.title}</h2>
+				<span className='description text-lg font-normal'>
+					{card.description}
+				</span>
+				<Link
+					href={`/${card.path}`}
+					className='flex items-center self-end text-base mt-auto'
+				>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						viewBox='0 0 24 24'
+						fill='currentColor'
+						className='w-6 h-6'
 					>
-						{card.category}
-					</div>
-					<div
-						className={`card-title text-base flex justify-center md:text-2xl ${
-							active && 'text-rose-100'
-						}`}
-					>
-						{card.title}
-					</div>
-					<div className='card-description hidden md:flex text-lg font-normal'>
-						{card.description}
-					</div>
-				</div>
-			</Link>
+						<path
+							fillRule='evenodd'
+							d='M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z'
+							clipRule='evenodd'
+						/>
+					</svg>
+					<span className='mr-2 cursor-pointer underline'>Read more</span>
+				</Link>
+			</div>
 		</div>
 	);
 };
