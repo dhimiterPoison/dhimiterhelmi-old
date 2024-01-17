@@ -8,7 +8,7 @@ type Props = {
 		path: string;
 		title: string;
 		description: string;
-		category: string;
+		categories: string[];
 		img: StaticImageData;
 	};
 	active?: boolean;
@@ -37,19 +37,29 @@ const MyCarouselCard = ({
 
 	return (
 		<div
-			className={`project-card flex flex-col p-2 gap-2 bg-green-800 rounded-xl ${GeistSans.className}`}
+			className={`project-card flex flex-col md:flex-row p-2 gap-2 bg-green-800 rounded-xl md:hover:scale-105 ease-in-out duration-200 ${GeistSans.className}`}
 		>
 			<Image
 				src={card.img}
 				aria-label='{`Image cover for ${card.title}'
 				alt={`Image cover for ${card.title} project`}
-				className='image h-2/3 object-cover rounded-md'
+				className='image w-full aspect-square object-cover rounded-md md:h-full md:w-1/2'
 			></Image>
-			<div className='content flex flex-col h-1/3 '>
+			<div className='content flex flex-col h-1/2  md:h-full md:w-1/2 gap-2 md:gap-4'>
 				<h2 className='title text-xl font-bold'>{card.title}</h2>
-				<span className='description text-lg font-normal'>
+				<span className='description text-base font-normal'>
 					{card.description}
 				</span>
+				<div className='tags flex gap-2'>
+					{card.categories.map((category, index) => (
+						<span
+							key={index}
+							className='badge bg-primary rounded-md text-slate-800'
+						>
+							{category}
+						</span>
+					))}
+				</div>
 				<Link
 					href={`/${card.path}`}
 					className='flex items-center self-end text-base mt-auto'
