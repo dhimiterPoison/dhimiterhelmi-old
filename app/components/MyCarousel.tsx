@@ -18,7 +18,7 @@ const cards = [
 			'Wep app for enrolling the 2023 Balonade Sport Tournament and live checking the match scores.',
 		environment: 'Production',
 		link: 'https://balonade.it/',
-		category: 'Web',
+		categories: ['Web', "UX", "Production"],
 		img: BalonadeHomescreen,
 	},
 	{
@@ -29,7 +29,7 @@ const cards = [
 			'Dump your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly.',
 		environment: 'Building in public',
 		link: 'https://self-glance.it/',
-		category: 'Web',
+		categories: ["AI", "UX", "#BuildInPublic"],
 		img: BalonadeHomescreen,
 	},
 	{
@@ -38,7 +38,7 @@ const cards = [
 		title: "Nature's Serenade",
 		description: `A journey in the wonders of the universe, giving importance to the listening and observation to explore that beauty is in the simple things.`,
 		environment: 'Coming soon',
-		category: 'Multimedia',
+		categories: ['Immersive', 'Multimedia', ],
 		img: NaturesSerenadeImage,
 	},
 	{
@@ -48,7 +48,7 @@ const cards = [
 		description: 'My preferred way to capture magical moments.',
 		environment: 'Production',
 		link: 'https://instagram.com/dhimanalogadventures',
-		category: 'Multimedia',
+		categories: ['Multimedia',],
 		img: AnalogAdventuresImage,
 	},
 	{
@@ -59,14 +59,14 @@ const cards = [
 			'Browse coffee shops, purchase your own coffee card and get nice offers and discounts.',
 		environment: 'Paused',
 		link: '',
-		category: 'Web',
+		categories: ["Deprioritized", "Web"],
 		img: CoffeCardImage,
 	},
 	// {
 	//     id: 6,
 	//     path: 'money-tracker',
 	//     title: 'Money Tracker',
-	//     category: 'Web',
+	//     categories: ['Web',
 	//     img: MoneyTrackerCard,
 	// },
 ];

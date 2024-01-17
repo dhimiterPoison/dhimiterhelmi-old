@@ -131,7 +131,7 @@ const CarrerCarousel = () => {
 						key={experience.id}
 						id={`experience-${index}`}
 						className={`carousel-card relative flex w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
-                            snap-always snap-start shadow-xl p-4 md:hover:scale-110 ease-in-out duration-200 
+                            snap-always snap-start shadow-xl p-4 md:hover:scale-105 ease-in-out duration-200 
                             `}
 					>
 						<div className='flex justify-center -mt-10 mb-4'>
@@ -169,12 +169,12 @@ const CarrerCarousel = () => {
 						</div>
 						<div className='flex h-12 items-center justify-center gap-4 mb-2 text-xs'>
 							{experience.tech.map((technology, index) => (
-								<div key={index} className='w-9 h-9 rounded-md bg-green-950'>
+								<div key={index} className='w-9 h-9 rounded-md'>
 									<Image
 										src={technology.icon}
 										alt='React'
 										title={technology.name}
-										className='h-full p-1 object-contain rounded-md'
+										className='h-full p-1 object-cover rounded-md'
 									/>
 								</div>
 							))}
