@@ -7,6 +7,7 @@ $base-200: '#205A32';
 $base-300: '#337A54';
 $base-400: '#90D8A7';
 
+
 body {
 	width: 100vw;
 }
@@ -20,7 +21,7 @@ body {
 	max-height: 10svh;
 }
 
-.content {
+.router-content {
 	min-height: 90svh;
 }
 
@@ -41,63 +42,33 @@ body {
 	aspect-ratio: 2/3;
 }
 
-.scroll-margin-left {
-	// scroll-margin-left: calc(100vw/2);
-	//scroll-margin-left: 50vw;
-	// margin-left: 50vw;
-	margin-left: calc(50vw - ((20rem * (2 / 3)) / 2));
-}
-
-.scroll-margin-right {
-	//scroll-margin-right: 50vw;
-	margin-right: calc(50vw - ((20rem * (2 / 3)) / 2));
-}
-
-.card-image {
-	mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-	mask-mode: alpha;
-
-	&.active {
-		mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-		mask-mode: alpha;
-	}
-}
-
-.example-image-container {
-	max-height: 40svh;
-}
-.example-image {
+.project-card {
+	width: calc(2/3*100svw);
+	// min-height: calc(2/3*100svh);
 	aspect-ratio: 3/5;
-	height: 100%;
-	object-fit: contain;
-}
 
-@media screen and (min-width: 768px) {
-	.example-image-container {
-		max-height: 80svh;
-	}
-	.card-image {
-		&:hover {
-			mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-			mask-mode: alpha;
+	// overflow: hidden;
+
+	.content {
+		.title {
+			// overflow-wrap: break-word;
+		}
+		.tags {
+			// overflow-x: auto;
+		}
+		.description {
+			width:100%;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
 		}
 	}
-
-	.carousel-card.projects {
-		aspect-ratio: unset;
-		background: #337a54;
-
-		// background: linear-gradient(145deg, #2e6e4c, #37835a);
-		// box-shadow: 20px 20px 60px #2b6847, -20px -20px 60px #3b8c61;
-		box-shadow:  -10px 10px 19px #2a6445,
-             10px -10px 19px #3c9063;
-	}
 }
 
-.image-opacity-gradient-bottom {
-	mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-	mask-mode: alpha;
-}
+
+
+
 
 *::-webkit-scrollbar {
 	width: 12px; /* width of the entire scrollbar */
@@ -141,3 +112,68 @@ body {
 		}
 	}
 }
+
+
+
+// .scroll-margin-left {
+// 	// scroll-margin-left: calc(100vw/2);
+// 	//scroll-margin-left: 50vw;
+// 	// margin-left: 50vw;
+// 	margin-left: calc(50vw - ((20rem * (2 / 3)) / 2));
+// }
+
+// .scroll-margin-right {
+// 	//scroll-margin-right: 50vw;
+// 	margin-right: calc(50vw - ((20rem * (2 / 3)) / 2));
+// }
+
+// .card-image {
+// 	mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+// 	mask-mode: alpha;
+
+// 	&.active {
+// 		mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+// 		mask-mode: alpha;
+// 	}
+// }
+
+// .example-image-container {
+// 	max-height: 40svh;
+// }
+// .example-image {
+// 	aspect-ratio: 3/5;
+// 	height: 100%;
+// 	object-fit: contain;
+// }
+
+// @media screen and (min-width: 768px) {
+// 	.example-image-container {
+// 		max-height: 80svh;
+// 	}
+// 	.card-image {
+// 		&:hover {
+// 			mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+// 			mask-mode: alpha;
+// 		}
+// 	}
+
+// 	.carousel-card.projects {
+// 		aspect-ratio: unset;
+// 		background: #337a54;
+
+// 		// background: linear-gradient(145deg, #2e6e4c, #37835a);
+// 		// box-shadow: 20px 20px 60px #2b6847, -20px -20px 60px #3b8c61;
+// 		box-shadow:  -10px 10px 19px #2a6445,
+//              10px -10px 19px #3c9063;
+// 	}
+// }
+
+// .image-opacity-gradient-bottom {
+// 	mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+// 	mask-mode: alpha;
+// }
+
+// * {
+// 	min-width: 0;
+// 	min-height: 0;
+// }

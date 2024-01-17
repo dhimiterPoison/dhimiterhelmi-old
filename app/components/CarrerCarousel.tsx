@@ -124,14 +124,14 @@ export const experiences = [
 const sections = Inter({ subsets: ['latin'] });
 const CarrerCarousel = () => {
 	return (
-		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 md:px-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
+		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
 			{experiences.map((experience, index) => {
 				return (
 					<div
 						key={experience.id}
 						id={`experience-${index}`}
 						className={`carousel-card relative flex w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
-                            snap-always snap-start shadow-xl p-4
+                            snap-always snap-start shadow-xl p-4 md:hover:scale-110 ease-in-out duration-200 
                             `}
 					>
 						<div className='flex justify-center -mt-10 mb-4'>
@@ -169,13 +169,14 @@ const CarrerCarousel = () => {
 						</div>
 						<div className='flex h-12 items-center justify-center gap-4 mb-2 text-xs'>
 							{experience.tech.map((technology, index) => (
-								<Image
-									key={index}
-									src={technology.icon}
-									alt='React'
-									title={technology.name}
-									className='w-7 h-full object-contain rounded-md'
-								/>
+								<div key={index} className='w-9 h-9 rounded-md bg-green-950'>
+									<Image
+										src={technology.icon}
+										alt='React'
+										title={technology.name}
+										className='h-full p-1 object-contain rounded-md'
+									/>
+								</div>
 							))}
 						</div>
 						<div className=''>
@@ -200,7 +201,10 @@ const CarrerCarousel = () => {
 							</ul>
 						</div>
 						<div className='absolute bottom-2 text-sm self-end text-white'>
-							<Link href={`/career/${experience.slug}`} className='flex items-center'>
+							<Link
+								href={`/career/${experience.slug}`}
+								className='flex items-center'
+							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 24 24'

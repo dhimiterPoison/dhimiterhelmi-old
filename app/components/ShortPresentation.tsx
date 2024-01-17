@@ -4,10 +4,12 @@ import React from 'react';
 import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
 import GithubLogo from '../../public/github.svg';
 import ProfilePicture from '../../public/profile-picture-test.jpg';
+import { Montserrat } from 'next/font/google';
 
+const montserrat = Montserrat({ subsets: ['latin'] });
 const ShortPresentation = () => {
 	return (
-		<div id='short-presentation' className='presentation flex flex-col items-center justify-center md:flex-row mb-8 md:mb-12'>
+		<div id='short-presentation' className={`presentation flex flex-col items-center justify-center md:flex-row mb-8 md:mb-12 ${montserrat.className}`}>
 			<div className='flex flex-col sm:flex-row'>
 				<div className='profile-image-container flex md:flex-col justify-center mb-2 shrink-0'>
 					<div className='profile-image w-20 h-20 bg-green-950 rounded-full shadow-lg'>
