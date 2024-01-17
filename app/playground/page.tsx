@@ -6,7 +6,7 @@ const page = () => {
 		<div className='flex flex-col gap-16 items-center py-4'>
 			{[1, 2, 3, 4, 5, 6, 7, 8, 9].map((card, index) => {
 				return (
-					<div className='project-card flex flex-col p-2 gap-2 bg-green-800'>
+					<div key={index} className='project-card flex flex-col p-2 gap-2 bg-green-800'>
 						<div className="image h-2/3 border border-yellow-200 bg-green-900"></div>
 						<div className="content flex flex-col h-1/3 border border-yellow-200 bg-green-900">
 							<h2 className="title text-xl font-bold">Title</h2>
