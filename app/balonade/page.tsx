@@ -34,7 +34,7 @@ const Balonade = () => {
 				<h2>Balonade Web App</h2>
 				<p>
 					Best things happen casually. <br />I was helping some friends
-					organizing the <u>Buttrio</u> 's summer sport torunament (Balonade),
+					organizing the <u>Buttrio</u> &apos;s summer sport torunament (Balonade),
 					and we were discussing about how to manage teams subriptions.
 				</p>
 				<p>
@@ -44,7 +44,7 @@ const Balonade = () => {
 				<p>Example of the form mentioned earlier</p>
 				<p>
 					Then I realized that, as a Frontend developer with a considerate eye
-					for UX, i couldn't live with that. If I was a user and had to enroll
+					for UX, i couldn&apos;t live with that. If I was a user and had to enroll
 					the tournament using that form, i would have gone crazy.
 					<br />
 				</p>
@@ -52,7 +52,7 @@ const Balonade = () => {
 				<ol>
 					<li className=''>Not much time</li>
 					<li>First time to launch something in production on my own</li>
-					<li>Didn't know what tech stack to use</li>
+					<li>Didn&apos;t know what tech stack to use</li>
 				</ol>
 				<p>GAAADAMIT (Why do i love putting myself in this situations)</p>
 				<p>After some research, I decided to use the following tech stack:</p>
@@ -117,7 +117,7 @@ const Balonade = () => {
 					frontend and backend at light speed.
 					<br />
 					After a few tutorials, and some Bestemmie, i realized that they had
-					just released the 13th version, and the tutorials were{' '}
+					just released the 13th version, and the tutorials were
 					<strong>
 						<u>outdated</u>.
 					</strong>

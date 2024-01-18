@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
     "sass": "^1.64.1",
+    "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.1",
     "typescript": "5.1.6"
