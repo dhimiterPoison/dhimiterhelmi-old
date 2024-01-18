@@ -90,6 +90,12 @@ const Balonade = () => {
 							</td>
 							<td>Xata.io</td>
 						</tr>
+						<tr>
+							<td>
+								<div className='badge badge-primary font-semibold'>New</div>
+							</td>
+							<td>UploadThing</td>
+						</tr>
 					</tbody>
 				</table>
 				<h3>Sketching time</h3>

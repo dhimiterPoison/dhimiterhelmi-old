@@ -8,19 +8,21 @@ import Logo from './components/Logo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistSans } from 'geist/font/sans';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
-
 export const metadata: Metadata = {
-	title: 'Dhimiter Helmi Portfolio - FrontEnd & UX developer',
+	title: 'Dhimiter Helmi Portfolio - Fullstack & UX developer',
 	description: `I help you by providing products or SaaS tailored to your needs.
 	Win win, I create and have fun, 
 	you save time and get a smile.`,
+	metadataBase: new URL('https://dhimiterhelmi.it'),
+	openGraph: {
+		images: [{ url: 'images/portfolio-seo-image.png' }],
+	},
 };
 
 export default function RootLayout({
@@ -30,6 +32,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			
 			<body className={GeistSans.className}>
 				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
 					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between bg-base-100'>
