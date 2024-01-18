@@ -7,7 +7,6 @@ $base-200: '#205A32';
 $base-300: '#337A54';
 $base-400: '#90D8A7';
 
-
 body {
 	width: 100vw;
 }
@@ -40,16 +39,38 @@ body {
 
 .carousel-card {
 	aspect-ratio: 2/3;
-	box-shadow:  -10px 10px 19px #2a6445,
-             10px -10px 19px #3c9063;
+	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+}
 
+.neu-inner-shadow {
+	box-shadow: inset 8px 8px 15px #296243, inset -8px -8px 15px #3d9265;
+}
+
+.contact.btn,
+.profile-image {
+	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+}
+
+.blog-cover-image{
+	width: 100%;
+	height: 30svh;
+	position: relative;
+}
+
+.esc-button {
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+	z-index: 10;
+	background-color: rgb(0, 0, 0, 0.5);
+	border-radius: 50%;
+	padding: .2rem
 }
 
 .project-card {
-	width: calc(2/3*100svw);
-	
-	box-shadow:  -10px 10px 19px #2a6445,
-             10px -10px 19px #3c9063;
+	width: calc(2 / 3 * 100svw);
+
+	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
 
 	.content {
 		.title {
@@ -59,7 +80,7 @@ body {
 			// overflow-x: auto;
 		}
 		.description {
-			width:100%;
+			width: 100%;
 			overflow: hidden;
 			display: -webkit-box;
 			-webkit-line-clamp: 3;
@@ -75,13 +96,12 @@ body {
 		// height: fit-content;
 		// aspect-ratio: 16/9;
 		height: min(40svh, 20rem);
-		
+
 		.content {
 			padding: 1rem 1rem;
 		}
 	}
 }
-
 
 *::-webkit-scrollbar {
 	width: 12px; /* width of the entire scrollbar */
@@ -125,8 +145,6 @@ body {
 		}
 	}
 }
-
-
 
 // .scroll-margin-left {
 // 	// scroll-margin-left: calc(100vw/2);

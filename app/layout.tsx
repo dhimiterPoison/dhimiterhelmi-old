@@ -36,7 +36,7 @@ export default function RootLayout({
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='router-content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 py-4 mt-4 lg:mt-0 justify-center scroll-smooth  text-slate-50'>
+					<div className='router-content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 mt-4 lg:mt-0 justify-center scroll-smooth text-slate-50 neu-inner-shadow'>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
