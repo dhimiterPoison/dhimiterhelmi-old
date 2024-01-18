@@ -124,7 +124,7 @@ export const experiences = [
 const sections = Inter({ subsets: ['latin'] });
 const CarrerCarousel = () => {
 	return (
-		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
+		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 py-6 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
 			{experiences.map((experience, index) => {
 				return (
 					<div
@@ -169,12 +169,12 @@ const CarrerCarousel = () => {
 						</div>
 						<div className='flex h-12 items-center justify-center gap-4 mb-2 text-xs'>
 							{experience.tech.map((technology, index) => (
-								<div key={index} className='w-9 h-9 rounded-md'>
+								<div key={index} className='w-9 h-9 rounded-md bg-green-950'>
 									<Image
 										src={technology.icon}
 										alt='React'
 										title={technology.name}
-										className='h-full p-1 object-cover rounded-md'
+										className='h-full w-full p-1 object-cover rounded-md'
 									/>
 								</div>
 							))}

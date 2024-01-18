@@ -1,9 +1,10 @@
 import { Inter } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import AnalogAdventuresImage from '../../public/images/analog-adventures-card.jpg';
-import BalonadeHomescreen from '../../public/images/balonade-card.png';
+import BalonadeHomescreen from '../../public/images/balonade-card-bg.png';
 import CoffeCardImage from '../../public/images/coffidelity-card.png';
 import NaturesSerenadeImage from '../../public/images/natures-serenade-card.jpg';
+import SelfGlanceImage from '../../public/images/self-glance.png';
 import MyCarouselCard from './MyCarouselCard';
 
 const sections = Inter({ subsets: ['latin'] });
@@ -30,7 +31,7 @@ const cards = [
 		environment: 'Building in public',
 		link: 'https://self-glance.it/',
 		categories: ["AI", "UX", "#BuildInPublic"],
-		img: BalonadeHomescreen,
+		img: SelfGlanceImage,
 	},
 	{
 		id: 3,

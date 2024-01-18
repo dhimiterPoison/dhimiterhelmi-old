@@ -54,7 +54,7 @@ const Navbar = () => {
 					/>
 				))}
 			</div>
-			<div className='contact btn btn-secondary font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
+			<div className='navbar-contact btn btn-secondary uppercase font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
 				<Link href='mailto:dhimiter.helmi@gmail.com' className={``}>Get in touch</Link>
 			</div>
 		</div>
