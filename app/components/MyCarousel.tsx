@@ -87,7 +87,21 @@ const MyCarousel = () => {
 			// className='carousel-slider flex flex-col gap-32 items-center justify-center overflow-hidden md:max-w-full flex-wrap overscroll-none py-10 md:px-4'
 			className='flex flex-col gap-16 items-center py-4'
 		>
-			
+			{cards.map((card, index) => {
+				// const active = selectedCard === card.id;
+				// const hasScrollMarginLeft = index === 0;
+				// const hasScrollMarginRight = index === cards.length - 1;
+				return (
+					<MyCarouselCard
+						key={card.id}
+						card={card}
+						// active={active}
+						// hasScrollMarginLeft={hasScrollMarginLeft}
+						// hasScrollMarginRight={hasScrollMarginRight}
+						// selectCard={selectCardHandler}
+					/>
+				);
+			})}
 			{/* <div ref={lineRef} className='vertical-line absolute top-0 bottom-0 w-1 bg-red-500'></div> */}
 		</div>
 	);
