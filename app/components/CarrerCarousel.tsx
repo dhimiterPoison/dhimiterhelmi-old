@@ -22,8 +22,13 @@ import SwedenFlag from '../../public/flag-sweden.svg';
 import ItalyFlag from '../../public/flag-italy.svg';
 
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
+import AlfaSistemiCover from '../../public/career/alfasistemi-cover.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
+import DanieliCover from '../../public/career/danieli-cover.svg';
 import ClavisterLogo from '../../public/career/clavister-logo.jpg';
+import ClavisterCover from '../../public/career/clavister-cover.png';
+import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
+
 import Image from 'next/image';
 
 const icons = {
@@ -51,6 +56,7 @@ export const experiences = [
 		slug: 'alfa-sistemi',
 		company: 'Alfa Sistemi',
 		logo: AlfaSistemiLogo,
+		cover: AlfaSistemiCover,
 		role: 'Mid FullStack Developer',
 		duration: '08/2021 - Present',
 		location: 'Buttrio, Italy',
@@ -69,12 +75,23 @@ export const experiences = [
 			'Creating and mantaining responsive React SPAs',
 			'Project scope definition, costs estimation, and constant contact with customers',
 		],
+		contacts: [
+			{
+				logo: LinkedinLogo,
+				link: 'https://www.linkedin.com/in/andrea-rossi-9a1b0b1a0/',
+			},
+			{
+				logo: LinkedinLogo,
+				link: 'https://www.alfasistemi.net/en/',
+			},
+		],
 	},
 	{
 		id: 2,
 		slug: 'danieli-automation',
 		company: 'Danieli Automation',
 		logo: DanieliLogo,
+		cover: DanieliCover,
 		role: 'FrontEnd Developer Intern',
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
@@ -100,6 +117,7 @@ export const experiences = [
 		slug: 'clavister',
 		company: 'Clavister',
 		logo: ClavisterLogo,
+		cover: ClavisterCover,
 		role: 'Web Development Intern',
 		location: 'Örnsköldsvik, Sweden',
 		shortLocation: 'Sweden',

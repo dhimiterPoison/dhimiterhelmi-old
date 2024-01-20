@@ -7,10 +7,10 @@ const MainHero = () => {
 	return (
 		<div className='flex flex-col mb-8'>
 			<div className={`${montserrat.className}`}>
-				<h1 className='flex flex-row justify-center text-3xl md:text-5xl font-bold'>
+				<h1 className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
 					unleash Powerful
 				</h1>
-				<div className='flex flex-row justify-center text-3xl md:text-5xl font-bold'>
+				<div className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
 					{/* //set fist letter to secondary color */}
 					<h1 className='text-primary'>U</h1>ser e
 					<h1 className='text-secondary'>X</h1>perience

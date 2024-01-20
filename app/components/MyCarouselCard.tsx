@@ -50,7 +50,7 @@ const MyCarouselCard = ({
 				<span className='description text-base font-normal'>
 					{card.description}
 				</span>
-				<div className='tags flex gap-2'>
+				<div className='tags flex gap-2 flex-wrap'>
 					{card.categories.map((category, index) => (
 						<span
 							key={index}

@@ -4,17 +4,20 @@ import React from 'react';
 const page = () => {
 	return (
 		<div className='flex flex-col gap-16 items-center py-4'>
-			{/* {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((card, index) => {
+			{[1, 2, 3, 4].map((card, index) => {
 				return (
-					<div key={index} className='project-card flex flex-col p-2 gap-2 bg-green-800'>
-						<div className="image h-2/3 border border-yellow-200 bg-green-900"></div>
-						<div className="content flex flex-col h-1/3 border border-yellow-200 bg-green-900">
-							<h2 className="title text-xl font-bold">Title</h2>
-							<span className="description text-lg border border-red-400 ">Descrizione setst seg segiseng rshgusehgiuREH SUERHH SOFEUHGSAOUFEH F USHEFOSHF  SEIHFSEFH SH SHASF </span>
-							<Link
-								href={`/career/`}
-								className='flex items-center self-end'
-							>
+					<div
+						key={index}
+						className='project-card flex flex-col p-2 gap-2 bg-green-800'
+					>
+						<div className='image h-2/3 border border-yellow-200 bg-green-900'></div>
+						<div className='content flex flex-col h-1/3 border border-yellow-200 bg-green-900'>
+							<h2 className='title text-xl font-bold'>Title</h2>
+							<span className='description text-lg border border-red-400 '>
+								Descrizione setst seg segiseng rshgusehgiuREH SUERHH
+								SOFEUHGSAOUFEH F USHEFOSHF SEIHFSEFH SH SHASF{' '}
+							</span>
+							<Link href={`/career/`} className='flex items-center self-end'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 24 24'
@@ -32,7 +35,8 @@ const page = () => {
 						</div>
 					</div>
 				);
-			})} */}
+			})}
+			
 		</div>
 	);
 };
