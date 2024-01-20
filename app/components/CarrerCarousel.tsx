@@ -62,7 +62,7 @@ export const experiences = [
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
-		description: '',
+		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
 		tech: [
 			icons.javascript,
 			icons.react,
@@ -97,7 +97,7 @@ export const experiences = [
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
 		duration: '02/2021 - 04/2021',
-		description: '',
+		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
 		tech: [
 			icons.angular,
 			icons.typescript,

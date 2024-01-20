@@ -76,6 +76,11 @@ body {
 		object-fit: cover;
 		// object-position: 40% 50%;
 	}
+	.profile-pic {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
 }
 
 .esc-button {

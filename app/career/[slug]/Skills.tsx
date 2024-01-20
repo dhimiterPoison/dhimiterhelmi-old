@@ -33,7 +33,7 @@ const Skills = () => {
 		window.onscroll = function() {
 			var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 			// - document.documentElement.clientHeight
-			var height = document.documentElement.scrollHeight- (document.documentElement.clientHeight/2) ;
+			var height = document.documentElement.offsetHeight - (document.documentElement.clientHeight/2) ;
 			var scrolled = (winScroll / height) * 100;
 			const line = document.getElementById("glow-line");
 			if (!line) return;
