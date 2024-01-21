@@ -9,7 +9,7 @@ export const Contacts = (experience: any) => {
 			<div className='grid grid-cols-2 w-full lg:w-1/2 gap-8'>
 				{experience.contacts?.map((contact: any, index: number) => {
 					return (
-						<Link className='' href={contact.link} target='_blank'>
+						<Link key={index} href={contact.link} target='_blank'>
 							<div
 								key={index}
 								className='flex items-center justify-around p-4 h-16  md:h-20 bg-base-200 rounded-lg *:h-full '

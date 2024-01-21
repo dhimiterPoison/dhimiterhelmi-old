@@ -112,7 +112,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 				<div className='py-2'>
 					<h1 className={`text-lg tracking-wider pb-4`}>Technology used</h1>
 					{experience?.tech.map((tech, index) => (
-						<div className='grid grid-cols-[50px_minmax(1rem,_1fr)_100px] py-1 px-4 items-center rounded-lg bg-transparent hover:bg-base-200'>
+						<div key={index} className='grid grid-cols-[50px_minmax(1rem,_1fr)_100px] py-1 px-4 items-center rounded-lg bg-transparent hover:bg-base-200'>
 							<div className='columns bg-base-200 w-fit p-1 rounded-md'>
 								<Image
 									src={tech.icon}
