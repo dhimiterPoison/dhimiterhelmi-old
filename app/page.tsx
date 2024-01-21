@@ -6,15 +6,18 @@ import {
     Catamaran,
     Inter
 } from 'next/font/google';
-import MyCarousel from './components/MyCarousel';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'
 import MainHero from './components/MainHero';
 import ShortPresentation from './components/ShortPresentation';
-import CarrerCarousel from './components/CarrerCarousel';
 import TvAnimation from './components/TvAnimation';
 import { sectionTitleClassname } from './helper/typography';
 import { GeistSans } from 'geist/font/sans';
+
+
+const MyCarousel = dynamic(() => import('./components/MyCarousel'));
+const CarrerCarousel = dynamic(() => import('./components/CarrerCarousel'));
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 const sections = Inter({ subsets: ['latin'] });

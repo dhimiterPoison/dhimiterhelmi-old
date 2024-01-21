@@ -1,12 +1,11 @@
-import React from 'react';
 import { experiences } from '@/app/components/CarrerCarousel';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
+import Gallery from '@/app/components/Gallery';
 import { Metadata, ResolvingMetadata } from 'next';
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
-import { sectionTitleClassname } from '@/app/helper/typography';
-import { useMotionValue } from 'framer-motion';
+import { notFound } from 'next/navigation';
+import { Contacts } from './Contacts';
 import Skills from './Skills';
 
 type Props = {
@@ -51,11 +50,11 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 		return notFound();
 
 	return (
-		<div className='flex flex-col w-full relative  font-light text-white'>
+		<div className='flex flex-col w-full relative  font-light text-white bg-base-100'>
 			<div className='blog-cover'>
 				<Image
 					src={experience?.cover}
-					alt='Balonade cover image'
+					alt={`${experience?.company} cover image`}
 					className='rounded-t-lg'
 				/>
 				<Link className='esc-button' href='/#career'>
@@ -74,11 +73,18 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 						/>
 					</svg>
 				</Link>
-				<div className='absolute -bottom-10 md:-bottom-20 right-4 md:right-16 flex flex-col w-1/4 md:w-44 aspect-square bg-base-100 rounded-full border-4 border-primary items-center justify-center'>
-					photo
+				<div className='absolute -bottom-10 md:-bottom-20 right-4 md:right-16 flex w-28 h-28 md:w-44 md:h-44 bg-base-100 rounded-full border-4 border-primary items-center justify-center'>
+					<Image
+						src={experience?.profilePicture}
+						alt={`${experience?.company} profile image`}
+						className='h-full object-cover rounded-full'
+						loading='lazy'
+						width={100}
+						height={100}
+					/>
 				</div>
 			</div>
-			<div className='flex flex-col lg:flex-row px-8 py-10 md:py-8 gap-8'>
+			<div className='flex flex-col lg:flex-row lg:justify-center px-8 py-10 md:py-8 gap-8'>
 				<div className='flex flex-col w-full lg:w-1/2 lg:pr-8 gap-4'>
 					<div className='flex justify-start font-bold'>
 						<span className='text-2xl'>{experience?.role}</span>
@@ -89,7 +95,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 								src={experience.flag}
 								alt={`${experience.shortLocation} flag`}
 								title={`${experience.shortLocation} flag`}
-								className='w-7 h-7'
+								className='w-8 h-8'
 							/>
 							<span className={`${inter.className} text-base`}>
 								{experience.location}
@@ -104,10 +110,10 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 					</div>
 				</div>
 				<div className='py-2'>
-					<h1 className={`text-lg tracking-wider`}>Technology used</h1>
+					<h1 className={`text-lg tracking-wider pb-4`}>Technology used</h1>
 					{experience?.tech.map((tech, index) => (
-						<div className='grid grid-cols-[50px_minmax(1rem,_1fr)_100px] py-1 px-4 items-center rounded-lg bg-transparent hover:bg-base-100'>
-							<div className='columns bg-base-100 w-fit p-1 rounded-md'>
+						<div className='grid grid-cols-[50px_minmax(1rem,_1fr)_100px] py-1 px-4 items-center rounded-lg bg-transparent hover:bg-base-200'>
+							<div className='columns bg-base-200 w-fit p-1 rounded-md'>
 								<Image
 									src={tech.icon}
 									alt={tech.name}
@@ -123,7 +129,8 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 				</div>
 			</div>
 			<div className='px-8'>
-				<Skills></Skills>
+				<Skills slug={params?.slug}></Skills>
+				<Gallery></Gallery>
 				<Contacts {...experience}></Contacts>
 			</div>
 		</div>
@@ -131,31 +138,3 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 };
 
 export default CareerDetail;
-
-import { Experience } from '@/app/helper/types';
-
-export const Contacts = (experience: any) => {
-	return (
-		<div className='contacts flex flex-col items-center py-16 gap-8'>
-			<h2 className='text-xl'>Contacts</h2>
-			<div className='flex justify-center gap-8 md:gap-16 flex-wrap'>
-				{experience.contacts?.map((contact: any, index: number) => {
-					return (
-						<div
-							key={index}
-							className='w-32 h-16 md:w-40 md:h-20 bg-base-100 rounded-lg'
-						>
-							<Link className='' href={contact.link} target='_blank'>
-								<Image
-									src={contact.logo}
-									alt=''
-									className='p-2 w-full h-full object-fit fill-white'
-								/>
-							</Link>
-						</div>
-					);
-				})}
-			</div>
-		</div>
-	);
-};

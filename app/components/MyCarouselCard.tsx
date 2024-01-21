@@ -44,6 +44,7 @@ const MyCarouselCard = ({
 				aria-label='{`Image cover for ${card.title}'
 				alt={`Image cover for ${card.title} project`}
 				className='image w-full aspect-square object-cover rounded-md md:h-full md:w-1/2'
+				loading='lazy'
 			></Image>
 			<div className='content flex flex-col h-1/2  md:h-full md:w-1/2 gap-2 md:gap-4'>
 				<h2 className='title text-xl font-bold'>{card.title}</h2>
