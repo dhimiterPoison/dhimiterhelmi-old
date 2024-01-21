@@ -44,13 +44,14 @@ const MyCarouselCard = ({
 				aria-label='{`Image cover for ${card.title}'
 				alt={`Image cover for ${card.title} project`}
 				className='image w-full aspect-square object-cover rounded-md md:h-full md:w-1/2'
+				loading='lazy'
 			></Image>
 			<div className='content flex flex-col h-1/2  md:h-full md:w-1/2 gap-2 md:gap-4'>
 				<h2 className='title text-xl font-bold'>{card.title}</h2>
 				<span className='description text-base font-normal'>
 					{card.description}
 				</span>
-				<div className='tags flex gap-2'>
+				<div className='tags flex gap-2 flex-wrap'>
 					{card.categories.map((category, index) => (
 						<span
 							key={index}

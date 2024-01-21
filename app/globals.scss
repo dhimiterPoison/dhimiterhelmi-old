@@ -7,8 +7,17 @@ $base-200: '#205A32';
 $base-300: '#337A54';
 $base-400: '#90D8A7';
 
+
+
 body {
-	width: 100vw;
+	width: 100%;
+
+	--primary : #F9F871;
+	--secondary : #CC8BB8;
+
+	--transition: 0.25s;
+	--spark: 1.8s;
+	--speed: 1.2s;
 }
 
 .app {
@@ -55,20 +64,33 @@ body {
 	text-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
 }
 
-.blog-cover-image{
+.blog-cover {
 	width: 100%;
 	height: 30svh;
+	max-height: 30svh;
 	position: relative;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		// object-position: 40% 50%;
+	}
+	.profile-pic {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
 }
 
 .esc-button {
 	position: absolute;
-	top: .5rem;
-	right: .5rem;
+	top: 0.5rem;
+	right: 0.5rem;
 	z-index: 10;
 	background-color: rgb(0, 0, 0, 0.5);
 	border-radius: 50%;
-	padding: .2rem
+	padding: 0.2rem;
 }
 
 .project-card {
@@ -128,26 +150,6 @@ body {
 	left: 0;
 	width: 100vw;
 	height: 1px;
-}
-
-.animation-test {
-	h2 {
-		background: linear-gradient(90deg, black, transparent);
-		// background-size: 200%;
-		animation: reveal both linear;
-		animation-timeline: view();
-		// animation-range: entry 50% cover 50%;
-		background-repeat: no-repeat;
-	}
-
-	@keyframes reveal {
-		0% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 1;
-		}
-	}
 }
 
 // .scroll-margin-left {
@@ -212,3 +214,82 @@ body {
 // 	min-width: 0;
 // 	min-height: 0;
 // }
+
+
+.snake-container {
+	position: relative;
+    width: 100%;
+    margin: 0 auto;
+	
+	// height: min(100svh, fit-content);
+
+	// background-color: red;
+	.paragraph {
+		position: relative;
+		margin: 50px 0;
+		padding: 0 20px;
+	}
+
+	#line {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		height: 100%;
+		background-color: var(--primary);
+	}
+
+	#glow-line {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		background-color: var(--primary);
+		box-shadow: 0px 0px 25px 9px rgb(11, 216, 107);
+		// max-height: 100svh;
+		// animation: fillOnScroll;
+		// scale: 1 0;
+		// transform-origin: top;
+
+		// animation: scroll-watcher linear ;
+		// animation-timeline: scroll();
+	}
+}
+
+@keyframes scroll-watcher {
+	0% {
+		scale: 1 0;
+	}
+	50% {
+		scale: 1 1;
+	}
+}
+@keyframes fillOnScroll {
+	0% {
+		height: 0%;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
+.animation-test {
+	h2 {
+		background: linear-gradient(90deg, black, transparent);
+		// background-size: 200%;
+		animation: reveal both linear;
+		animation-timeline: view();
+		// animation-range: entry 50% cover 50%;
+		background-repeat: no-repeat;
+	}
+
+	@keyframes reveal {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+	}
+}
+

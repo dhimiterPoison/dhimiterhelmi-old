@@ -19,7 +19,7 @@ const cards = [
 			'Wep app for enrolling the 2023 Balonade Sport Tournament and live checking the match scores.',
 		environment: 'Production',
 		link: 'https://balonade.it/',
-		categories: ['Web', "UX", "Production"],
+		categories: ['Web', "UX", "Mobile", "Production"],
 		img: BalonadeHomescreen,
 	},
 	{

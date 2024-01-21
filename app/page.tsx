@@ -6,15 +6,18 @@ import {
     Catamaran,
     Inter
 } from 'next/font/google';
-import MyCarousel from './components/MyCarousel';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'
 import MainHero from './components/MainHero';
 import ShortPresentation from './components/ShortPresentation';
-import CarrerCarousel from './components/CarrerCarousel';
 import TvAnimation from './components/TvAnimation';
 import { sectionTitleClassname } from './helper/typography';
 import { GeistSans } from 'geist/font/sans';
+
+
+const MyCarousel = dynamic(() => import('./components/MyCarousel'));
+const CarrerCarousel = dynamic(() => import('./components/CarrerCarousel'));
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 const sections = Inter({ subsets: ['latin'] });
@@ -25,7 +28,7 @@ export default function Home() {
         <main
             //adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
             //be restricted by the padding, id like it to continue to the end of the screen
-            className={`flex flex-col w-full my-4 justify-start ${GeistSans.className} scroll-smooth transition ease-linear`}
+            className={`flex flex-col w-full py-4 md:p-8 justify-start ${GeistSans.className} scroll-smooth transition ease-linear`}
         >
             <ShortPresentation />
             <MainHero />

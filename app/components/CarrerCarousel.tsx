@@ -22,9 +22,15 @@ import SwedenFlag from '../../public/flag-sweden.svg';
 import ItalyFlag from '../../public/flag-italy.svg';
 
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
+import AlfaSistemiCover from '../../public/career/alfasistemi-cover.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
+import DanieliCover from '../../public/career/danieli-cover.svg';
 import ClavisterLogo from '../../public/career/clavister-logo.jpg';
+import ClavisterCover from '../../public/career/clavister-cover.png';
+import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
+
 import Image from 'next/image';
+import {LinkedinIcon, GlobeIcon } from '../helper/Icons';
 
 const icons = {
 	react: { name: 'React', icon: ReactIcon },
@@ -51,12 +57,14 @@ export const experiences = [
 		slug: 'alfa-sistemi',
 		company: 'Alfa Sistemi',
 		logo: AlfaSistemiLogo,
+		cover: AlfaSistemiCover,
+		profilePicture: "/career/alfasistemi/alfa-profile.jpg",
 		role: 'Mid FullStack Developer',
 		duration: '08/2021 - Present',
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
-		description: '',
+		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
 		tech: [
 			icons.javascript,
 			icons.react,
@@ -64,10 +72,66 @@ export const experiences = [
 			icons.git,
 			icons.gitlab,
 		],
-		skills: [
+		shortSkills: [
 			'Working with important clients',
 			'Creating and mantaining responsive React SPAs',
 			'Project scope definition, costs estimation, and constant contact with customers',
+		],
+		skills: [
+			{
+				type: 'text',
+				message:
+					'Coded using React.js on front end and Java Spring Boot for backend.',
+			},
+			{
+				type: 'text',
+				message:
+					'Involved in all the projects phases, from the kickoff meetings and project scope definition, costs estimation, schema definition, full stack development to the customer presentations.',
+			},
+			{
+				type: 'text',
+				message:
+					'React + Java to power responsive single-page applications for different important customers in the Italian industry:',
+			},
+			{ type: 'indent', message: 'thousands of procedures hosted' },
+			{ type: 'indent', message: '10% of time saved for each user' },
+			{
+				type: 'indent',
+				message:
+					'considerate amount of money transactions safely registered and',
+			},
+			{
+				type: 'indent',
+				message:
+					'brought value to our customers time with constant fast support and automated procedures',
+			},
+			{ type: 'indent', message: 'allowed seamless digital transition' },
+			{
+				type: 'indent',
+				message: 'accessible on both desktop and mobile platforms',
+			},
+			{
+				type: 'text',
+				message:
+					'Integrated enhancements to improve User Experience, smooth functionalities, and boost performance and provided constant application support and releases.',
+			},
+			{
+				type: 'text',
+				message:
+					'Developed ability to collaborate in different teams to create innovative and scalable products, with considerate eye for user design and user experience and attention to details.',
+			},
+		],
+		contacts: [
+			{
+				logo: <LinkedinIcon className='fill-white'/>,
+				link: 'https://www.linkedin.com/company/alfa-sistemi-spa/',
+				name: "Linkedin"
+			},
+			{
+				logo: <GlobeIcon />,
+				link: 'https://www.alfasistemi.net/en/',
+				name: "Website"
+			},
 		],
 	},
 	{
@@ -75,12 +139,14 @@ export const experiences = [
 		slug: 'danieli-automation',
 		company: 'Danieli Automation',
 		logo: DanieliLogo,
+		cover: DanieliCover,
+		profilePicture: "/career/danieli/danieli-profile.jpg",
 		role: 'FrontEnd Developer Intern',
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
 		duration: '02/2021 - 04/2021',
-		description: '',
+		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
 		tech: [
 			icons.angular,
 			icons.typescript,
@@ -88,11 +154,36 @@ export const experiences = [
 			icons.git,
 			icons.azuredevops,
 		],
-		skills: [
+		shortSkills: [
 			'Scrum methodology, weekly sprints',
 			'UI/UX design with Adobe Xd',
 			'Developed new features with Angular and Typescript',
 			'CI/CD with Azure DevOps',
+		],
+		skills: [
+			{
+				type: 'text',
+				message: 'Designed new pages and features with Adobe XD',
+			},
+			{ type: 'text', message: 'Scrum methodology, weekly sprints' },
+			{ type: 'text', message: 'Developed the features using Angular' },
+			{
+				type: 'text',
+				message:
+					'Worked with Azure Devops to create user stories and version control (git)',
+			},
+		],
+		contacts: [
+			{
+				logo: <LinkedinIcon className='fill-white'/>,
+				link: 'https://www.linkedin.com/company/danieli-digi-met/',
+				name: "Linkedin"
+			},
+			{
+				logo: <GlobeIcon />,
+				link: 'https://www.dca.it/en/',
+				name: "Website"
+			},
 		],
 	},
 	{
@@ -100,12 +191,14 @@ export const experiences = [
 		slug: 'clavister',
 		company: 'Clavister',
 		logo: ClavisterLogo,
+		cover: ClavisterCover,
+		profilePicture: "/career/clavister/clavister-profile.jpg",
 		role: 'Web Development Intern',
 		location: 'Örnsköldsvik, Sweden',
 		shortLocation: 'Sweden',
 		flag: SwedenFlag,
 		duration: '05/2018 - 06/2018',
-		description: '',
+		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
 		tech: [
 			icons.generalDb,
 			icons.adobeXD,
@@ -113,10 +206,47 @@ export const experiences = [
 			icons.git,
 			icons.gitlab,
 		],
-		skills: [
+		shortSkills: [
 			'International work experience',
 			'Learned how to work and comunicate in a team',
 			'Eye-opening experience about the world of work',
+		],
+		skills: [
+			{
+				type: 'text',
+				message: 'Eye-opening experience about the international world of work',
+			},
+			{
+				type: 'text',
+				message:
+					'Collaborated in team to define project requirements and scope',
+			},
+			{
+				type: 'text',
+				message:
+					'Conducted analysis to decide the features and functionalities to integrate into the project',
+			},
+			{
+				type: 'text',
+				message:
+					'Designed and implemented the database structure, including table relationships and data management',
+			},
+			{
+				type: 'text',
+				message: 'Initiated the development process using ASP.NET Framework',
+			},
+		],
+		contacts: [
+			{
+				logo: <LinkedinIcon className='fill-white'/>,
+				link: 'https://www.linkedin.com/company/clavister/',
+				name: "Linkedin"
+			},
+			{
+				logo: <GlobeIcon />,
+				link: 'https://www.clavister.com/',
+				name: "Website"
+			},
 		],
 	},
 ];
@@ -181,7 +311,7 @@ const CarrerCarousel = () => {
 						</div>
 						<div className=''>
 							<ul>
-								{experience.skills.map((skill, index) => (
+								{experience.shortSkills.map((skill, index) => (
 									<li key={index} className='text-sm text-white py-1 flex'>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
