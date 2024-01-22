@@ -37,7 +37,7 @@ const Skills = ({ slug }: { slug: string }) => {
 			<div className='snake-container md:px-28 flex justify-center'>
 				<div id='line'></div>
 				<div id='glow-line' className='ease-linear duration-75'></div>
-				<ul className='px-8 last:has-[:indent]:pb-4 lg:w-4/5'>
+				<ul className='px-8 last:has-[:indent]:pb-4 lg:w-4/5 text-lg'>
 					{notes?.map((note, index) => (
 						<div
 							key={index}

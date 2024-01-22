@@ -14,6 +14,7 @@ import ShortPresentation from './components/ShortPresentation';
 import TvAnimation from './components/TvAnimation';
 import { sectionTitleClassname } from './helper/typography';
 import { GeistSans } from 'geist/font/sans';
+import ContactForm from './components/ContactForm';
 
 
 const MyCarousel = dynamic(() => import('./components/MyCarousel'));
@@ -49,8 +50,9 @@ export default function Home() {
                     </h1>
                 </div>
                 <MyCarousel />
+                <ContactForm />
             </div>
-            <TvAnimation />
+            {/* <TvAnimation /> */}
         </main>
     );
 }
