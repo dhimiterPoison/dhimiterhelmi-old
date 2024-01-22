@@ -64,7 +64,7 @@ export const experiences = [
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
-		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+		description: `Combining React + Java to power responsive data-driven single-page applications for different important customers in the Italian industry, allowing them to have a seamless digital transition, saving time and manage safely a considerate amount of money transactions.`,
 		tech: [
 			icons.javascript,
 			icons.react,
@@ -198,7 +198,7 @@ export const experiences = [
 		shortLocation: 'Sweden',
 		flag: SwedenFlag,
 		duration: '05/2018 - 06/2018',
-		description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+		description: ``,
 		tech: [
 			icons.generalDb,
 			icons.adobeXD,
@@ -333,7 +333,7 @@ const CarrerCarousel = () => {
 						<div className='absolute bottom-2 text-sm self-end text-white'>
 							<Link
 								href={`/career/${experience.slug}`}
-								className='flex items-center'
+								className='flex items-center btn btn-sm border-base-100'
 							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'

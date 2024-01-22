@@ -3,6 +3,7 @@ import React from 'react';
 const Gallery = () => {
 	return (
 		<div className='py-16'>
+			<h2 className='pb-4 text-xl tracking-wider'>Gallery</h2>
 			<div className='bg-base-200 h-[30rem] flex flex-col p-4 gap-4 md:flex-row rounded-xl'>
 				<div className='main-image h-4/5 w-full bg-base-100  md:w-2/3 md:h-full rounded-lg'>
 					main

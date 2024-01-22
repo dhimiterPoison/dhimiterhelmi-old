@@ -13,42 +13,19 @@ const Skills = ({ slug }: { slug: string }) => {
 			const line = document.getElementById('glow-line');
 			if (!line) return;
 
-			console.log(
-				'scroll: vh height',
-				window.document.documentElement.clientHeight
-			);
 			let winScroll = document.documentElement.scrollTop;
-			console.log(
-				'scroll: snakeContainer',
-				glowContainer[0]?.getBoundingClientRect()
-			);
 
-			const glowContainerHeight =
-				glowContainer[0]?.getBoundingClientRect().height;
+			const glowContainerHeight = glowContainer[0]?.getBoundingClientRect().height;
 			const glowContainerTop = glowContainer[0]?.getBoundingClientRect().top;
 
-			console.log('scroll: snakeContainerHeight', glowContainerHeight);
-			console.log('scroll: snakeContainerTop', glowContainerTop);
-
 			let glowScroll = 0;
-			// winScroll = winScroll + window.document.documentElement.clientHeight / 2;
-			// winScroll = winScroll + glowContainerTop / 2;
-			console.log('scroll: winScroll', winScroll);
 
 			glowScroll = winScroll;
-			console.log('scroll: glowScroll', glowScroll);
 
-			if (
-				window.document.documentElement.clientHeight - glowContainerTop <
-				100
-			) {
-				console.log('scroll: aspetto');
+			if (window.document.documentElement.clientHeight - glowContainerTop < 100 ) {
 				additionalScroll = window.document.documentElement.clientHeight / 2;
 			}
-			console.log('scroll: additionalScroll', additionalScroll);
-			var scrolled =
-				((glowScroll - additionalScroll) * 100) / glowContainerHeight;
-			console.log('scroll: scrolled', scrolled);
+			var scrolled = ((glowScroll - additionalScroll) * 100) / glowContainerHeight;
 
 			if (scrolled < 100) line.style.height = scrolled + '%';
 		};
@@ -56,11 +33,11 @@ const Skills = ({ slug }: { slug: string }) => {
 
 	return (
 		<div className='w-full'>
-			<h2 className=' py-8 text-xl tracking-wider'>Matured skills</h2>
-			<div className='snake-container md:px-28 flex '>
+			<h2 className=' py-8 text-xl tracking-wider text-center'>Matured skills</h2>
+			<div className='snake-container md:px-28 flex justify-center'>
 				<div id='line'></div>
 				<div id='glow-line' className='ease-linear duration-75'></div>
-				<ul className='px-8 last:has-[:indent]:pb-4 lg:w-4/5'>
+				<ul className='px-8 last:has-[:indent]:pb-4 lg:w-4/5 text-lg'>
 					{notes?.map((note, index) => (
 						<div
 							key={index}
