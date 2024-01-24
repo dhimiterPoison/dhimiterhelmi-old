@@ -134,7 +134,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 			<div className='px-8'>
 				<Skills slug={params?.slug}></Skills>
 				<Gallery></Gallery>
-				<Contacts {...experience}></Contacts>
+				<Contacts contacts={experience.contacts}></Contacts>
 			</div>
 		</div>
 	);

@@ -50,7 +50,7 @@ export default function Home() {
                     </h1>
                 </div>
                 <MyCarousel />
-                <ContactForm />
+                {/* <ContactForm /> */}
             </div>
             {/* <TvAnimation /> */}
         </main>

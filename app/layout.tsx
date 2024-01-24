@@ -32,7 +32,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			
 			<body className={GeistSans.className}>
 				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
 					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between bg-base-100'>
