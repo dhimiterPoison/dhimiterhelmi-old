@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 
+export type Todo = any;
+
 export type Experience = {
 	id: number;
 	slug: string;
@@ -17,8 +19,11 @@ export type Experience = {
 		icon: string;
 	}[];
 	skills: string[];
-	contacts?: {
-		logo: string;
-		link: string;
-	}[];
+	contacts?: Contact[];
+};
+
+export type Contact = {
+	logo: Todo;
+	name: string;
+	link: string;
 };

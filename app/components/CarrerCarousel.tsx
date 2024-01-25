@@ -73,9 +73,9 @@ export const experiences = [
 			icons.gitlab,
 		],
 		shortSkills: [
-			'Working with important clients',
-			'Creating and mantaining responsive React SPAs',
-			'Project scope definition, costs estimation, and constant contact with customers',
+			'React + Java to power responsive single-page applications for different important customers in the Italian industry',
+			'Project scope definition, fullstack developement, and fast-paced releases',
+			'UX-focused, detail-oriented teamwork',
 		],
 		skills: [
 			{
@@ -86,12 +86,12 @@ export const experiences = [
 			{
 				type: 'text',
 				message:
-					'Involved in all the projects phases, from the kickoff meetings and project scope definition, costs estimation, schema definition, full stack development to the customer presentations.',
+					'Involved in all the projects phases, from the kickoff meetings with the stakeholders and project scope definition, costs estimation, schema definition and full stack development to the customer presentations.',
 			},
 			{
 				type: 'text',
 				message:
-					'React + Java to power responsive single-page applications for different important customers in the Italian industry:',
+					'React + Java (Spring boot) to power responsive single-page applications for different important customers in the Italian industry:',
 			},
 			{ type: 'indent', message: 'thousands of procedures hosted' },
 			{ type: 'indent', message: '10% of time saved for each user' },
@@ -257,7 +257,8 @@ const CarrerCarousel = () => {
 		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 py-6 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
 			{experiences.map((experience, index) => {
 				return (
-					<div
+					<Link
+						href={`/career/${experience.slug}`}
 						key={experience.id}
 						id={`experience-${index}`}
 						className={`carousel-card relative flex w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
@@ -331,9 +332,9 @@ const CarrerCarousel = () => {
 							</ul>
 						</div>
 						<div className='absolute bottom-2 text-sm self-end text-white'>
-							<Link
-								href={`/career/${experience.slug}`}
-								className='flex items-center btn btn-sm border-base-100'
+							<div
+								
+								className='flex items-center '
 							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -348,9 +349,9 @@ const CarrerCarousel = () => {
 									/>
 								</svg>
 								<span className='mr-2 cursor-pointer underline'>Read more</span>
-							</Link>
+							</div>
 						</div>
-					</div>
+					</Link>
 				);
 			})}
 		</div>

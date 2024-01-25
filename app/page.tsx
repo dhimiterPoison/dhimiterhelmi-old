@@ -29,7 +29,7 @@ export default function Home() {
         <main
             //adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
             //be restricted by the padding, id like it to continue to the end of the screen
-            className={`flex flex-col w-full py-4 md:p-8 justify-start ${GeistSans.className} scroll-smooth transition ease-linear`}
+            className={`landing-page flex flex-col w-full py-4 md:p-8 justify-start ${GeistSans.className} scroll-smooth transition ease-linear`}
         >
             <ShortPresentation />
             <MainHero />
@@ -50,7 +50,7 @@ export default function Home() {
                     </h1>
                 </div>
                 <MyCarousel />
-                <ContactForm />
+                {/* <ContactForm /> */}
             </div>
             {/* <TvAnimation /> */}
         </main>
