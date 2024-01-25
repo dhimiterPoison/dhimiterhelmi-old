@@ -257,7 +257,8 @@ const CarrerCarousel = () => {
 		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 py-6 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
 			{experiences.map((experience, index) => {
 				return (
-					<div
+					<Link
+						href={`/career/${experience.slug}`}
 						key={experience.id}
 						id={`experience-${index}`}
 						className={`carousel-card relative flex w-72 flex-col bg-[#294f38] flex-shrink-0 justify-self-center rounded-xl 
@@ -331,9 +332,9 @@ const CarrerCarousel = () => {
 							</ul>
 						</div>
 						<div className='absolute bottom-2 text-sm self-end text-white'>
-							<Link
-								href={`/career/${experience.slug}`}
-								className='flex items-center btn btn-sm border-base-100'
+							<div
+								
+								className='flex items-center '
 							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -348,9 +349,9 @@ const CarrerCarousel = () => {
 									/>
 								</svg>
 								<span className='mr-2 cursor-pointer underline'>Read more</span>
-							</Link>
+							</div>
 						</div>
-					</div>
+					</Link>
 				);
 			})}
 		</div>
