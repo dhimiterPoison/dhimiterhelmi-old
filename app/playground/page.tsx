@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, {useState} from 'react';
 
-const page = () => {
-	const [showDetail, setShowDetail] = React.useState(false);
+const Page = () => {
+	const [showDetail, setShowDetail] = useState(false);
 	return (
 		<div className='p-main w-full flex p-4'>
 			<div className='flex flex-col w-full gap-16 items-center py-4 transition ease-in-out duration-100'>
@@ -58,4 +58,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
