@@ -35,8 +35,6 @@ module.exports = {
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
 		themes: [
-			'lemonade',
-			'forest',
 			{
 				'mytheme-dark': {
 					primary: '#F9F871',
