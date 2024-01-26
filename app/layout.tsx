@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Logo from './components/Logo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistSans } from 'geist/font/sans';
+import PlausibleProvider from 'next-plausible';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,14 +32,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' data-theme="mytheme-dark">
+		<html lang='en' data-theme='mytheme-dark'>
 			<body className={GeistSans.className}>
-				<div className='app relative flex overscroll-none flex-col justify-start lg:px-4 lg:pb-4'>
-					<div className='navigation py-2 flex flex-col max-h-screen w-full lg:flex-row lg:justify-between bg-base-100'>
+				<div className='app relative flex flex-col justify-start overscroll-none lg:px-4 lg:pb-4'>
+					<div className='navigation flex max-h-screen w-full flex-col bg-base-100 py-2 lg:flex-row lg:justify-between'>
 						<Logo />
 						<Navbar />
 					</div>
-					<div className='router-content w-full flex rounded-t-2xl lg:rounded-lg bg-base-300 mt-4 lg:mt-0 justify-center scroll-smooth text-slate-50 neu-inner-shadow'>
+					<div className='router-content neu-inner-shadow mt-4 flex w-full justify-center scroll-smooth rounded-t-2xl bg-base-300 text-slate-50 lg:mt-0 lg:rounded-lg'>
 						{children}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -46,7 +47,7 @@ export default function RootLayout({
 							viewBox='0 0 24 24'
 							strokeWidth={1.5}
 							stroke='currentColor'
-							className='w-6 h-6 stroke-white absolute bottom-8 lg:bottom-8 animate-bounce'
+							className='absolute bottom-8 h-6 w-6 animate-bounce stroke-white lg:bottom-8'
 						>
 							<path
 								strokeLinecap='round'
@@ -59,6 +60,7 @@ export default function RootLayout({
 				{/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
+				<PlausibleProvider domain="dhimiterhelmi.it" />
 				<SpeedInsights />
 			</body>
 		</html>
