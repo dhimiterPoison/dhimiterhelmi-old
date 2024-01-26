@@ -60,7 +60,7 @@ export default function RootLayout({
 				{/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
-				<PlausibleProvider domain="dhimiterhelmi.it" />
+				<PlausibleProvider domain="dhimiterhelmi.it" trackOutboundLinks={true} taggedEvents={true}/>
 				<SpeedInsights />
 			</body>
 		</html>
