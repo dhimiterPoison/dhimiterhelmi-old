@@ -24,8 +24,14 @@ export const metadata: Metadata = {
 	openGraph: {
 		images: [{ url: 'images/portfolio-seo-image.png' }],
 	},
+	other: {
+		'google-site-verification': 'a9L5OqkfY454mH_FomQKeX8T7weHuYWTEe2ZRn_rSzs',
+	},
 };
-
+<meta
+	name='google-site-verification'
+	content='a9L5OqkfY454mH_FomQKeX8T7weHuYWTEe2ZRn_rSzs'
+/>;
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -60,7 +66,11 @@ export default function RootLayout({
 				{/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />
 				<Analytics />
-				<PlausibleProvider domain="dhimiterhelmi.it" trackOutboundLinks={true} taggedEvents={true}/>
+				<PlausibleProvider
+					domain='dhimiterhelmi.it'
+					trackOutboundLinks={true}
+					taggedEvents={true}
+				/>
 				<SpeedInsights />
 			</body>
 		</html>
