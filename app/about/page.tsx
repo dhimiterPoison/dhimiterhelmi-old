@@ -20,7 +20,7 @@ const AboutPage = () => {
 					Being curious made me fall in love with code developing, as
 					the young me wrote in the motivation letter for my{' '}
 					<Link href='/career/clavister'>Erasmus Internship</Link>{' '}
-					when i was 17:
+					when I was 17:
 				</p>
 				<blockquote>
 					I chose computer science because I wanted to learn
@@ -41,7 +41,7 @@ const AboutPage = () => {
 				<p>
 					<strong>(2021-2023)</strong> - My journey continues in{' '}
 					<Link href='/career/alfa-sistemi'>Alfa Sistemi</Link>, where
-					I found myself to face the "business world" of software
+					I found myself to face the &quot;business world&quot; of software
 					development, the one where you have to deal with clients,
 					quality of the product aaaand .... deadlines.
 					<br />

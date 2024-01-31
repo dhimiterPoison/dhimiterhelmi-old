@@ -20,9 +20,7 @@ const MobileNavigation = () => {
 		const hash = window.location.hash;
 		const activeRoute = pathname.concat(hash);
 		setActiveRoute(activeRoute);
-		console.log('NAV: hash', hash);
-		console.log('NAV: activeRoute', activeRoute);
-	}, [params]);
+	}, [params, pathname]);
 
 	useEffect(() => {
 		// const checkpoint = document.querySelector('nav-checkpoint');
@@ -35,9 +33,6 @@ const MobileNavigation = () => {
 		// navObserver.observe(checkpoint);
 	}, []);
 
-	console.log('NAV: routes', routes);
-	console.log('NAV: pathname', pathname);
-
 	return (
 		<div className='mobile-nav fixed bottom-4 z-50 flex h-16 items-center gap-4 self-center rounded-xl bg-base-200 border border-base-300 p-2 shadow-md lg:hidden '>
 			{routes.map((route) => {
@@ -45,8 +40,6 @@ const MobileNavigation = () => {
 				const className = activeRoute.startsWith(route.path)
 					? (route.id == 2 || route.id == 4 ? 'fill-primary' : 'text-primary')
 					: 'text-base-content';
-				console.log('NAV: isActive', isActive);
-				console.log('NAV: className', route.icon.props);
 				let icon = React.cloneElement(route.icon, {className});
 				return (
 					<MobileNavButton key={route.id} path={route.path} isActive>
