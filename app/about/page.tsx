@@ -41,17 +41,25 @@ const AboutPage = () => {
 				<p>
 					<strong>(2021-2023)</strong> - My journey continues in{' '}
 					<Link href='/career/alfa-sistemi'>Alfa Sistemi</Link>, where
-					I found myself to face the &quot;business world&quot; of software
-					development, the one where you have to deal with clients,
-					quality of the product aaaand .... deadlines.
+					I found myself to face the &quot;business world&quot; of
+					software development, the one where you have to deal with
+					clients, quality of the product aaaand .... deadlines.
 					<br />
 				</p>
 				<p>
+					I had the opportunity work in every phase of the projects,
+					from the kickoff meetings with the stakeholders and project
+					scope definition, costs estimation, schema definition and
+					full stack development to the customer presentations.
+				</p>
+				<p>
 					As imaginable, being my first time with those kind of
-					responsibilities, it was a bit overwhelming at first, but I 
-
-					This experience was a great opportunity to learn, grow and
-					build a solid foundation for my future career. <br />
+					responsibilities, it was a bit overwhelming at first, but I
+					managed to get the hang of it and now I feel more confident
+					in my skills. <br />
+					This experience was a great opportunity to
+					learn, grow and build a solid foundation for my future
+					career.
 				</p>
 			</div>
 		</div>
