@@ -1,6 +1,7 @@
 import React from 'react';
 import ShortPresentation from '../components/ShortPresentation';
 import Link from 'next/link';
+import ContactForm from '../components/ContactForm';
 
 const AboutPage = () => {
 	return (
@@ -62,6 +63,7 @@ const AboutPage = () => {
 					career.
 				</p>
 			</div>
+			<ContactForm></ContactForm>
 		</div>
 	);
 };
