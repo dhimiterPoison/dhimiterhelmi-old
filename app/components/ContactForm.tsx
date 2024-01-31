@@ -40,7 +40,7 @@ const ContactForm = () => {
 						defaultValue="Hey, I'm interested in your services!"
 						className='input input-bordered w-full font-semibold '
 					/>
-					<button type='submit' className='btn text-lg ' plausible-event-name="contact-form" >
+					<button type='submit' className='btn text-lg btn-primary' plausible-event-name="contact-form" >
 						Send
 					</button>
 				</div>

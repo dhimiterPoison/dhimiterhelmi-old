@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { Lora, Catamaran, Inter } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const sections = Inter({ subsets: ['latin'] });
 
@@ -14,33 +15,22 @@ type Props = {
 };
 const Route = ({ route, closeNavigation }: Props) => {
 	const pathname = usePathname();
-    const isActive = pathname?.startsWith('/' + route.path + '/');
+	const isActive = pathname?.startsWith('/' + route.path + '/');
 	return (
-		// <div className='route-category mb-10'>
-		// 	<div
-		// 		className={`route-category-title text-accent  tracking-wider ${sections.className}`}
-		// 	>
-		// 		{category}
-		// 	</div>
-		// 	<div className='route-category-routes'>
-				// {routes.map((route) => {
-					// return (
-						<div key={route.id} className='route-category-route'>
-							<Link
-								className={`flex text-xl py-2 items-center ${
-									isActive && 'text-primary font-semibold'
-								} hover:underline  hover:scale-110`}
-
-								href={`${route.path}`}
-								onClick={closeNavigation}
-							>
-								{route.title}
-							</Link>
-						</div>
-		// 			);
-		// 		})}
-		// 	</div>
-		// </div>
+		// <motion.div key={route.id} className='route-category-route'
+		// 	animate={{ start: { opacity: 0 }, tra end: { opacity: 1 } }}
+		// ></motion.div>
+		<div key={route.id} className='route-category-route'>
+			<Link
+				className={`flex items-center py-2 text-xl ${
+					isActive && 'font-semibold text-primary'
+				} hover:underline`}
+				href={`${route.path}`}
+				onClick={closeNavigation}
+			>
+				{route.title}
+			</Link>
+		</div>
 	);
 };
 
