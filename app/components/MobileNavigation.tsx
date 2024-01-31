@@ -34,7 +34,7 @@ const MobileNavigation = () => {
 	}, []);
 
 	return (
-		<div className='mobile-nav fixed bottom-4 z-50 flex h-16 items-center gap-4 self-center rounded-xl bg-base-200 border border-base-300 p-2 shadow-md lg:hidden '>
+		<div className='mobile-nav fixed bottom-4 z-50 flex h-16 items-center gap-4 self-center rounded-xl bg-base-200 border border-base-300 p-2 shadow-md lg:hidden'>
 			{routes.map((route) => {
 				const isActive = activeRoute === route.path;
 				const className = activeRoute.startsWith(route.path)
