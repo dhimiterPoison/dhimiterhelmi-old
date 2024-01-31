@@ -8,6 +8,7 @@ import Logo from './components/Logo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistSans } from 'geist/font/sans';
 import PlausibleProvider from 'next-plausible';
+import MobileNavigation from './components/MobileNavigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
 		images: [{ url: 'images/portfolio-seo-image.png' }],
 	},
 	other: {
-		'google-site-verification': 'a9L5OqkfY454mH_FomQKeX8T7weHuYWTEe2ZRn_rSzs',
+		'google-site-verification':
+			'a9L5OqkfY454mH_FomQKeX8T7weHuYWTEe2ZRn_rSzs',
 	},
 };
 <meta
@@ -41,13 +43,13 @@ export default function RootLayout({
 		<html lang='en' data-theme='mytheme-dark'>
 			<body className={GeistSans.className}>
 				<div className='app relative flex flex-col justify-start overscroll-none lg:px-4 lg:pb-4'>
-					<div className='navigation flex max-h-screen w-full flex-col bg-base-100 py-2 lg:flex-row lg:justify-between'>
-						<Logo />
+					<div className='navigation flex max-h-screen w-full flex-col bg-base-100 px-8 py-2 lg:flex-row lg:justify-between'>
+						{/* <Logo /> */}
 						<Navbar />
 					</div>
 					<div className='router-content neu-inner-shadow mt-4 flex w-full justify-center scroll-smooth rounded-t-2xl bg-base-300 text-slate-50 lg:mt-0 lg:rounded-lg'>
 						{children}
-						<svg
+						{/* <svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
@@ -60,8 +62,9 @@ export default function RootLayout({
 								strokeLinejoin='round'
 								d='M19.5 8.25l-7.5 7.5-7.5-7.5'
 							/>
-						</svg>
+						</svg> */}
 					</div>
+					<MobileNavigation></MobileNavigation>
 				</div>
 				{/* <div className='horizontal-line bg-red-500'></div> */}
 				<Footer />

@@ -281,7 +281,7 @@ const CarrerCarousel = () => {
 							{experience.role}
 						</span>
 						<div className='flex justify-between h-16 items-center'>
-							<div className='flex text-sm gap-2 items-center'>
+							<div className='flex text-sm gap-2 items-center nav-checkpoint'>
 								<Image
 									src={experience.flag}
 									alt={`${experience.shortLocation} flag`}
