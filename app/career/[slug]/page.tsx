@@ -20,14 +20,13 @@ export async function generateMetadata(
 	parent: ResolvingMetadata
 ): Promise<Metadata> {
 	// read route params
-	const slug = params.slug;
 	const experience = experiences.find(
 		(experience) => experience.slug == params?.slug
 	);
 
 	// optionally access and extend (rather than replace) parent metadata
 	// const previousImages = (await parent).openGraph?.images || [];
-	const previousDescription = (await parent).description || '';
+	const previousDescription = (await parent).description ?? '';
 
 	return {
 		title: `Dhimiter Helmi - ${experience?.company} - ${experience?.role}`,
@@ -46,7 +45,6 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 	);
 
 	if (!experience)
-		//TODO: not working as expected
 		return notFound();
 
 	return (
@@ -124,7 +122,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 									className='w-5 h-5'
 								/>
 							</div>
-							<div key={index} className='px-2 py-1 w-fit '>
+							<div className='px-2 py-1 w-fit '>
 								{tech.name}
 							</div>
 						</div>

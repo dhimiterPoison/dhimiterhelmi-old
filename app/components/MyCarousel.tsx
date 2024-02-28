@@ -36,7 +36,7 @@ const cards = [
 	{
 		id: 3,
 		path: 'natures-serenade',
-		title: "Nature's Serenade",
+		title: "a Human Experience",
 		description: `A journey in the wonders of the universe, giving importance to the listening and observation to explore that beauty is in the simple things.`,
 		environment: 'Coming soon',
 		categories: ['Immersive', 'Multimedia', ],

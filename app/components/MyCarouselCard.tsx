@@ -36,7 +36,7 @@ const MyCarouselCard = ({
 	// }, [entry?.isIntersecting]);
 
 	return (
-		<Link href={`/${card.path}`}>
+		<Link href={`/project/${card.path}`}>
 			<div
 				className={`project-card flex flex-col md:flex-row p-2 gap-2 bg-green-800 rounded-xl md:hover:scale-105 ease-in-out duration-200 ${GeistSans.className}`}
 			>
