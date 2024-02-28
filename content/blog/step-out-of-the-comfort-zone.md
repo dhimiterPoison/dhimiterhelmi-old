@@ -3,7 +3,7 @@ notionId: e5649115-3dc0-4968-85d0-1ec767ae2da3
 type: Blog
 date: 2024-02-16
 slug: step-out-of-the-comfort-zone
-enabled: true
+status: To do
 tags:
   - blog
 cover:

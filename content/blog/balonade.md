@@ -3,7 +3,7 @@ notionId: 91b8cf5a-d98f-46b6-a9ee-a84fc7e5faa6
 type: Blog
 date: 2024-01-20T00:00:00.000+01:00
 slug: balonade
-enabled: true
+status: Published
 tags:
   - project
 cover:
@@ -40,6 +40,7 @@ GAAADAMIT (Why do i love putting myself in this situations)
 
 
 After some research, I decided to use the following tech stack:
+
 
 | Experience | Name         |
 | ---------- | ------------ |

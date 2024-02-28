@@ -37,7 +37,6 @@
     "react-slick": "^0.29.0",
     "sass": "^1.64.1",
     "sharp": "^0.33.2",
-    "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.1",
     "typescript": "5.1.6"
   },
@@ -47,7 +46,7 @@
     "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^14.1.2",
     "daisyui": "^4.6.0",
-    "dotenv": "^16.3.2",
+    "dotenv": "^16.4.5",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.2.4",
