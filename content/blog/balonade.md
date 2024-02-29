@@ -1,13 +1,15 @@
 ---
 notionId: 91b8cf5a-d98f-46b6-a9ee-a84fc7e5faa6
 type: Blog
+enabled: true
 date: 2024-01-20T00:00:00.000+01:00
 slug: balonade
 status: Published
 tags:
   - project
+  - production
 cover:
-  src: /images/blog/pika-1705535485067-1x.png
+  src: /images/blog/balonade-small.png
   width: 1616
   height: 1400
 location: Buttrio
