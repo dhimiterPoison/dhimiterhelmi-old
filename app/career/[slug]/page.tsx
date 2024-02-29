@@ -48,7 +48,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 		return notFound();
 
 	return (
-		<div className='flex flex-col w-full relative  font-light text-white bg-base-100'>
+		<div className='flex flex-col w-full relative  font-light  text-[#FDF5E6] bg-base-100'>
 			<div className='blog-cover'>
 				<Image
 					src={experience?.cover}
@@ -129,7 +129,7 @@ const CareerDetail = ({ params }: { params: { slug: string } }) => {
 					))}
 				</div>
 			</div>
-			<div className='px-8'>
+			<div className='px-8  text-[#FDF5E6]'>
 				<Skills slug={params?.slug}></Skills>
 				<Gallery></Gallery>
 				<Contacts contacts={experience.contacts}></Contacts>

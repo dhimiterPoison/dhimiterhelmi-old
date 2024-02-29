@@ -35,10 +35,10 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
 					</svg>
 				</Link>
 			</div>
-			<div className='px-4 prose lg:prose-lg py-4 lg:mx-auto'>
-				<h2 className='text-center'>{blogItem?.title}</h2>
+			<div className='px-4 prose lg:prose-lg py-4 md:mx-auto '>
+				<h2 className='text-center  text-[#FDF5E6]'>{blogItem?.title}</h2>
 				<div
-					className=' prose lg:prose-lg text-justify'
+					className=' prose lg:prose-lg text-justify text-[#FDF5E6]'
 					dangerouslySetInnerHTML={{ __html: blogItem?.body.html || '' }}
 				>
 					{/* {blogItem?.body.raw} */}

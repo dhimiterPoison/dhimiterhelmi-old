@@ -30,7 +30,7 @@ import ClavisterCover from '../../public/career/clavister-cover.png';
 import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
 
 import Image from 'next/image';
-import {LinkedinIcon, GlobeIcon } from '../helper/Icons';
+import { LinkedinIcon, GlobeIcon } from '../helper/Icons';
 
 const icons = {
 	react: { name: 'React', icon: ReactIcon },
@@ -78,52 +78,27 @@ export const experiences = [
 			'UX-focused, detail-oriented teamwork',
 		],
 		skills: [
-			{
-				type: 'text',
-				message:
-					'Coded using React.js on front end and Java Spring Boot for backend.',
-			},
-			{
-				type: 'text',
-				message:
-					'Involved in all the projects phases, from the kickoff meetings with the stakeholders and project scope definition, costs estimation, schema definition and full stack development to the customer presentations.',
-			},
-			{
-				type: 'text',
-				message:
-					'React + Java (Spring boot) to power responsive single-page applications for different important customers in the Italian industry:',
-			},
-			{ type: 'indent', message: 'thousands of procedures hosted' },
-			{ type: 'indent', message: '10% of time saved for each user' },
-			{
-				type: 'indent',
-				message:
-					'considerate amount of money transactions safely registered and',
-			},
-			{
-				type: 'indent',
-				message:
-					'brought value to our customers time with constant fast support and automated procedures',
-			},
-			{ type: 'indent', message: 'allowed seamless digital transition' },
-			{
-				type: 'indent',
-				message: 'accessible on both desktop and mobile platforms',
-			},
-			{
-				type: 'text',
-				message:
-					'Integrated enhancements to improve User Experience, smooth functionalities, and boost performance and provided constant application support and releases.',
-			},
-			{
-				type: 'text',
-				message:
-					'Developed ability to collaborate in different teams to create innovative and scalable products, with considerate eye for user design and user experience and attention to details.',
-			},
+			{ "type": "text", "message": "React + Java  (spring boot) to power responsive single-page applications for different important customers in the Italian industry:" },
+			{ "type": "indent", "message": "data-oriented solutions with tailored UI/UX to enhance productivity for our customers and their employees." },
+			{ "type": "indent", "message": "thousands of procedures hosted" },
+			{ "type": "indent", "message": "10% of time saved for each user" },
+			{ "type": "indent", "message": "considerate amount of money transactions safely registered and" },
+			{ "type": "indent", "message": "brought value to our customers time with constant fast support and automated procedures" },
+			{ "type": "indent", "message": "allowed seamless digital transition" },
+			{ "type": "indent", "message": "responsive and accessible and on both desktop and mobile platforms" },
+			{ "type": "text", "message": "The initial project I worked on was met with such positive reception that it led to the acquisition of 3 additional projects, commissioned by clients who were impressed by our work." },
+			{ "type": "text", "message": "Involved in all the projects phases, from the kickoff meetings with the stakeholders and project scope definition, costs estimation, schema definition and full stack development to the customer presentations." },
+			{ "type": "text", "message": "Translate customer requirements into tangible functionalities within the interface," },
+			{ "type": "text", "message": "Integrated enhancements to improve User Experience, new smooth functionalities, and boost performance and provided constant application support and updates through fast paced releases." },
+			{ "type": "text", "message": "Developed ability to collaborate in different teams to create innovative and scalable products, with a considerate eye for user design, user experience and attention to details." },
+			{ "type": "text", "message": "Developer ability to work independently" },
+			{ "type": "text", "message": "Build and structure complex projects, with structured code, easily maintainable and deliver quality work integrating necessary tests." },
+			{ "type": "text", "message": "Taking ownership of my work and responsibility of my role and work in the team." },
+			{ "type": "text", "message": "Introducing and guiding new team members." }
 		],
 		contacts: [
 			{
-				logo: <LinkedinIcon className='fill-white'/>,
+				logo: <LinkedinIcon className='fill-white' />,
 				link: 'https://www.linkedin.com/company/alfa-sistemi-spa/',
 				name: "Linkedin"
 			},
@@ -161,21 +136,14 @@ export const experiences = [
 			'CI/CD with Azure DevOps',
 		],
 		skills: [
-			{
-				type: 'text',
-				message: 'Designed new pages and features with Adobe XD',
-			},
-			{ type: 'text', message: 'Scrum methodology, weekly sprints' },
-			{ type: 'text', message: 'Developed the features using Angular' },
-			{
-				type: 'text',
-				message:
-					'Worked with Azure Devops to create user stories and version control (git)',
-			},
+			{ "type": "text", "message": "Designed new pages and features with Adobe XD" },
+			{ "type": "text", "message": "Scrum methodology, weekly sprints" },
+			{ "type": "text", "message": "Developed the features using Angular" },
+			{ "type": "text", "message": "Worked with Azure Devops to create user stories and version control (git)" }
 		],
 		contacts: [
 			{
-				logo: <LinkedinIcon className='fill-white'/>,
+				logo: <LinkedinIcon className='fill-white' />,
 				link: 'https://www.linkedin.com/company/danieli-digi-met/',
 				name: "Linkedin"
 			},
@@ -212,33 +180,15 @@ export const experiences = [
 			'Eye-opening experience about the world of work',
 		],
 		skills: [
-			{
-				type: 'text',
-				message: 'Eye-opening experience about the international world of work',
-			},
-			{
-				type: 'text',
-				message:
-					'Collaborated in team to define project requirements and scope',
-			},
-			{
-				type: 'text',
-				message:
-					'Conducted analysis to decide the features and functionalities to integrate into the project',
-			},
-			{
-				type: 'text',
-				message:
-					'Designed and implemented the database structure, including table relationships and data management',
-			},
-			{
-				type: 'text',
-				message: 'Initiated the development process using ASP.NET Framework',
-			},
+			{ "type": "text", "message": "Eye-opening experience about the international world of work" },
+			{ "type": "text", "message": "Collaborated in team to define project requirements and scope" },
+			{ "type": "text", "message": "Conducted analysis to decide the features and functionalities to integrate into the project" },
+			{ "type": "text", "message": "Designed and implemented the database structure, including table relationships and data management" },
+			{ "type": "text", "message": "Initiated the development process using ASP.NET Framework" }
 		],
 		contacts: [
 			{
-				logo: <LinkedinIcon className='fill-white'/>,
+				logo: <LinkedinIcon className='fill-white' />,
 				link: 'https://www.linkedin.com/company/clavister/',
 				name: "Linkedin"
 			},
@@ -333,7 +283,7 @@ const CarrerCarousel = () => {
 						</div>
 						<div className='absolute bottom-2 text-sm self-end text-white'>
 							<div
-								
+
 								className='flex items-center '
 							>
 								<svg
