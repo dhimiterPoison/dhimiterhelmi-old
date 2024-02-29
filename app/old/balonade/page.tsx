@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import BalonadeBGLarge from '../../public/images/balonade-card-bg-lg.png';
+import BalonadeBGLarge from '@/public/images/balonade-card-bg-lg.png';
 import Link from 'next/link';
-import Gallery from '../components/Gallery';
+import Gallery from '@/app/components/Gallery';
 
 const Balonade = () => {
 	return (
@@ -124,13 +124,13 @@ const Balonade = () => {
 					</strong>
 				</p>
 				<div className='flex w-full justify-center'>
-					<Image
+					{/* <Image
 						src='https://media.tenor.com/VOf_IsXVKfsAAAAC/meme-elmo.gif'
 						alt=''
 						width={300}
 						height={280}
 						className='self-center'
-					/>
+					/> */}
 				</div>
 				<p>
 					Ookay, never mind. I got it. After that i really loved NextJs and it
