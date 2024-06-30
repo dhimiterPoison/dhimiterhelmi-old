@@ -20,11 +20,9 @@ const ContactForm = () => {
 			<div className='text-lg font-light leading-3'>
 				Did you find my work interesting?
 			</div>
-			<div className='text-2xl md:text-3xl font-semibold  leading-10'>Let&apos;s get in touch!</div>
+			<div className='text-2xl md:text-3xl font-semibold  leading-10'>let&apos;s get in touch</div>
 			<div className='text-lg font-light leading-8'>
-				Contact me and I&apos;ll reach you out ASAP.
-				<br />
-				let&apos;s create something awesome together!
+				and create something awesome together!
 			</div>
 			<form 
 				action={submit}

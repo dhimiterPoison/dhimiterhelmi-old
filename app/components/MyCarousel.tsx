@@ -27,7 +27,7 @@ const cards = [
 		path: 'self-glance',
 		title: 'Self, your life at a glance',
 		description:
-			'Dump your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly.',
+			'Store your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly.',
 		environment: 'Building in public',
 		link: 'https://self-glance.it/',
 		categories: ["AI", "UX", "#BuildInPublic"],
