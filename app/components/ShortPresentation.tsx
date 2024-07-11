@@ -33,7 +33,7 @@ const ShortPresentation = () => {
 					</div>
 				</div>
 			</div>
-			<div className='contact-points flex justify-center items-center h-16 gap-4'>
+			{/* <div className='contact-points flex justify-center items-center h-16 gap-4'>
 				<div className='contact btn btn-secondary btn-sm font-extrabold '>
 					<Link
 						href='https://www.linkedin.com/in/dhimiter-helmi-561955200'
@@ -80,7 +80,7 @@ const ShortPresentation = () => {
 						</svg>
 					</Link>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

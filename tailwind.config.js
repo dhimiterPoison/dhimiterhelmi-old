@@ -60,6 +60,8 @@ module.exports = {
 					'base-200': '#205A32',
 					'base-300': '#337A54',
 					'base-400': '#90D8A7',
+					// 'pastel-green': '#c3dfba'
+					// 'celadon': '#ACE1AF'
 				},
 			},
 		],
