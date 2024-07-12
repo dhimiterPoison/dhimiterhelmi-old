@@ -7,9 +7,9 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 const MainHero = () => {
 	return (
 		<div className='flex flex-col mb-8'>
-			<div className={`tracking-wider flex flex-col`}>
-				<h1 className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
-					unleash Powerful
+			<div className={` flex flex-col`}>
+				<h1 className='flex tracking-wide flex-row justify-center text-4xl md:text-5xl font-bold'>
+					unleash <span className='ml-2 tracking-wider'>Powerful</span>
 				</h1>
 				<div className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
 					{/* //set fist letter to secondary color */}
@@ -19,7 +19,7 @@ const MainHero = () => {
 				<div className='flex flex-col my-4 justify-center text-xl items-center'>
 					{/* <p>Whatever you do,</p>
 					<p className='mx-2'>isn&apos;t it better enjoying doing it?</p> */}
-					<p className='tracking-wide'>Give your users a top tier experience!</p>
+					<span className='text-center'>Empower Your <i>users</i> with tailored interactivity!</span>
 				</div>
 				<div className='flex navbar-contact btn btn-secondary uppercase font-extrabold self-center w-fit shadow-md hover:scale-105'>
 					<Link href='mailto:dhimiter.helmi@gmail.com' plausible-event-name="get-in-touch-nav" className={``}>Book a call</Link>
