@@ -19,7 +19,7 @@ export async function generateMetadata(
 
 	return {
 		title: `Self, your life at a glance - Dhimiter Helmi`,
-		description: `Dump your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly. ${previousDescription} `, //experience?.shortDescription,
+		description: `Store your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly. ${previousDescription} `, //experience?.shortDescription,
 		// openGraph: {
 			// images: ['/some-specific-page-image.jpg', ...previousImages],
 			// description: `${previousDescription} Key points of my experience in ${experience?.company}`, //experience?.shortDescription,

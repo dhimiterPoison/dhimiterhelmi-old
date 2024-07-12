@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /r/
 
-Sitemap: https://dhimiterhelmi.it/sitemap.xml
+Sitemap: https://dhimiterhelmi.com/sitemap.xml

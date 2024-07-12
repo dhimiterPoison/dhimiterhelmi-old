@@ -41,7 +41,7 @@ export default function Home() {
 				<CarrerCarousel />
 				<div id='personal-projects' className='flex'>
 					<h1 className={`mt-8 h-10 ${sectionTitleClassname}`}>
-						Personal Projects
+						Projects
 					</h1>
 				</div>
 				<MyCarousel />

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 	description: `I help you by providing products or SaaS tailored to your needs.
 	Win win, I create and have fun, 
 	you save time and get a smile.`,
-	metadataBase: new URL('https://dhimiterhelmi.it'),
+	metadataBase: new URL('https://dhimiterhelmi.com'),
 	openGraph: {
 		images: [{ url: 'images/portfolio-seo-image.png' }],
 	},
@@ -70,7 +70,7 @@ export default function RootLayout({
 				<Footer />
 				<Analytics />
 				<PlausibleProvider
-					domain='dhimiterhelmi.it'
+					domain='dhimiterhelmi.com'
 					trackOutboundLinks={true}
 					taggedEvents={true}
 				/>
