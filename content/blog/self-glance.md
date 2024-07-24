@@ -22,7 +22,7 @@ title: Self, your life at a glance
 Focus your energies on what truly matters and stay in the flow!
 
 
-Dump your thoughts, ideas, and feelings in a **safe** place and let
+Store your thoughts, ideas, and feelings in a **safe** place and let
 _Self_ help you organizing your time and energies.
 
 
@@ -126,5 +126,8 @@ _**Self**_ is still under developement,
 
 
 if you want to receive news join the waitlist on:
+
+
+[<u>selfglance.com</u>](http://selfglance.com/)
 
 

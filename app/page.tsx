@@ -28,7 +28,7 @@ export default function Home() {
 		<main
 			//adding w-full fixes the horizontal scroll issue, BUUUT, it also makes the carousels
 			//be restricted by the padding, id like it to continue to the end of the screen
-			className={`landing-page flex w-full flex-col justify-start scroll-smooth py-4 transition ease-linear md:p-8 ${GeistSans.className}`}
+			className={`landing-page flex w-full flex-col justify-start py-8 scroll-smooth md:p-8 ${GeistSans.className}`}
 		>
 			<ShortPresentation />
 			<MainHero />
@@ -47,7 +47,17 @@ export default function Home() {
 				<MyCarousel />
 				<ContactForm />
 			</div>
-			{/* <TvAnimation /> */}
+			{/* <TvAnimation />  */}
+			{/* <div id='section1' className='w-full h-screen bg-blue-200'>sectiopn 1</div>
+			<div id='section2' className='w-full h-screen bg-green-200'>sectiopn 2</div>
+			<div id='section3' className='w-full h-screen bg-red-200'>sectiopn 3</div>
+			<div id='section4' className='w-full h-screen bg-violet-200'>sectiopn 4</div>
+			<div className="fixed flex bottom-0 left-0 h-20 w-full bg-blue-200">
+				<Link href="#section1">Sectioon 1</Link>
+				<Link href="#section2">Sectioon 2</Link>
+				<Link href="#section3">Sectioon 3</Link>
+				<Link href="#section4">Sectioon 4</Link>
+			</div> */}
 		</main>
 	);
 }

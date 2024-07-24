@@ -1,6 +1,9 @@
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
 import React from 'react';
+import { InlineWidget } from "react-calendly";
+import BookCallComponent from './BookCallComponent';
+
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -13,17 +16,18 @@ const MainHero = () => {
 				</h1>
 				<div className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
 					{/* //set fist letter to secondary color */}
-					<h1 className='text-primary'>U</h1>ser e
-					<h1 className='text-secondary'>X</h1>perience
+					<h1 className='text-primary u-letter'>U</h1>ser e
+					<h1 className='text-secondary x-letter'>X</h1>perience
 				</div>
 				<div className='flex flex-col my-4 justify-center text-xl items-center'>
 					{/* <p>Whatever you do,</p>
 					<p className='mx-2'>isn&apos;t it better enjoying doing it?</p> */}
-					<span className='text-center'>Empower Your <i>users</i> with tailored interactivity!</span>
+					<span className='text-center font-light'>Empower your <strong>users</strong> with tailored interactivity!</span>
 				</div>
-				<div className='flex navbar-contact btn btn-secondary uppercase font-extrabold self-center w-fit shadow-md hover:scale-105'>
-					<Link href='mailto:dhimiter.helmi@gmail.com' plausible-event-name="get-in-touch-nav" className={``}>Book a call</Link>
-				</div>
+				{/* <div id='call-schedule' className='flex navbar-contact btn btn-secondary uppercase font-extrabold self-center w-fit shadow-md hover:scale-105'>
+					<button plausible-event-name="get-in-touch-nav" className={`uppercase`}>Book a call</button>
+				</div> */}
+				<BookCallComponent></BookCallComponent>
 			</div>
 			{/* <div className='flex flex-col items-center my-4 prose'>
 				Whatever you do, <br /> isn’t it better enjoying doing it? <br /> I help you by
