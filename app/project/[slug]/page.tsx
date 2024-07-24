@@ -6,7 +6,6 @@ import Image from 'next/image'
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
 
 	const blogItem = allBlogs.find((el: Blog) => el.slug === params.slug)
-	console.log('blogItem', blogItem)
 
 	return (
 		<div className='flex flex-col w-full text-white bg-base-100'>

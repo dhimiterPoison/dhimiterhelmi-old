@@ -9,6 +9,10 @@ tags:
   - project
   - immersive
   - multimedia
+cover:
+  src: /images/blog/a-h-s_pic.jpg
+  width: 1280
+  height: 1280
 location: Amsterdam
 title: a Human Experience
 
@@ -25,5 +29,5 @@ at first it was meant to be a sidealone project,
 
 but now i see that it can fit under it’s umbrella also:
 
-- [Self, your life at a glance](http://www.dhimiterhelmi.it/project/self-glance)
-- [Analog adventures](http://www.dhimiterhelmi.it/project/analog-adventures)
+- [Self, your life at a glance](http://www.dhimiterhelmi.com/project/self-glance)
+- [Analog adventures](http://www.dhimiterhelmi.com/project/analog-adventures)

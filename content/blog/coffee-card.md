@@ -64,6 +64,6 @@ I wasn’t sure of the business model and didn’t think that could be profitabl
 	Here we are.
 
 
-	Now i am working on [Self, your life at a glance](https://dhimiterhelmi.it/project/balonade)
+	Now i am working on [Self, your life at a glance](https://dhimiterhelmi.it/project/self-glance)
 	
 
