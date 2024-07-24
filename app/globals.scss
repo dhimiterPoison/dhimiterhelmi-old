@@ -23,6 +23,10 @@ body {
 	// max-height: 100svh;
 }
 
+.landing-page {
+	scroll-behavior: smooth !important;
+}
+
 .logo {
 	max-height: 10svh;
 }
@@ -150,6 +154,13 @@ body {
 	height: 1px;
 }
 
+.x-letter {
+	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+  }  
+
+  .u-letter {
+	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+  }  
 // .scroll-margin-left {
 // 	// scroll-margin-left: calc(100vw/2);
 // 	//scroll-margin-left: 50vw;
