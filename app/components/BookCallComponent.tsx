@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { InlineWidget, PopupModal } from 'react-calendly'
+import { BackIcon, XIcon } from '../helper/Icons';
 
 let rootElement: HTMLElement | null;
 const BookCallComponent = () => {
@@ -15,20 +16,28 @@ const BookCallComponent = () => {
 
 	return (
 		<div className="gigi w-full flex justify-center">
-			<button className="btn upp bg-secondary hover:bg-primary border-none text-slate-50 hover:text-slate-950 shadow-md  uppercase"
+			<button type='button' className="main-cta btn upp bg-secondary  border-white hover:bg-primary border-none text-slate-50 hover:text-slate-950 shadow-md  uppercase"
 				onClick={() => (document.getElementById('my_modal_2') as HTMLDialogElement)?.showModal()}
 			>
 				Book call
 
 			</button>
 			<dialog id="my_modal_2" className="modal">
-				<div className="modal-box">
+				<div className="modal-box text-center">
+					<div className='pb-4'>
+						<button type='button'
+							className='flex gap-2'
+							onClick={() => (document.getElementById('my_modal_2') as HTMLDialogElement)?.close()}
+						>
+							<XIcon /> Cancel
+						</button>
+					</div>
 					<InlineWidget
 						url="https://calendly.com/dhimiter-helmi/30min"
 					/>
 				</div>
 				<form method="dialog" className="modal-backdrop">
-					<button>close</button>
+					<button type='button'>close</button>
 				</form>
 			</dialog>
 

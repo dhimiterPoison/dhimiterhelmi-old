@@ -161,6 +161,16 @@ body {
   .u-letter {
 	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
   }  
+
+
+  .main-cta {
+	border-bottom: 1px solid yellow
+  }
+  .main-cta::after {
+	content: "";
+}
+
+
 // .scroll-margin-left {
 // 	// scroll-margin-left: calc(100vw/2);
 // 	//scroll-margin-left: 50vw;
