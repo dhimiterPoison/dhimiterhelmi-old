@@ -60,7 +60,7 @@ export const experiences = [
 		cover: AlfaSistemiCover,
 		profilePicture: "/career/alfasistemi/alfa-profile.jpg",
 		role: 'Mid FullStack Developer',
-		duration: '08/2021 - Present',
+		duration: '08/2021 - 10/2022',
 		location: 'Buttrio, Italy',
 		shortLocation: 'Italy',
 		flag: ItalyFlag,
