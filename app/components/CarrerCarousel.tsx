@@ -20,6 +20,7 @@ import GeneralDb from '../../public/general-db.svg';
 
 import SwedenFlag from '../../public/flag-sweden.svg';
 import ItalyFlag from '../../public/flag-italy.svg';
+import NetherlandsFlag from '../../public/flag-netherlands.svg';
 
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
 import AlfaSistemiCover from '../../public/career/alfasistemi-cover.png';
@@ -52,6 +53,45 @@ const icons = {
 };
 
 export const experiences = [
+	{
+		id: 3,
+		slug: 'a-human-experience',
+		company: 'a Human Experience',
+		logo: AlfaSistemiLogo,
+		cover: AlfaSistemiCover,
+		profilePicture: "/career/alfasistemi/alfa-profile.jpg",
+		role: 'Founder & FullStack Developer',
+		duration: '08/2024 - Present',
+		location: 'Amsterdam, Netherlands',
+		shortLocation: 'Netherlands',
+		flag: NetherlandsFlag,
+		description: ``,
+		tech: [
+			icons.typescript,
+			icons.react,
+			icons.nextjs,
+			icons.tailwind,
+			icons.git,
+		],
+		shortSkills: [
+			''
+		],
+		skills: [
+			{ "type": "text", "message": "temp" },
+		],
+		contacts: [
+			// {
+			// 	logo: <LinkedinIcon className='fill-white' />,
+			// 	link: 'https://www.linkedin.com/company/a-human-experience/',
+			// 	name: "Linkedin"
+			// },
+			{
+				logo: <GlobeIcon />,
+				link: 'https://www.dhimhumanexperience.com/',
+				name: "Website"
+			},
+		],
+	},
 	{
 		id: 3,
 		slug: 'alfa-sistemi',
