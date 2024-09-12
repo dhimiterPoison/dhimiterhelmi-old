@@ -23,7 +23,7 @@ const MainHero = () => {
 					{/* <p>Whatever you do,</p>
 					<p className='mx-2'>isn&apos;t it better enjoying doing it?</p> */}
 					<span className='text-center text-xl font-light leading-tight'>Empower your <strong>users</strong> with tailored interactivity!</span><br />
-					<span className='text-center text-lg font-light p-4 leading-tight'>Let's discuss your idea and see how we can bring it to life!</span>
+					<span className='text-center text-lg font-light p-4 leading-tight'>Let&apos;s discuss your idea and see how we can bring it to life!</span>
 				</div>
 				{/* <div id='call-schedule' className='flex navbar-contact btn btn-secondary uppercase font-extrabold self-center w-fit shadow-md hover:scale-105'>
 					<button plausible-event-name="get-in-touch-nav" className={`uppercase`}>Book a call</button>
