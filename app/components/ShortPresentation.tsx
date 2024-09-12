@@ -29,7 +29,9 @@ const ShortPresentation = () => {
 						FullStack & UX Developer
 					</div>
 					<div className='flex flex-row justify-center sm:justify-start text-lg items-center'>
-						with passion for <i className='mx-2'>analog </i> activities
+						with passion for <div className="tooltip whitespace-pre-line" data-tip="swimming, &#10;hiking, &#10;photography, &#10;cinematography, &#10;cooking">
+							<i className='mx-2'>analog </i>
+						</div> activities
 					</div>
 				</div>
 			</div>
