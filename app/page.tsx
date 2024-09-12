@@ -1,27 +1,19 @@
-import {
-	Montserrat,
-	Archivo_Black,
-	Work_Sans,
-	Lora,
-	Catamaran,
-	Inter,
-} from 'next/font/google';
-import Image from 'next/image';
-import Link from 'next/link';
+import { GeistSans } from 'geist/font/sans';
 import dynamic from 'next/dynamic';
+import {
+	Inter,
+	Montserrat
+} from 'next/font/google';
+import ContactForm from './components/ContactForm';
 import MainHero from './components/MainHero';
 import ShortPresentation from './components/ShortPresentation';
-import TvAnimation from './components/TvAnimation';
 import { sectionTitleClassname } from './helper/typography';
-import { GeistSans } from 'geist/font/sans';
-import ContactForm from './components/ContactForm';
 
 const MyCarousel = dynamic(() => import('./components/MyCarousel'));
 const CarrerCarousel = dynamic(() => import('./components/CarrerCarousel'));
 
 const monserrat = Montserrat({ subsets: ['latin'] });
 const sections = Inter({ subsets: ['latin'] });
-// const sections = Lora({ subsets: ['latin'] });
 
 export default function Home() {
 	return (
@@ -58,6 +50,7 @@ export default function Home() {
 				<Link href="#section3">Sectioon 3</Link>
 				<Link href="#section4">Sectioon 4</Link>
 			</div> */}
+			
 		</main>
 	);
 }

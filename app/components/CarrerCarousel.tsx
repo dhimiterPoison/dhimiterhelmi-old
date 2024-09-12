@@ -20,7 +20,9 @@ import GeneralDb from '../../public/general-db.svg';
 
 import SwedenFlag from '../../public/flag-sweden.svg';
 import ItalyFlag from '../../public/flag-italy.svg';
+import NetherlandsFlag from '../../public/flag-netherlands.svg';
 
+import AHELogo from '../../public/career/aHE-logo2-white.png';
 import AlfaSistemiLogo from '../../public/career/alfasistemi-logo.png';
 import AlfaSistemiCover from '../../public/career/alfasistemi-cover.png';
 import DanieliLogo from '../../public/career/danieli-logo.png';
@@ -28,12 +30,14 @@ import DanieliCover from '../../public/career/danieli-cover.svg';
 import ClavisterLogo from '../../public/career/clavister-logo.jpg';
 import ClavisterCover from '../../public/career/clavister-cover.png';
 import LinkedinLogo from '../../public/linkedin-svgrepo-com.svg';
+import ExpoLogo from '../../public/expo-white.svg';
 
 import Image from 'next/image';
 import { LinkedinIcon, GlobeIcon } from '../helper/Icons';
 
 const icons = {
 	react: { name: 'React', icon: ReactIcon },
+	reactNative: { name: 'React Native', icon: ReactIcon },
 	nextjs: { name: 'Nextjs', icon: NextJSIcon },
 	spring: { name: 'Spring Boot', icon: SpringIcon },
 	angular: { name: 'Angular', icon: AngularIcon },
@@ -49,9 +53,51 @@ const icons = {
 	vercel: { name: 'Vercel', icon: VercelIcon },
 	adobeXD: { name: 'Adobe', icon: AdobeXD },
 	generalDb: { name: 'General DB', icon: GeneralDb },
+	expo: { name: 'Expo', icon: ExpoLogo},
 };
 
 export const experiences = [
+	{
+		id: 3,
+		slug: 'a-human-experience',
+		company: 'a Human Experience',
+		logo: AHELogo,
+		cover: AlfaSistemiCover,
+		profilePicture: "/career/alfasistemi/alfa-profile.jpg",
+		role: 'Founder & Software engineer',
+		duration: '08/2024 - Present',
+		location: 'Amsterdam, Netherlands',
+		shortLocation: 'Netherlands',
+		flag: NetherlandsFlag,
+		description: ``,
+		tech: [
+			icons.reactNative,
+			icons.typescript,
+			icons.expo,
+			icons.tailwind,
+			icons.git,
+		],
+		shortSkills: [
+			'Working as a freelancer for Frontend Fullstack developement',
+			'Taking care of UI/UX design',
+			'Learning from the experience of research and developement of a SaaS',
+		],
+		skills: [
+			{ "type": "text", "message": "temp" },
+		],
+		contacts: [
+			// {
+			// 	logo: <LinkedinIcon className='fill-white' />,
+			// 	link: 'https://www.linkedin.com/company/a-human-experience/',
+			// 	name: "Linkedin"
+			// },
+			{
+				logo: <GlobeIcon />,
+				link: 'https://www.dhimhumanexperience.com/',
+				name: "Website"
+			},
+		],
+	},
 	{
 		id: 3,
 		slug: 'alfa-sistemi',
@@ -204,7 +250,7 @@ export const experiences = [
 const sections = Inter({ subsets: ['latin'] });
 const CarrerCarousel = () => {
 	return (
-		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start lg:justify-center px-4 py-6 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
+		<div className='carousel-slider career flex gap-4 md:gap-8 items-center justify-start xl:justify-center px-4 py-6 md:p-12 overflow-auto overscroll-none snap-proximity snap-x scroll-px-10'>
 			{experiences.map((experience, index) => {
 				return (
 					<Link

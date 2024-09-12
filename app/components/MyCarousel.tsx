@@ -13,6 +13,17 @@ const sections = Inter({ subsets: ['latin'] });
 const cards = [
 	{
 		id: 1,
+		path: 'self-glance',
+		title: 'Self, your life at a glance',
+		description:
+			'Focus your energies on what truly matters and stay in the flow!',
+		environment: 'Building in public',
+		link: 'https://selfglance.com/',
+		categories: ["Productivity", "Awereness", "AI", "UX", "#BuildInPublic"],
+		img: SelfGlanceImage,
+	},
+	{
+		id: 2,
 		path: 'balonade',
 		title: 'Balonade Web App',
 		description:
@@ -21,17 +32,6 @@ const cards = [
 		link: 'https://balonade.it/',
 		categories: ['Web', "UX", "Mobile", "Production"],
 		img: BalonadeHomescreen,
-	},
-	{
-		id: 2,
-		path: 'self-glance',
-		title: 'Self, your life at a glance',
-		description:
-			'Store your thoughts, ideas, and feelings in a safe place and let Self help you organizing your time so you can focus your energies more consciusly.',
-		environment: 'Building in public',
-		link: 'https://self-glance.it/',
-		categories: ["AI", "UX", "#BuildInPublic"],
-		img: SelfGlanceImage,
 	},
 	{
 		id: 3,

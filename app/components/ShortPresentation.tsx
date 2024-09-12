@@ -13,7 +13,7 @@ const ShortPresentation = () => {
 			id='short-presentation'
 			className={`presentation flex flex-col items-center justify-center md:flex-row mb-8 md:mb-12 ${montserrat.className}`}
 		>
-			<div className='flex flex-col sm:flex-row'>
+			<div className='flex flex-col sm:flex-row mt-8'>
 				<div className='profile-image-container flex md:flex-col justify-center mb-2 shrink-0'>
 					<Image
 						src={ProfilePicture}
@@ -29,7 +29,9 @@ const ShortPresentation = () => {
 						FullStack & UX Developer
 					</div>
 					<div className='flex flex-row justify-center sm:justify-start text-lg items-center'>
-						with passion for <i className='mx-2'>analog </i> activities
+						with passion for <div className="tooltip whitespace-pre-line" data-tip="swimming, &#10;hiking, &#10;photography, &#10;cinematography, &#10;cooking">
+							<i className='mx-2'>analog </i>
+						</div> activities
 					</div>
 				</div>
 			</div>
