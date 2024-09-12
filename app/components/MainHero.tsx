@@ -11,18 +11,19 @@ const MainHero = () => {
 	return (
 		<div className='flex flex-col mb-8'>
 			<div className={` flex flex-col`}>
-				<h1 className='flex tracking-wide flex-row justify-center text-4xl md:text-5xl font-bold'>
-					unleash <span className='ml-2 tracking-wider'>Powerful</span>
+				<h1 className='flex tracking-wide flex-row justify-center text-4xl md:text-5xl font-bold leading-tight '>
+					unleash <span className='ml-2 '>Powerful</span>
 				</h1>
-				<div className='flex flex-row justify-center text-4xl md:text-5xl font-bold'>
+				<div className='flex flex-row justify-center  text-4xl md:text-5xl font-bold leading-tight '>
 					{/* //set fist letter to secondary color */}
 					<h1 className='text-primary u-letter'>U</h1>ser e
 					<h1 className='text-secondary x-letter'>X</h1>perience
 				</div>
-				<div className='flex flex-col my-4 justify-center text-xl items-center'>
+				<div className='flex flex-col items-center justify-start my-4 text-xl '>
 					{/* <p>Whatever you do,</p>
 					<p className='mx-2'>isn&apos;t it better enjoying doing it?</p> */}
-					<span className='text-center font-light'>Empower your <strong>users</strong> with tailored interactivity!</span>
+					<span className='text-center text-xl font-light leading-tight'>Empower your <strong>users</strong> with tailored interactivity!</span><br />
+					<span className='text-center text-lg font-light p-4 leading-tight'>Let's discuss your idea and see how we can bring it to life!</span>
 				</div>
 				{/* <div id='call-schedule' className='flex navbar-contact btn btn-secondary uppercase font-extrabold self-center w-fit shadow-md hover:scale-105'>
 					<button plausible-event-name="get-in-touch-nav" className={`uppercase`}>Book a call</button>

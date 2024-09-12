@@ -16,10 +16,10 @@ const BookCallComponent = () => {
 
 	return (
 		<div className="gigi w-full flex justify-center">
-			<button type='button' className="main-cta btn upp bg-secondary  border-white hover:bg-primary border-none text-slate-50 hover:text-slate-950 shadow-md  uppercase"
+			<button type='button' className="main-cta btn upp bg-secondary px-6 py-3 border-white hover:bg-primary border-none text-slate-50 hover:text-slate-950 shadow-md  uppercase"
 				onClick={() => (document.getElementById('my_modal_2') as HTMLDialogElement)?.showModal()}
 			>
-				Book call
+				<span>Book call</span>
 
 			</button>
 			<dialog id="my_modal_2" className="modal">
