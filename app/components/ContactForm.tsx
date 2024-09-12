@@ -3,12 +3,13 @@
 import React from 'react';
 import { sendMail } from '../actions/contactForm';
 import { Todo } from '../helper/types';
+import BookCallComponent from './BookCallComponent';
 
 const ContactForm = () => {
 
-	const submit = async (e:Todo) => {
+	const submit = async (e: Todo) => {
 		// e.preventDefault();
-		
+
 		const answer = await sendMail(e);
 		console.log('answer', answer);
 		window.location.href = answer.message;
@@ -24,7 +25,11 @@ const ContactForm = () => {
 			<div className='text-lg font-light leading-8'>
 				and create something awesome together!
 			</div>
-			<form 
+			<div className=" grid h-20 place-items-center">
+				<BookCallComponent></BookCallComponent>
+			</div>
+			<div className="divider text-base">OR</div>
+			<form
 				action={submit}
 				// action="mailto:dhimiter.helmi@gmail.com" 
 				className='flex flex-col gap-4 '
