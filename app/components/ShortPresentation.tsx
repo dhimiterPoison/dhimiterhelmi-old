@@ -12,10 +12,9 @@ const ShortPresentation = () => {
 	return (
 		<div
 			id='short-presentation'
-			className={`presentation mb-8 flex flex-col items-center justify-center md:mb-12 md:flex-row ${montserrat.className}`}
+			className={`presentation mb-8 flex items-center justify-center md:mb-12 flex-row tracking-wide`}
 		>
-			<div className='flex flex-col sm:flex-row'>
-				<div className='profile-image-container mb-2 flex shrink-0 justify-center md:flex-col'>
+				<div className='profile-image-container  flex flex-col shrink justify-center items-center '>
 					<Image
 						src={ProfilePicture}
 						alt='profile picture'
@@ -23,19 +22,18 @@ const ShortPresentation = () => {
 					/>
 				</div>
 				<div className='flex flex-col justify-center pl-4 md:mx-8 md:pl-0'>
-					<div className='flex flex-row items-center justify-center text-xl font-semibold sm:justify-start'>
+					<div className='flex flex-row items-center  text-lg font-semibold sm:justify-start'>
 						Dhimiter Helmi
 					</div>
-					<div className='flex flex-row items-center justify-center text-xl sm:justify-start'>
+					<div className='flex flex-row items-center  text-lg sm:justify-start'>
 						FullStack & UX Developer
 					</div>
-					<div className='flex flex-row justify-center sm:justify-start text-lg items-center'>
+					<div className='flex flex-row justify-center sm:justify-start text-base items-center'>
 						with passion for <div className="tooltip whitespace-pre-line" data-tip="swimming, &#10;hiking, &#10;photography, &#10;cinematography, &#10;cooking">
 							<i className='mx-2'>analog </i>
 						</div> activities
 					</div>
 				</div>
-			</div>
 			{/* <div className='contact-points flex justify-center items-center h-16 gap-4'>
 				<div className='contact btn btn-secondary btn-sm font-extrabold '>
 					<Link

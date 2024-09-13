@@ -6,8 +6,8 @@ import { useSessionStorage } from '@mantine/hooks';
 import { BookIcon, BriefcaseIcon, InfoCardIcon, LightBulbIcon } from '../helper/Icons';
 
 export const routes = [
-	{ id: 1, path: '#career', title: 'Career', icon: <BriefcaseIcon />},
-	{ id: 2, path: '#personal-projects', title: 'Projects', icon: <LightBulbIcon />},
+	{ id: 1, path: '/#career', title: 'Career', icon: <BriefcaseIcon />},
+	{ id: 2, path: '/#personal-projects', title: 'Projects', icon: <LightBulbIcon />},
 	{ id: 3, path: '/about', title: 'Me', icon: <InfoCardIcon />},
 	{ id: 4, path: '/blog', title: 'Blog', icon: <BookIcon />},
 	

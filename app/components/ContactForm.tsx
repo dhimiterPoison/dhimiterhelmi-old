@@ -4,6 +4,7 @@ import React from 'react';
 import { sendMail } from '../actions/contactForm';
 import { Todo } from '../helper/types';
 import BookCallComponent from './BookCallComponent';
+import { ContactLinks } from './ShortPresentation';
 
 const ContactForm = () => {
 
@@ -28,7 +29,7 @@ const ContactForm = () => {
 				<BookCallComponent></BookCallComponent>
 			</div>
 			<div className="divider text-base">OR</div>
-			<form
+			{/* <form
 				action={submit}
 				// action="mailto:dhimiter.helmi@gmail.com"
 				className='flex flex-col gap-4 '
@@ -56,12 +57,10 @@ const ContactForm = () => {
 					placeholder='Your message'
 					className='textarea textarea-bordered h-32 w-full resize-y text-base font-normal'
 				></textarea>
-			</form>
-			<div className='flex w-full flex-col border-slate-300 text-slate-300'>
+			</form> */}
 				
-				<div className='divider'>OR</div>
+				{/* <div className='divider'>OR</div> */}
 				
-			</div>
 			<ContactLinks size="md"></ContactLinks>
 		</div>
 	);
