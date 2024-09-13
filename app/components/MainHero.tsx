@@ -11,6 +11,23 @@ const MainHero = () => {
 	return (
 		<div className='flex flex-col mb-8'>
 			<div className={` flex flex-col`}>
+				{/* <div className="absolute inset-0 overflow-hidden">
+					<div className="absolute left-1/2 top-32 -translate-x-1/2  w-3/4 h-96 rounded-full blur-md animate-pulse"
+						style={{
+							background: 'radial-gradient(circle at center, transparent 50%, #2d6a4f 50%, #3d8a6f 100%)',
+							backgroundSize: '120% 120%',
+							backgroundPosition: 'center',
+						}}
+					></div>
+					<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-md animate-pulse"
+						style={{
+							background: 'radial-gradient(circle at center, transparent 50%, #2d6a4f 50%, #3d8a6f 100%)',
+							backgroundSize: '120% 120%',
+							backgroundPosition: 'center',
+							animationDelay: '-1.5s',
+						}}
+					></div>
+				</div> */}
 				<h1 className='flex tracking-wide flex-row justify-center text-4xl md:text-5xl font-bold leading-tight '>
 					unleash <span className='ml-2 '>Powerful</span>
 				</h1>
