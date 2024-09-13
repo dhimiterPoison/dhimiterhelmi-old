@@ -38,7 +38,8 @@ module.exports = {
 			{
 				'mytheme-dark': {
 					primary: '#F9F871',
-					secondary: '#CC8BB8',
+					// secondary: '#B54A60',
+					secondary: '#7A3359',
 					accent: '#42D780',
 					neutral: '#dcfce7',
 					info: '#22d3ee',
@@ -60,6 +61,8 @@ module.exports = {
 					'base-200': '#205A32',
 					'base-300': '#337A54',
 					'base-400': '#90D8A7',
+					// 'pastel-green': '#c3dfba'
+					// 'celadon': '#ACE1AF'
 				},
 			},
 		],

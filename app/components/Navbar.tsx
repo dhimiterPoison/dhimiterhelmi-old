@@ -6,8 +6,8 @@ import { useSessionStorage } from '@mantine/hooks';
 import { BookIcon, BriefcaseIcon, InfoCardIcon, LightBulbIcon } from '../helper/Icons';
 
 export const routes = [
-	{ id: 1, path: '/#career', title: 'Career', icon: <BriefcaseIcon />},
-	{ id: 2, path: '/#personal-projects', title: 'Projects', icon: <LightBulbIcon />},
+	{ id: 1, path: '#career', title: 'Career', icon: <BriefcaseIcon />},
+	{ id: 2, path: '#personal-projects', title: 'Projects', icon: <LightBulbIcon />},
 	{ id: 3, path: '/about', title: 'Me', icon: <InfoCardIcon />},
 	{ id: 4, path: '/blog', title: 'Blog', icon: <BookIcon />},
 	
@@ -59,9 +59,9 @@ const Navbar = () => {
 					/>
 				))}
 			</div>
-			<div className='hidden lg:flex navbar-contact btn btn-secondary uppercase font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
+			{/* <div className='hidden lg:flex navbar-contact btn btn-secondary uppercase font-extrabold w-full lg:w-auto shadow-md hover:scale-105'>
 				<Link href='mailto:dhimiter.helmi@gmail.com' plausible-event-name="get-in-touch-nav" className={``}>Get in touch</Link>
-			</div>
+			</div> */}
 		</div>
 	);
 };
