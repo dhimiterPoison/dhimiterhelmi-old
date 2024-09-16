@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { InlineWidget, PopupModal } from 'react-calendly'
+import { InlineWidget } from 'react-calendly'
 import { BackIcon, XIcon } from '../helper/Icons';
 
 let rootElement: HTMLElement | null;

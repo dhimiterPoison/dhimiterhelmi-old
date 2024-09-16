@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export type Todo = any;
 
@@ -26,4 +26,8 @@ export type Contact = {
 	logo: Todo;
 	name: string;
 	link: string;
+};
+
+export type ContactLinkProps = {
+	size?: 'sm' | 'md' ;
 };

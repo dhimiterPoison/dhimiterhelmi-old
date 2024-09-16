@@ -1,6 +1,7 @@
 import React from 'react';
 import ShortPresentation from '../components/ShortPresentation';
 import Link from 'next/link';
+import ContactForm from '../components/ContactForm';
 
 const AboutPage = () => {
 	return (
@@ -82,6 +83,7 @@ const AboutPage = () => {
 					Under this umbrella, I am developing Self and supporting the business by taking on freelance projects and jobs.
 				</p>
 			</div>
+			<ContactForm></ContactForm>
 		</div>
 	);
 };
