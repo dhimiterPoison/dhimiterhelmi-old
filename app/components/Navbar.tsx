@@ -44,12 +44,11 @@ const Navbar = () => {
 		<div
 			className={`${
 				openNavigation ? '' : 'flex'
-			} flex flex-row w-full justify-center lg:justify-between gap py-2 bg-base-100`}
+			} flex flex-row w-full justify-center lg:justify-around gap py-2 bg-base-100`}
 		>
 			<Link className='pt-3 text-3xl font-bold lg:justify-start lg:pt-0' href='/' onClick={closeNavigationHandler}>
 				DhimRealm <sub className='text-sm'>(WiP)</sub>
 			</Link>
-			<div className="hidden lg:flex spacer"></div>
 			<div className='hidden lg:flex flex-col lg:flex-row lg:gap-12 lg:mb-0 px-8'>
 				{routes.map((route) => (
 					<Route

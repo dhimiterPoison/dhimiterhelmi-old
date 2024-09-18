@@ -12,7 +12,7 @@ const ShortPresentation = () => {
 	return (
 		<div
 			id='short-presentation'
-			className={`presentation mb-8 flex items-center justify-center md:mb-12 flex-row tracking-wide`}
+			className={`presentation z-10  pb-8 flex items-center justify-center md:pb-12 flex-row tracking-wide`}
 		>
 				<div className='profile-image-container  flex flex-col shrink justify-center items-center '>
 					<Image

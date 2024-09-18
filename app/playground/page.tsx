@@ -9,38 +9,50 @@ const Page = () => {
 	const isIdle = useIdle();
 
 	return (
-		<div className='p-main w-full flex p-4 gap-4'>
-			<div className='flex flex-col w-full gap-16 items-center py-4 transition ease-in-out duration-100'>
+		<div className='p-main flex w-full gap-4 p-4'>
+			<div className='flex w-full flex-col items-center gap-16 py-4 transition duration-100 ease-in-out'>
+				<div className='relative flex h-[30svh] w-full items-center justify-center dark:bg-grid-white/[0.2]'>
+					{/* Radial gradient for the container to give a faded look */}
+					<div className='pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-base-100'></div>
+					<p className='relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl'>
+						Playground
+					</p>
+				</div>
 				{[1, 2, 3, 4].map((card, index) => {
 					return (
 						<div
 							key={index}
-							className='project-card flex flex-col md:flex-row p-2 gap-2 bg-green-800'
+							className='project-card flex flex-col gap-2 bg-green-800 p-2 md:flex-row'
 						>
-							<div className='image w-full aspect-square object-cover bg-base-200 rounded-md md:h-full md:w-1/2'></div>
-							<div className='content flex flex-col h-1/2 md:w-1/2 md:h-full gap-2 md:gap-4'>
+							<div className='image aspect-square w-full rounded-md bg-base-200 object-cover md:h-full md:w-1/2'></div>
+							<div className='content flex h-1/2 flex-col gap-2 md:h-full md:w-1/2 md:gap-4'>
 								{/* <div className='content flex flex-col h-1/3 border border-yellow-200 bg-green-900'> */}
-								<h2 className='title text-xl font-bold'>Title</h2>
-								<span className='description text-lg border border-red-400 '>
-									Descrizione setst seg segiseng rshgusehgiuREH SUERHH
-									SOFEUHGSAOUFEH F USHEFOSHF SEIHFSEFH SH SHASF{' '}
+								<h2 className='title text-xl font-bold'>
+									Title
+								</h2>
+								<span className='description border border-red-400 text-lg'>
+									Descrizione setst seg segiseng
+									rshgusehgiuREH SUERHH SOFEUHGSAOUFEH F
+									USHEFOSHF SEIHFSEFH SH SHASF{' '}
 								</span>
-								<div className='tags flex gap-2 flex-wrap'>
-									{['React', 'Next', 'Tailwind'].map((category, index) => (
-										<span
-											key={index}
-											className='badge bg-primary rounded-md text-slate-800'
-										>
-											{category}
-										</span>
-									))}
+								<div className='tags flex flex-wrap gap-2'>
+									{['React', 'Next', 'Tailwind'].map(
+										(category, index) => (
+											<span
+												key={index}
+												className='badge rounded-md bg-primary text-slate-800'
+											>
+												{category}
+											</span>
+										)
+									)}
 								</div>
-								<div className='flex items-center self-end mt-auto'>
+								<div className='mt-auto flex items-center self-end'>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										viewBox='0 0 24 24'
 										fill='currentColor'
-										className='w-6 h-6'
+										className='h-6 w-6'
 									>
 										<path
 											fillRule='evenodd'
@@ -50,7 +62,9 @@ const Page = () => {
 									</svg>
 									<span
 										className='mr-2 cursor-pointer underline'
-										onClick={() => setShowDetail((prevVal) => !prevVal)}
+										onClick={() =>
+											setShowDetail((prevVal) => !prevVal)
+										}
 									>
 										Read more
 									</span>
@@ -71,10 +85,9 @@ const Page = () => {
 			<div
 				className={`${
 					showDetail ? '' : 'hidden'
-				} w-2/5 transition ease-in-out duration-100 py-4
-				`}
+				} w-2/5 py-4 transition duration-100 ease-in-out`}
 			>
-				<div className='w-full h-full bg-base-200 p-4'>
+				<div className='h-full w-full bg-base-200 p-4'>
 					{isIdle ? <div>IDle</div> : <div>Active</div>}
 				</div>
 			</div>
