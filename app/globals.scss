@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-$base-100: '#184426';
-$base-200: '#205A32';
-$base-300: '#337A54';
+$base-100: '#205A32';
+$base-200: '#337A54';
+$base-300: '#184426';
 $base-400: '#90D8A7';
 
 body {
 	width: 100%;
+
+	--base-100: #184426;
+	--base-200: #205A32;
+	--base-300: #337A54;
+
 
 	--primary: #f9f871;
 	--secondary: #cc8bb8;
@@ -18,8 +23,16 @@ body {
 	--speed: 1.2s;
 }
 
+.navigation {
+	// background: radial-gradient(ellipse_at_center,#205331,#184426);
+	// background: radial-gradient(at 50% 0%, red 10px, yellow 30%, #1e90ff 50%);
+	// background: radial-gradient(at 50% 0%, #205331, #184426 );
+}
+
+
 .app {
 	min-height: 100svh;
+	background: radial-gradient(at 50% 0%, #205331, #184426 );
 	// max-height: 100svh;
 }
 
@@ -74,20 +87,20 @@ body {
 
 .carousel-card {
 	aspect-ratio: 2/3;
-	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+	// box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #184426;
 }
 
 .neu-inner-shadow {
-	box-shadow: inset 8px 8px 15px #296243, inset -8px -8px 15px #3d9265;
+	// box-shadow: inset 8px 8px 15px #296243, inset -8px -8px 15px #184426;
 }
 
 .contact.btn,
 .profile-image {
-	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+	// box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #184426;
 }
 
 .text-shadow {
-	text-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+	text-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #184426;
 }
 
 .blog-cover {
@@ -122,7 +135,7 @@ body {
 .project-card {
 	width: calc(2 / 3 * 100svw);
 
-	box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #3c9063;
+	// box-shadow: -10px 10px 19px #2a6445, 10px -10px 19px #184426;
 
 	.content {
 		.title {
@@ -188,7 +201,9 @@ body {
 
 
   .main-cta {
-	border-bottom: 1px solid yellow
+	border-bottom: 1px solid var(--primary);
+	background: radial-gradient(at 50% 0%, #EB5780, #89466a);
+
   }
   .main-cta::after {
 	content: "";
