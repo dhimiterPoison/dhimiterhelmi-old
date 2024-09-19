@@ -23,8 +23,16 @@ body {
 	--speed: 1.2s;
 }
 
+.navigation {
+	// background: radial-gradient(ellipse_at_center,#205331,#184426);
+	// background: radial-gradient(at 50% 0%, red 10px, yellow 30%, #1e90ff 50%);
+	// background: radial-gradient(at 50% 0%, #205331, #184426 );
+}
+
+
 .app {
 	min-height: 100svh;
+	background: radial-gradient(at 50% 0%, #205331, #184426 );
 	// max-height: 100svh;
 }
 
@@ -193,7 +201,9 @@ body {
 
 
   .main-cta {
-	border-bottom: 1px solid yellow
+	border-bottom: 1px solid var(--primary);
+	background: radial-gradient(at 50% 0%, #EB5780, #89466a);
+
   }
   .main-cta::after {
 	content: "";

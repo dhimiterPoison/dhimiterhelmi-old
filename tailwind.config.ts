@@ -71,8 +71,11 @@ module.exports = {
 			{
 				'mytheme-dark': {
 					primary: '#F9F871',
-					// secondary: '#B54A60',
-					secondary: '#7A3359',
+					// secondary: '#B54A60', //light rose
+					// secondary: '#7A3359',	//bordeaux to purple
+					// secondary: '#00BFFF',	//light blue
+					// secondary: '#FFA500',	//orange
+					secondary: '#EB5780',	//rosaceo
 					accent: '#42D780',
 					neutral: '#dcfce7',
 					info: '#22d3ee',

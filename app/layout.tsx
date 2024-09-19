@@ -29,11 +29,11 @@ export default function RootLayout({
 	return (
 		<html lang='en' data-theme='mytheme-dark'>
 			<body className={GeistSans.className}>
-				<div className='app relative flex flex-col justify-start overscroll-none lg:px-4 lg:pb-4'>
-					<div className='navigation flex max-h-screen w-full flex-col bg-base-100 px-8 py-2 lg:flex-row lg:justify-between'>
+				<div className='app relative flex flex-col justify-start overscroll-none lg:pb-4'>
+					<div className='navigation flex max-h-screen w-full flex-col px-8 py-2 lg:flex-row lg:justify-between'>
 						<Navbar />
 					</div>
-					<div className='router-content neu-inner-shadow mt-4 flex w-full justify-center scroll-smooth rounded-t-2xl bg-base-100 text-slate-50 lg:mt-0 lg:rounded-lg'>
+					<div className='router-content neu-inner-shadow mt-4 flex w-full justify-center scroll-smooth rounded-t-2xl bg-base-200 text-slate-50 lg:mt-0 lg:rounded-lg'>
 						{children}
 					</div>
 					<MobileNavigation></MobileNavigation>

@@ -7,7 +7,7 @@ const MainHero = () => {
 	return (
 		<div className='relative mb-8 flex w-full lg:w-2/3 lg:self-center flex-col items-center justify-center dark:bg-grid-white/[0.2]'>
 			{/* Radial gradient for the container to give a faded look */}
-			<div className='pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-base-100'></div>
+			<div className='pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-base-200'></div>
 			<h2 className='z-10 my-6 self-center text-xl'>
 				Empower your <strong>users</strong>,
 			</h2>

@@ -44,7 +44,7 @@ const Navbar = () => {
 		<div
 			className={`${
 				openNavigation ? '' : 'flex'
-			} flex flex-row w-full justify-center lg:justify-around gap py-2 bg-base-100`}
+			} flex flex-row w-full justify-center lg:justify-around gap py-2 bg-base-[#256a3b]`}
 		>
 			<Link className='pt-3 text-3xl font-bold lg:justify-start lg:pt-0' href='/' onClick={closeNavigationHandler}>
 				DhimRealm <sub className='text-sm'>(WiP)</sub>
